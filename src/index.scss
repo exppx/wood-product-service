@@ -1,0 +1,34 @@
+@import url("ress/ress.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@font-face {
+  font-family: "KyivTypeSans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./assets/fonts/KyivTypeSans-Light-.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KyivTypeSans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/KyivTypeSans-Regular-.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KyivTypeSans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/KyivTypeSans-Medium-.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KyivTypeSans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/KyivTypeSans-Black-.otf") format("opentype");
+  font-display: swap;
+}

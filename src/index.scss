@@ -1,3 +1,4 @@
+@use "./sass/constants.scss" as *;
 @import url("ress/ress.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
@@ -31,4 +32,122 @@
   font-weight: 700;
   src: url("./assets/fonts/KyivTypeSans-Black-.otf") format("opentype");
   font-display: swap;
+}
+
+:root {
+  --color-primary-1: #5f7489;
+  --color-primary-2: #728bad;
+  --color-primary-3: #a3b8d7;
+  --color-primary-4: #d5dcee;
+  --color-primary-5: #b0b4bd;
+  --color-primary-6: #7a574b;
+  --color-primary-7: #9f8578;
+  --color-primary-8: #c8b2a7;
+
+  --color-secondary-1: #664033;
+  --color-secondary-2: #6c200b;
+  --color-secondary-3: #8e3921;
+  --color-secondary-4: #e1764d;
+  --color-secondary-5: #e59679;
+  --color-secondary-6: #fb9e6e;
+  --color-secondary-7: #ffc099;
+  --color-secondary-8: #ffdbbb;
+
+  --color-tertiary-1: #1e0c06;
+  --color-tertiary-2: #222021;
+  --color-tertiary-3: #32353c;
+  --color-tertiary-4: #5b6069;
+  --color-tertiary-5: #848891;
+  --color-tertiary-6: #7d746d;
+  --color-tertiary-7: #d2c8c6;
+  --color-tertiary-8: #f1ded0;
+
+  --color-divider: #0a0a0a;
+  --color-background: #f0f0f0;
+  --color-surface: #fafafa;
+
+  --color-text: #0a0a0a;
+  --color-text-alter: #cdcac3;
+  --color-text-placeholder: #262626;
+
+  --color-shadow: color-mix(in oklab, var(--color-text) 17%, transparent 83%);
+  --shadow-main: 0 4px 52px 0 var(--color-shadow);
+
+  --break-xs: #{$break-xs};
+  --break-sm: #{$break-sm};
+  --break-md: #{$break-md};
+  --break-lg: #{$break-lg};
+  --break-xl: #{$break-xl};
+  --break-xxl: #{$break-xxl};
+
+  --spacing-none: 0;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 2.5rem;
+
+  --padding-xs: var(--spacing-xs);
+  --padding-sm: var(--spacing-sm);
+  --padding-md: var(--spacing-md);
+  --padding-lg: var(--spacing-lg);
+  --padding-xl: var(--spacing-xl);
+
+  --margin-xs: var(--spacing-xs);
+  --margin-sm: var(--spacing-sm);
+  --margin-md: var(--spacing-md);
+  --margin-lg: var(--spacing-lg);
+  --margin-xl: var(--spacing-xl);
+
+  --gap-xs: var(--spacing-xs);
+  --gap-sm: var(--spacing-sm);
+  --gap-md: var(--spacing-md);
+  --gap-lg: var(--spacing-lg);
+  --gap-xl: var(--spacing-xl);
+
+  --border-radius-none: var(--spacing-none);
+  --border-radius-xs: var(--spacing-xs);
+  --border-radius-sm: var(--spacing-sm);
+  --border-radius-md: var(--spacing-md);
+  --border-radius-lg: var(--spacing-lg);
+  --border-radius-xl: var(--spacing-xxl);
+  --border-radius-rounded: 9000px;
+
+  --line-height-md: 1;
+  --line-height-lg: 1.2;
+  --line-height-xl: calc(1 + 1 / 3);
+  --line-height-xxl: 1.5;
+}
+
+:root[data-theme="dark"] {
+  --color-divider: #f5f5f5;
+  --color-background: #222021;
+  --color-surface: #1e0c06;
+
+  --color-text: #f5f5f5;
+  --color-text-alter: #32353c;
+  --color-text-placeholder: #d9d9d9;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1;
+}
+
+body {
+  font-family: "Inter";
+  background-color: var(--color-background);
+  color: var(--color-text);
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "KyivTypeSans";
+  font-weight: 500;
 }

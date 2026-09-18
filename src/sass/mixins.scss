@@ -1,0 +1,25 @@
+@use "./constants.scss" as *;
+
+@mixin media-mobile {
+  @media (max-width: calc($break-sm - 1px)) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (min-width: $break-sm) and (max-width: calc($break-lg - 1px)) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (min-width: $break-lg) {
+    @content;
+  }
+}
+
+@mixin hover {
+  @media (pointer: fine) and (hover: hover) {
+    @content;
+  }
+}

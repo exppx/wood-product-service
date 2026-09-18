@@ -1,12 +1,7 @@
-import { useTranslation } from "react-i18next";
+import ReactRouterProvider from "./providers/ReactRouterProvider";
 
 function App() {
-  const { t } = useTranslation();
-  return (
-    <div>
-      <h1>{t("App.title")}</h1>
-    </div>
-  );
+  return <ReactRouterProvider />;
 }
 
 export default App;

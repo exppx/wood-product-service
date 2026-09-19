@@ -1,0 +1,11 @@
+@use "@/sass/mixins.scss" as *;
+
+.locale {
+  text-transform: uppercase;
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+
+  @include media-desktop {
+    font-size: var(--font-size-sm);
+  }
+}

@@ -1,0 +1,64 @@
+@use "@/sass/mixins.scss" as *;
+
+.side-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-menu__burger-button,
+.side-menu__close-button {
+  @include media-desktop {
+    display: none;
+  }
+}
+
+.side-menu__panel {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  padding: var(--padding-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-surface);
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+
+  @include media-desktop {
+    padding: 0;
+    position: static;
+    background-color: transparent;
+    transform: none;
+    transition: none;
+  }
+}
+
+.side-menu__panel_active {
+  transform: translateX(0);
+
+  @include media-desktop {
+    transform: none;
+  }
+}
+
+.side-menu__tools {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xxxl);
+
+  @include media-desktop {
+    flex-direction: row;
+  }
+}
+
+.side-menu__options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xl);
+
+  @include media-desktop {
+    gap: var(--gap-xs);
+  }
+}

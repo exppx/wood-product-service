@@ -1,0 +1,67 @@
+@use "@/sass/mixins.scss" as *;
+
+.navigation {
+  @include media-desktop {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navigation__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--font-size-xl);
+
+  @include media-desktop {
+    flex-direction: row;
+    gap: var(--gap-xxxl);
+    font-size: var(--font-size-md);
+  }
+}
+
+.navigation__link-container {
+  padding: var(--padding-md);
+  width: 100%;
+  text-align: center;
+
+  &:not(:last-child) {
+    border-bottom: 2px solid var(--color-divider);
+
+    @include media-desktop {
+      border: none;
+    }
+  }
+
+  @include media-desktop {
+    width: auto;
+    padding: 0;
+  }
+}
+
+.navigation__link {
+  color: var(--color-text);
+  transition: var(--transition-default);
+
+  @include hover {
+    &:hover {
+      color: var(--color-primary-1);
+    }
+  }
+}
+
+:root[data-theme="dark"] .navigation__link {
+  @include hover {
+    &:hover {
+      color: var(--color-primary-3);
+    }
+  }
+}
+
+.navigation__link_active {
+  color: var(--color-primary-1);
+}
+
+:root[data-theme="dark"] .navigation__link_active {
+  color: var(--color-primary-3);
+}

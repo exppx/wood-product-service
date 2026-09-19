@@ -1,0 +1,26 @@
+@use "@/sass/mixins.scss" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: var(--padding-md);
+  border-radius: 0 0 var(--border-radius-xl) var(--border-radius-xl);
+  transition: var(--transition-default);
+
+  @include media-desktop {
+    border-radius: 0 0 var(--border-radius-xxl) var(--border-radius-xxl);
+    padding: var(--padding-md);
+  }
+}
+
+.header_filled {
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-main);
+}
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,5 +1,23 @@
 {
-  "App": {
-    "title": "App Title"
+  "Logo": {
+    "label": "Go to homepage"
+  },
+  "Navigation": {
+    "gallery": "Gallery",
+    "prices": "Prices of services",
+    "about": "About us",
+    "contacts": "Contacts"
+  },
+  "SideMenu": {
+    "burgerButtonLabel": "Open side menu",
+    "closeButtonLabel": "Close side menu"
+  },
+  "ToggleLocaleButton": {
+    "label": "Toggle locale to {{ locale }}"
+  },
+  "ToggleThemeButton": {
+    "label": "Toggle theme to {{ theme }}",
+    "dark": "dark",
+    "light": "light"
   }
 }

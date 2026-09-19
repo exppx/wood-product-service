@@ -3,10 +3,14 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
 import en from "./locales/en.json";
+import ru from "./locales/ru.json";
 
 export const resources = {
   en: {
     translation: en,
+  },
+  ru: {
+    translation: ru,
   },
 } as const;
 
@@ -18,7 +22,7 @@ void i18n
 
     fallbackLng: "en",
 
-    supportedLngs: ["en"],
+    supportedLngs: ["en", "ru"],
 
     interpolation: {
       escapeValue: false,

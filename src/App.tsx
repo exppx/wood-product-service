@@ -1,4 +1,4 @@
-import ReactRouterProvider from "./providers/ReactRouterProvider";
+import ReactRouterProvider from "@/providers/ReactRouterProvider";
 
 function App() {
   return <ReactRouterProvider />;

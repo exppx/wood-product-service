@@ -1,0 +1,23 @@
+{
+  "Logo": {
+    "label": "На главную страницу"
+  },
+  "Navigation": {
+    "gallery": "Галерея",
+    "prices": "Цены на услуги",
+    "about": "О нас",
+    "contacts": "Контакты"
+  },
+  "SideMenu": {
+    "burgerButtonLabel": "Открыть боковое меню",
+    "closeButtonLabel": "Закрыть боковое меню"
+  },
+  "ToggleLocaleButton": {
+    "label": "Переключить язык на {{ locale }}"
+  },
+  "ToggleThemeButton": {
+    "label": "Переключить тему на {{ theme }}",
+    "dark": "темную",
+    "light": "светлую"
+  }
+}

@@ -1,0 +1,43 @@
+@use "@/sass/mixins.scss" as *;
+
+.materials__title {
+  margin-bottom: var(--margin-xxxl);
+
+  @include media-tablet {
+    padding: 0 calc(var(--padding-xxxl) * 1.5);
+  }
+
+  @include media-desktop {
+    padding: 0 calc(var(--padding-xxxl) * 5);
+    margin-bottom: calc(var(--margin-xxxl) * 2);
+  }
+}
+
+.materials__list-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: var(--padding-md) 0;
+
+  @include custom-scrollbar(horizontal);
+}
+
+.materials__list {
+  display: flex;
+  flex-wrap: nowrap;
+  column-gap: var(--gap-xl);
+  padding: 0 var(--padding-lg);
+
+  @include media-tablet {
+    column-gap: calc(var(--gap-xxxl) * 1.5);
+    padding: 0 var(--padding-xxxl);
+  }
+
+  @include media-desktop {
+    column-gap: calc(var(--gap-xxxl) * 3.5);
+    padding: 0 calc(var(--padding-xxxl) * 2);
+  }
+}
+
+.materials__item {
+  flex: 0 0 auto;
+}

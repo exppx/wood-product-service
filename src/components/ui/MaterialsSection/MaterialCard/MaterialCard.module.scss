@@ -1,0 +1,100 @@
+@use "@/sass/mixins.scss" as *;
+
+.material {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-md);
+
+  @include media-desktop {
+    gap: var(--gap-xl);
+  }
+}
+
+.material__image {
+  width: 90px;
+  height: 90px;
+  border-radius: var(--border-radius-md);
+
+  @include media-tablet {
+    width: 120px;
+    height: 120px;
+    border-radius: var(--border-radius-lg);
+  }
+
+  @include media-desktop {
+    width: 205px;
+    height: 205px;
+    border-radius: var(--border-radius-xxxl);
+  }
+}
+
+.material__name {
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+
+  @include media-tablet {
+    font-size: var(--font-size-xl);
+  }
+
+  @include media-desktop {
+    font-size: var(--font-size-xxxl);
+  }
+}
+
+.material__properties {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+
+  @include media-desktop {
+    gap: var(--gap-md);
+  }
+}
+
+.material__property {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+
+  @include media-desktop {
+    gap: var(--gap-md);
+  }
+}
+
+.material__property-icon {
+  width: 12px;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: var(--color-secondary-4);
+
+  @include media-tablet {
+    width: 14px;
+    height: 14px;
+  }
+
+  @include media-desktop {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.material__property-name {
+  font-size: var(--font-size-md);
+
+  @include media-tablet {
+    font-size: var(--font-size-lg);
+  }
+
+  @include media-desktop {
+    font-size: var(--font-size-xxl);
+  }
+}
+
+:root[data-theme="dark"] {
+  .material__property-icon {
+    fill: var(--color-secondary-7);
+  }
+}

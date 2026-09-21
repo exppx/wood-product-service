@@ -21,6 +21,15 @@
   "Logo": {
     "label": "На главную страницу"
   },
+  "MaterialCard": {
+    "property": {
+      "positive": "Положительное свойство",
+      "negative": "Отрицательное свойство"
+    }
+  },
+  "MaterialsSection": {
+    "title": "Древесина, с которой мы работаем"
+  },
   "Navigation": {
     "gallery": "Галерея",
     "prices": "Цены на услуги",

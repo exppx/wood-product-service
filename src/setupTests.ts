@@ -9,6 +9,7 @@ vi.mock("react-i18next", () => ({
     },
     i18n: {
       changeLanguage: () => Promise.resolve(),
+      language: "en",
     },
   }),
   initReactI18next: {

@@ -21,6 +21,15 @@
   "Logo": {
     "label": "Go to homepage"
   },
+  "MaterialCard": {
+    "property": {
+      "positive": "Positive property",
+      "negative": "Negative property"
+    }
+  },
+  "MaterialsSection": {
+    "title": "The wood we work with"
+  },
   "Navigation": {
     "gallery": "Gallery",
     "prices": "Prices of services",

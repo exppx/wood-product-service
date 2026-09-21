@@ -4,6 +4,11 @@
   position: relative;
   padding: 0;
   overflow-x: hidden;
+  margin-bottom: calc(var(--margin-xxxl) * 1.5);
+
+  @include media-desktop {
+    margin-bottom: calc(var(--margin-xxxl) * 3);
+  }
 }
 
 .hero-image {

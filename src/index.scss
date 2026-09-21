@@ -1,4 +1,5 @@
 @use "./sass/constants.scss" as *;
+@use "./sass/mixins.scss" as *;
 @import url("ress/ress.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
@@ -61,6 +62,9 @@
   --color-tertiary-6: #7d746d;
   --color-tertiary-7: #d2c8c6;
   --color-tertiary-8: #f1ded0;
+
+  --color-white: #f0f0f0;
+  --color-black: #0a0a0a;
 
   --color-divider: #0a0a0a;
   --color-background: #f0f0f0;
@@ -150,6 +154,12 @@
   --transition-default: all 0.2s ease;
 
   --sqrt-2: 1.41;
+
+  --header-height: 68px;
+
+  @include media-desktop {
+    --header-height: 82px;
+  }
 }
 
 :root[data-theme="dark"] {
@@ -182,6 +192,16 @@ h5,
 h6 {
   font-family: "KyivTypeSans";
   font-weight: 500;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  font-size: 30px;
+
+  @include media-desktop {
+    font-size: 90px;
+  }
 }
 
 a {

@@ -1,0 +1,33 @@
+@use "@/sass/mixins.scss" as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: var(--padding-xs) var(--padding-lg);
+  border-radius: var(--border-radius-rounded);
+  background-color: var(--color-primary-2);
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+  transition: var(--transition-default);
+
+  &:disabled {
+    opacity: 0.5;
+  }
+
+  @include hover {
+    &:hover:not(:disabled) {
+      background-color: var(--color-primary-3);
+    }
+
+    &:active:not(:disabled) {
+      background-color: var(--color-primary-1);
+    }
+  }
+
+  @include media-desktop {
+    padding: var(--padding-md) calc(var(--padding-xxxl) * 1.5);
+    font-size: var(--font-size-xl);
+  }
+}

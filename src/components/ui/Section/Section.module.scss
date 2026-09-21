@@ -1,0 +1,9 @@
+@use "@/sass/mixins" as *;
+
+.section {
+  padding: var(--padding-xxxl) 0;
+
+  @include media-desktop {
+    padding: calc(var(--padding-xxxl) * 3) 0;
+  }
+}

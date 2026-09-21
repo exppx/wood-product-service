@@ -32,7 +32,7 @@ function Header() {
       ])}
     >
       <Container width="xl" className={styles["header__container"]}>
-        <Logo />
+        <Logo color={isScrolled ? "adaptive" : "light"} />
         <SideMenu />
       </Container>
     </header>

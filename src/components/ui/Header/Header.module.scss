@@ -1,11 +1,14 @@
 @use "@/sass/mixins.scss" as *;
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   padding: var(--padding-md);
   border-radius: 0 0 var(--border-radius-xl) var(--border-radius-xl);
   transition: var(--transition-default);
+  z-index: 100;
 
   @include media-desktop {
     border-radius: 0 0 var(--border-radius-xxl) var(--border-radius-xxl);
@@ -23,4 +26,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  @include media-desktop {
+    padding: 0 calc(var(--padding-xxxl) * 2);
+  }
 }

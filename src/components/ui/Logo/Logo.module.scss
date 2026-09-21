@@ -1,14 +1,21 @@
-@use "../../../sass/mixins.scss" as *;
+@use "@/sass/mixins.scss" as *;
 
 .logo-container {
   width: 85px;
   height: 36px;
-  fill: var(--color-text);
 
   @include media-desktop {
     width: 118px;
     height: 50px;
   }
+}
+
+.logo-container_light {
+  fill: var(--color-white);
+}
+
+.logo-container_adaptive {
+  fill: var(--color-text);
 }
 
 .logo-link {

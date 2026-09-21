@@ -1,0 +1,32 @@
+@use "@/sass/mixins.scss" as *;
+
+.section-filled {
+  background-color: var(--color-surface);
+  padding: var(--padding-xxxl);
+  box-shadow: var(--shadow-main);
+  border-radius: var(--border-radius-md);
+
+  @include media-desktop {
+    border-radius: var(--border-radius-xxxl);
+  }
+}
+
+.section-filled_left {
+  margin-right: var(--margin-xxxl);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  @include media-desktop {
+    margin-right: calc(var(--margin-xxxl) * 4);
+  }
+}
+
+.section-filled_right {
+  margin-left: var(--margin-xxxl);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+  @include media-desktop {
+    margin-left: calc(var(--margin-xxxl) * 4);
+  }
+}

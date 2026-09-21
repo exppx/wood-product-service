@@ -1,4 +1,23 @@
 {
+  "Hero": {
+    "imageAlt": "Sawn logs lying on top of each other",
+    "image1Alt": "Woman sitting on the floor and assembling a wooden chair",
+    "image2Alt": "A view from the second floor of a spiral wooden stair",
+    "image3Alt": "A stone vase with 2 dried flowers standing on the wooden table with two chairs nearby",
+    "title": "Solid wood products",
+    "price": {
+      "left": "Oak, birch, ash from ",
+      "price": "$80",
+      "right": " per m3"
+    },
+    "cta": "Order"
+  },
+  "HomePage": {
+    "metadata": {
+      "title": "Bio CWT",
+      "description": "Solid wood products at attractive prices"
+    }
+  },
   "Logo": {
     "label": "Go to homepage"
   },

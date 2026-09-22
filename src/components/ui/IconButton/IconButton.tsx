@@ -9,7 +9,11 @@ interface IconButtonProps extends ComponentProps<"button"> {
 
 function IconButton({ Icon, className, ...rest }: IconButtonProps) {
   return (
-    <button {...rest} className={clsx([className, styles["icon-button"]])}>
+    <button
+      type="button"
+      {...rest}
+      className={clsx([className, styles["icon-button"]])}
+    >
       <div className={styles["icon-button__icon-container"]}>{Icon}</div>
     </button>
   );

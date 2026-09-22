@@ -1,4 +1,10 @@
 {
+  "Carousel": {
+    "label": "Image carousel demonstrating our works",
+    "buttonLeftLabel": "Previous image",
+    "buttonRightLabel": "Next image",
+    "progress": "Image {{ current }} of {{ total }}"
+  },
   "Hero": {
     "imageAlt": "Sawn logs lying on top of each other",
     "image1Alt": "Woman sitting on the floor and assembling a wooden chair",
@@ -35,6 +41,9 @@
     "prices": "Prices of services",
     "about": "About us",
     "contacts": "Contacts"
+  },
+  "OurWorksSection": {
+    "title": "Our works"
   },
   "SideMenu": {
     "burgerButtonLabel": "Open side menu",

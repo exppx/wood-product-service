@@ -3,11 +3,11 @@ import Logo from "./Logo";
 
 describe("Logo", () => {
   it("renders without breaking", () => {
-    render(<Logo />);
+    render(<Logo color="light" />);
   });
 
   it("renders link to the home page", () => {
-    render(<Logo />);
+    render(<Logo color="light" />);
 
     const link = screen.getByRole("link");
 

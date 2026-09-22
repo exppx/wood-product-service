@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import usePageMetadata from "@/hooks/usePageMetadata/usePageMetadata";
 import Hero from "@/components/ui/Hero/Hero";
 import MaterialsSection from "@/components/ui/MaterialsSection/MaterialsSection";
+import OurWorksSection from "@/components/ui/OurWorksSection/OurWorksSection";
 
 import styles from "./HomePage.module.scss";
 
@@ -16,6 +17,7 @@ function HomePage() {
     <main className={styles["home-page"]}>
       <Hero />
       <MaterialsSection />
+      <OurWorksSection />
     </main>
   );
 }

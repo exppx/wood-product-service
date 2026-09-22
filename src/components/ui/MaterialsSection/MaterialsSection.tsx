@@ -12,11 +12,7 @@ function MaterialsSection() {
 
   return (
     <Container width="xl">
-      <Section>
-        <h2 className={styles["materials__title"]}>
-          {t("MaterialsSection.title")}
-        </h2>
-
+      <Section title={t("MaterialsSection.title")}>
         <div className={styles["materials__list-container"]}>
           <ul className={styles["materials__list"]}>
             {MATERIALS[i18n.language as Locale].map((material) => (

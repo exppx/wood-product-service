@@ -3,11 +3,32 @@ import clsx from "clsx";
 
 import styles from "./Section.module.scss";
 
-type SectionProps = PropsWithChildren & ComponentProps<"section">;
+interface SectionProps extends PropsWithChildren, ComponentProps<"section"> {
+  title?: string;
+  titlePosition?: "left" | "right";
+}
 
-function Section({ className, children, ...rest }: SectionProps) {
+function Section({
+  title,
+  titlePosition = "left",
+  className,
+  children,
+  ...rest
+}: SectionProps) {
   return (
     <section {...rest} className={clsx([className, styles["section"]])}>
+      {title && (
+        <h2
+          className={clsx([
+            styles["section__title"],
+            {
+              [styles["section__title_right"]]: titlePosition === "right",
+            },
+          ])}
+        >
+          {title}
+        </h2>
+      )}
       {children}
     </section>
   );

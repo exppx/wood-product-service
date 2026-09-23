@@ -1,4 +1,14 @@
 {
+  "AdvantagesSection": {
+    "title": "Advantages working with us",
+    "cta": "Receive a consultation",
+    "imageAlt": "View from the back of the wooden stairs",
+    "text": {
+      "1": "In-house carpentry production",
+      "2": "We only treat wood with environmentally friendly and safe products",
+      "3": "Prices from the manufacturer, no extra charges"
+    }
+  },
   "Carousel": {
     "label": "Image carousel demonstrating our works",
     "buttonLeftLabel": "Previous image",

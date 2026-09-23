@@ -1,4 +1,16 @@
 {
+  "AboutSection": {
+    "title": "About us",
+    "text": {
+      "company": "BIO CWT",
+      "description": " - we manufacture solid wood products according to individual drawings. We make chairs, armchairs, wardrobes, beds and much more in our own workshop, equipped with all the necessary industrial equipment."
+    },
+    "images": {
+      "image1Alt": "Portrait of the young motivated carpenter standing by woodworking machine",
+      "image2Alt": "Person taking measures of the wood plank",
+      "image3Alt": "Cropped man wearing blue overall drawing furniture circuit"
+    }
+  },
   "AdvantagesSection": {
     "title": "Advantages working with us",
     "cta": "Receive a consultation",

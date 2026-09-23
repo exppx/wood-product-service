@@ -4,6 +4,7 @@ import Hero from "@/components/ui/Hero/Hero";
 import MaterialsSection from "@/components/ui/MaterialsSection/MaterialsSection";
 import OurWorksSection from "@/components/ui/OurWorksSection/OurWorksSection";
 import AdvantagesSection from "@/components/ui/AdvantagesSection/AdvantagesSection";
+import AboutSection from "@/components/ui/AboutSection/AboutSection";
 
 import styles from "./HomePage.module.scss";
 
@@ -20,6 +21,7 @@ function HomePage() {
       <MaterialsSection />
       <OurWorksSection />
       <AdvantagesSection />
+      <AboutSection />
     </main>
   );
 }

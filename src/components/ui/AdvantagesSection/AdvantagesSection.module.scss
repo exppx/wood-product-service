@@ -1,0 +1,76 @@
+@use "@/sass/mixins.scss" as *;
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advantages__main {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: var(--gap-xxxl);
+  padding: 0;
+
+  @include media-tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-xxxl);
+    padding: 0 var(--padding-md);
+  }
+
+  @include media-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: calc(var(--gap-xxxl) * 2);
+    padding: 0 var(--padding-md);
+  }
+}
+
+.advantages__image {
+  max-width: 100%;
+  border-radius: var(--border-radius-md);
+
+  @include media-tablet {
+    border-radius: var(--border-radius-lg);
+  }
+
+  @include media-desktop {
+    border-radius: var(--border-radius-xxl);
+  }
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+
+  @include media-desktop {
+    gap: var(--gap-xxxl);
+  }
+}
+
+.advantages__item {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-xl);
+
+  @include media-tablet {
+    font-size: var(--font-size-lg);
+  }
+
+  @include media-desktop {
+    font-size: var(--font-size-xxl);
+  }
+}
+
+.advantages__button-container {
+  margin-top: var(--margin-xxxl);
+
+  @include media-tablet {
+    margin-top: var(--margin-xxxl);
+  }
+
+  @include media-desktop {
+    margin-top: calc(var(--margin-xxxl) * 2);
+  }
+}

@@ -3,6 +3,7 @@ import usePageMetadata from "@/hooks/usePageMetadata/usePageMetadata";
 import Hero from "@/components/ui/Hero/Hero";
 import MaterialsSection from "@/components/ui/MaterialsSection/MaterialsSection";
 import OurWorksSection from "@/components/ui/OurWorksSection/OurWorksSection";
+import AdvantagesSection from "@/components/ui/AdvantagesSection/AdvantagesSection";
 
 import styles from "./HomePage.module.scss";
 
@@ -18,6 +19,7 @@ function HomePage() {
       <Hero />
       <MaterialsSection />
       <OurWorksSection />
+      <AdvantagesSection />
     </main>
   );
 }

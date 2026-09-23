@@ -5,11 +5,12 @@
   align-items: center;
   justify-content: center;
   width: fit-content;
-  padding: var(--padding-xs) var(--padding-lg);
+  padding: var(--padding-sm) var(--padding-lg);
   border-radius: var(--border-radius-rounded);
   background-color: var(--color-primary-2);
   color: var(--color-text);
   font-size: var(--font-size-md);
+  font-weight: bold;
   transition: var(--transition-default);
 
   &:disabled {

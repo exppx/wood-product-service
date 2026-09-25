@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
+import { QUESTIONS_FORM_ID } from "@/components/ui/QuestionsSection/QuestionsForm/QuestionsForm.config";
 import {
   HERO_IMAGE_1_URL,
   HERO_IMAGE_2_URL,
@@ -38,7 +39,7 @@ function Hero() {
             </p>
             <LinkButton
               isHash
-              to={"#questions-form"}
+              to={`#${QUESTIONS_FORM_ID}`}
               className={styles["hero__button"]}
             >
               {t("Hero.cta")}

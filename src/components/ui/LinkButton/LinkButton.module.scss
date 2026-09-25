@@ -13,6 +13,11 @@
   font-weight: bold;
   transition: var(--transition-default);
 
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-shadow-form-control);
+  }
+
   &:disabled {
     opacity: 0.5;
   }
@@ -25,6 +30,11 @@
     &:active:not(:disabled) {
       background-color: var(--color-primary-1);
     }
+  }
+
+  @include media-tablet {
+    padding: var(--padding-sm) var(--padding-xxl);
+    font-size: var(--font-size-lg);
   }
 
   @include media-desktop {

@@ -63,6 +63,24 @@
   --color-tertiary-7: #d2c8c6;
   --color-tertiary-8: #f1ded0;
 
+  --color-error-1: #260000;
+  --color-error-2: #430000;
+  --color-error-3: #6a0000;
+  --color-error-4: #ac0000;
+  --color-error-5: #ff0000;
+  --color-error-6: #ff3535;
+  --color-error-7: #ff6b6b;
+  --color-error-8: #ff9f9f;
+
+  --color-success-1: #002600;
+  --color-success-2: #004300;
+  --color-success-3: #006a00;
+  --color-success-4: #00ac00;
+  --color-success-5: #00ff00;
+  --color-success-6: #35ff35;
+  --color-success-7: #6bff6b;
+  --color-success-8: #9fff9f;
+
   --color-white: #f0f0f0;
   --color-black: #0a0a0a;
 
@@ -86,6 +104,28 @@
   );
 
   --color-shadow: color-mix(in oklab, var(--color-text) 17%, transparent 83%);
+  --color-shadow-form-control: color-mix(
+    in oklab,
+    var(--color-primary-2) 50%,
+    transparent 50%
+  );
+  --color-shadow-form-control-error: color-mix(
+    in oklab,
+    var(--color-error-6) 50%,
+    transparent 50%
+  );
+
+  --color-background-form-control-error: color-mix(
+    in oklab,
+    var(--color-error-5) 10%,
+    transparent 90%
+  );
+  --color-border-form-control-error: var(--color-error-5);
+  --color-background-form-control-disabled: var(--color-tertiary-5);
+  --color-text-form-control-disabled: var(--color-tertiary-3);
+  --color-placeholder-form-control-disabled: var(--color-tertiary-4);
+  --color-border-form-control-disabled: var(--color-tertiary-2);
+
   --shadow-main: 0 4px 52px 0 var(--color-shadow);
 
   --break-xs: #{$break-xs};
@@ -170,6 +210,11 @@
   --color-text: #f5f5f5;
   --color-text-alter: #32353c;
   --color-text-placeholder: #d9d9d9;
+
+  --color-background-form-control-disabled: var(--color-tertiary-7);
+  --color-text-form-control-disabled: var(--color-tertiary-4);
+  --color-placeholder-form-control-disabled: var(--color-tertiary-6);
+  --color-border-form-control-disabled: var(--color-tertiary-5);
 }
 
 html {

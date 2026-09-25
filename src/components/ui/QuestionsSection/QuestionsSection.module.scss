@@ -1,0 +1,70 @@
+@use "@/sass/mixins.scss" as *;
+
+.questions-container {
+  overflow: hidden;
+}
+
+.questions-section {
+  & > h2 {
+    margin-bottom: var(--margin-md);
+
+    @include media-tablet {
+      padding: 0 var(--padding-xxxl);
+    }
+
+    @include media-desktop {
+      padding: 0 var(--padding-xxxl);
+      margin-bottom: var(--margin-xxxl);
+    }
+  }
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xxxl);
+  position: relative;
+
+  @include media-desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 var(--padding-xxxl);
+  }
+}
+
+.questions__text {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-xl);
+
+  @include media-tablet {
+    padding: 0 var(--padding-xxxl);
+    font-size: var(--font-size-lg);
+  }
+
+  @include media-desktop {
+    text-align: right;
+    font-size: var(--font-size-xxl);
+    order: 1;
+  }
+}
+
+.questions-form__form-container {
+  width: 100%;
+  max-width: var(--break-xs);
+  margin: 0 auto;
+
+  @include media-desktop {
+    max-width: none;
+    margin: 0;
+    order: 0;
+  }
+}
+
+.questions__image {
+  width: 440px;
+  position: absolute;
+  right: 80px;
+  bottom: -200px;
+  transform: rotate(-27deg);
+  z-index: -1;
+}

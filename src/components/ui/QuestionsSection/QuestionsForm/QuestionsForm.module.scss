@@ -1,0 +1,19 @@
+@use "@/sass/mixins.scss" as *;
+
+.questions-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+}
+
+.questions-form__textarea {
+  min-height: 150px;
+  max-height: 350px;
+  resize: vertical;
+  field-sizing: content;
+
+  @include media-desktop {
+    min-height: 250px;
+    max-height: 450px;
+  }
+}

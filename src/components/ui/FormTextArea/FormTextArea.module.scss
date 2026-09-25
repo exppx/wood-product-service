@@ -1,0 +1,11 @@
+@use "@/sass/mixins.scss" as *;
+
+.form-textarea {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.form-textarea__label {
+  @include visually-hidden;
+}

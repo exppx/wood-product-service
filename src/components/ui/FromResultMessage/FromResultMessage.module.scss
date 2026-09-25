@@ -1,0 +1,57 @@
+@use "@/sass/mixins.scss" as *;
+
+.form-result {
+  display: grid;
+  grid-template-rows: 1fr;
+  animation: 0.2s ease spread-vertical;
+}
+
+.form-result__text {
+  overflow: hidden;
+  min-height: 0;
+  font-size: var(--font-size-md);
+  padding: var(--padding-sm) var(--padding-md);
+  border-radius: var(--border-radius-sm);
+  border: 2px solid;
+
+  @include media-tablet {
+    font-size: var(--font-size-lg);
+  }
+
+  @include media-desktop {
+    font-size: var(--font-size-xl);
+    padding: var(--padding-md) var(--padding-md);
+  }
+}
+
+.form-result__text_success {
+  border-color: color-mix(
+    in oklab,
+    var(--color-success-2) 40%,
+    transparent 60%
+  );
+  background-color: color-mix(
+    in oklab,
+    var(--color-success-5) 40%,
+    transparent 60%
+  );
+}
+
+.form-result__text_fail {
+  border-color: color-mix(in oklab, var(--color-error-2) 40%, transparent 60%);
+  background-color: color-mix(
+    in oklab,
+    var(--color-error-5) 40%,
+    transparent 60%
+  );
+}
+
+@keyframes spread-vertical {
+  from {
+    grid-template-rows: 0fr;
+  }
+
+  to {
+    grid-template-rows: 1fr;
+  }
+}

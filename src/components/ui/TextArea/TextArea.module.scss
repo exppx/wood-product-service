@@ -1,0 +1,63 @@
+@use "@/sass/mixins.scss" as *;
+
+.textarea {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid var(--color-primary-2);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-xl);
+  color: inherit;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  scrollbar-width: none;
+  corner-bottom-right-shape: scoop;
+
+  &::placeholder {
+    color: var(--color-tertiary-4);
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--color-shadow-form-control);
+  }
+
+  &:disabled {
+    border-color: var(--color-border-form-control-disabled);
+    color: var(--color-text-form-control-disabled);
+    background-color: var(--color-background-form-control-disabled);
+    cursor: not-allowed;
+  }
+
+  @include media-tablet {
+    font-size: var(--font-size-lg);
+    border-radius: var(--border-radius-lg);
+  }
+
+  @include media-desktop {
+    font-size: var(--font-size-lg);
+    border-radius: var(--border-radius-lg);
+  }
+}
+
+.textarea_invalid {
+  border-color: var(--color-border-form-control-error);
+  background-color: var(--color-background-form-control-error);
+
+  &:focus-visible {
+    box-shadow: 0 0 0 3px var(--color-shadow-form-control-error);
+  }
+}
+
+:root[data-theme="dark"] {
+  .textarea {
+    &::placeholder {
+      color: var(--color-tertiary-5);
+    }
+  }
+
+  .textarea_invalid {
+    border-color: var(--color-error-4);
+  }
+}

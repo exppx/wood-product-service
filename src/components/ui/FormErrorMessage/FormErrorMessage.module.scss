@@ -1,0 +1,40 @@
+@use "@/sass/mixins.scss" as *;
+
+.form-error-message {
+  display: grid;
+  grid-template-rows: 1fr;
+  animation: 0.2s ease spread-vertical;
+
+  color: var(--color-error-5);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-xl);
+
+  @include media-tablet {
+    font-size: var(--font-size-lg);
+  }
+
+  @include media-desktop {
+    font-size: var(--font-size-lg);
+  }
+}
+
+.form-error-message__text {
+  overflow: hidden;
+  min-height: 0;
+}
+
+:root[data-theme="dark"] {
+  .form-error-message {
+    color: var(--color-error-6);
+  }
+}
+
+@keyframes spread-vertical {
+  from {
+    grid-template-rows: 0fr;
+  }
+
+  to {
+    grid-template-rows: 1fr;
+  }
+}

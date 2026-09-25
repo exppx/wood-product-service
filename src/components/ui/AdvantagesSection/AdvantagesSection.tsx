@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { QUESTIONS_FORM_ID } from "@/components/ui/QuestionsSection/QuestionsForm/QuestionsForm.config";
 import Container from "@/components/ui/Container/Container";
 import Section from "@/components/ui/Section/Section";
 import LinkButton from "@/components/ui/LinkButton/LinkButton";
@@ -34,7 +35,7 @@ function AdvantagesSection() {
           </Container>
 
           <div className={styles["advantages__button-container"]}>
-            <LinkButton to="#questions-form" isHash>
+            <LinkButton to={`#${QUESTIONS_FORM_ID}`} isHash>
               {t("AdvantagesSection.cta")}
             </LinkButton>
           </div>

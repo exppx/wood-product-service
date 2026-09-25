@@ -1,0 +1,16 @@
+@use "@/sass/mixins.scss" as *;
+
+.submit-button__spinner-container {
+  width: calc(var(--font-size-md) * var(--line-height-lg));
+  height: calc(var(--font-size-md) * var(--line-height-lg));
+
+  @include media-tablet {
+    width: calc(var(--font-size-lg) * var(--line-height-lg));
+    height: calc(var(--font-size-lg) * var(--line-height-lg));
+  }
+
+  @include media-desktop {
+    width: calc(var(--font-size-xl) * var(--line-height-lg));
+    height: calc(var(--font-size-xl) * var(--line-height-lg));
+  }
+}

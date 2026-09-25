@@ -67,6 +67,40 @@
   "OurWorksSection": {
     "title": "Our works"
   },
+  "QuestionsForm": {
+    "submit": "Send",
+    "successMessage": "Your question was successfully sent!",
+    "failMessage": "Could not send your question. Please, try again later",
+    "nameInput": {
+      "label": "Name",
+      "placeholder": "Your name",
+      "errors": {
+        "required": "Name is required"
+      }
+    },
+    "telInput": {
+      "label": "Telephone number",
+      "placeholder": "Your telephone number",
+      "errors": {
+        "required": "Telephone number is required",
+        "invalid": "Telephone number should be in following format: +99999999999"
+      }
+    },
+    "questionInput": {
+      "label": "Question",
+      "placeholder": "Your question",
+      "errors": {
+        "required": "Question is required",
+        "short": "Question must be at least {{ length }} symbols long",
+        "long": "Question must not be longer than {{ length }} symbols"
+      }
+    }
+  },
+  "QuestionsSection": {
+    "title": "Any questions?",
+    "text": "Write to us and we will be sure to answer all your questions and give you a comprehensive consultation.",
+    "imageAlt": "Cut oak log"
+  },
   "SideMenu": {
     "burgerButtonLabel": "Open side menu",
     "closeButtonLabel": "Close side menu"

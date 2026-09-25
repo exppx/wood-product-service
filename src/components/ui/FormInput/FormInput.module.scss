@@ -1,0 +1,11 @@
+@use "@/sass/mixins.scss" as *;
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.form-input__label {
+  @include visually-hidden;
+}

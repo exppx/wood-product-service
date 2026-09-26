@@ -1,0 +1,33 @@
+@use "@/sass/mixins.scss" as *;
+
+.contact {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+
+  @include media-desktop {
+    gap: var(--gap-md);
+  }
+}
+
+.contact__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--spacing-lg);
+  height: var(--spacing-lg);
+  flex-shrink: 0;
+}
+
+.contact__text {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-lg);
+
+  @include media-tablet {
+    font-size: var(--font-size-lg);
+  }
+
+  @include media-desktop {
+    font-size: var(--font-size-md);
+  }
+}

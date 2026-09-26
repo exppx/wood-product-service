@@ -27,6 +27,13 @@
     "buttonRightLabel": "Next image",
     "progress": "Image {{ current }} of {{ total }}"
   },
+  "Footer": {
+    "privacy": "Privacy policy",
+    "contacts": {
+      "address": "Na Plzeňce 1166/1, Prague 5 - Smíchov, 150 00, Czech Republic",
+      "phone": "+420 000 000 000"
+    }
+  },
   "Hero": {
     "imageAlt": "Sawn logs lying on top of each other",
     "image1Alt": "Woman sitting on the floor and assembling a wooden chair",

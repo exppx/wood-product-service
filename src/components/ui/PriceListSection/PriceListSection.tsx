@@ -6,12 +6,19 @@ import PriceListTable from "./PriceListTable/PriceListTable";
 
 import styles from "./PriceListSection.module.scss";
 
-function PriceListSection() {
+interface PriceListSectionProps {
+  isMainSection?: boolean;
+}
+
+function PriceListSection({ isMainSection }: PriceListSectionProps) {
   const { t } = useTranslation();
 
   return (
     <Container width="xl">
-      <Section title={t("PriceListSection.title")}>
+      <Section
+        title={t("PriceListSection.title")}
+        isMainSection={isMainSection}
+      >
         <div className={styles["price-list-content"]}>
           <PriceListFilters />
           <PriceListTable />

@@ -14,7 +14,7 @@ function PricesPage() {
 
   return (
     <main className={styles["prices-page"]}>
-      <PriceListSection />
+      <PriceListSection isMainSection={true} />
       <QuestionsSection />
     </main>
   );

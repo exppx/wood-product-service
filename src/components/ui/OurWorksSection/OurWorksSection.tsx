@@ -5,12 +5,16 @@ import Container from "@/components/ui/Container/Container";
 import Section from "@/components/ui/Section/Section";
 import Carousel from "@/components/ui/Carousel/Carousel";
 
-function OurWorksSection() {
+interface OurWorksSectionProps {
+  isMainSection?: boolean;
+}
+
+function OurWorksSection({ isMainSection }: OurWorksSectionProps) {
   const { t, i18n } = useTranslation();
 
   return (
     <Container width="xl">
-      <Section title={t("OurWorksSection.title")}>
+      <Section title={t("OurWorksSection.title")} isMainSection={isMainSection}>
         <Carousel images={CAROUSEL_IMAGES[i18n.language as Locale]} />
       </Section>
     </Container>

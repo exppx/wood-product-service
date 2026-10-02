@@ -49,4 +49,18 @@ describe("Section", () => {
 
     expect(title.className).toContain("section__title_right");
   });
+
+  it("renders h1 tag if isMainSection is true", () => {
+    render(
+      <Section
+        titlePosition="right"
+        title="test_title"
+        isMainSection
+      ></Section>,
+    );
+
+    const title = screen.getByRole("heading", { level: 1 });
+
+    expect(title).toBeInTheDocument();
+  });
 });

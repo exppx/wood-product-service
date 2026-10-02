@@ -27,11 +27,36 @@
     "buttonRightLabel": "Следующее изображение",
     "progress": "Изображение {{ current }} из {{ total }}"
   },
+  "ContactsPage": {
+    "metadata": {
+      "title": "Bio CWT | Контакты",
+      "description": "Контактная информация: адресс, номер телефона"
+    }
+  },
+  "ContactsSection": {
+    "title": "Контакты",
+    "contacts": {
+      "phone": {
+        "label": "Номер телефона",
+        "value": "+420 000 000 000"
+      },
+      "address": {
+        "label": "Адрес",
+        "value": "На Пльзеньце, 1166/1, Прага 5 - Смихов, 150 00, Чехия"
+      }
+    }
+  },
   "Footer": {
     "privacy": "Политика конфиденциальности",
     "contacts": {
-      "address": "Na Plzeňce 1166/1, Прага 5 - Smíchov, 150 00, Чехия",
-      "phone": "+420 000 000 000"
+      "phone": {
+        "label": "Номер телефона",
+        "value": "+420 000 000 000"
+      },
+      "address": {
+        "label": "Адрес",
+        "value": "На Пльзеньце, 1166/1, Прага 5 - Смихов, 150 00, Чехия"
+      }
     }
   },
   "Hero": {

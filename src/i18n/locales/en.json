@@ -27,11 +27,36 @@
     "buttonRightLabel": "Next image",
     "progress": "Image {{ current }} of {{ total }}"
   },
+  "ContactsPage": {
+    "metadata": {
+      "title": "Bio CWT | Contacts",
+      "description": "Contact information: address, telephone number"
+    }
+  },
+  "ContactsSection": {
+    "title": "Contacts",
+    "contacts": {
+      "phone": {
+        "label": "Phone number",
+        "value": "+420 000 000 000"
+      },
+      "address": {
+        "label": "Address",
+        "value": "Na Plzeňce 1166/1, Prague 5 - Smíchov, 150 00, Czech Republic"
+      }
+    }
+  },
   "Footer": {
     "privacy": "Privacy policy",
     "contacts": {
-      "address": "Na Plzeňce 1166/1, Prague 5 - Smíchov, 150 00, Czech Republic",
-      "phone": "+420 000 000 000"
+      "phone": {
+        "label": "Phone number",
+        "value": "+420 000 000 000"
+      },
+      "address": {
+        "label": "Address",
+        "value": "Na Plzeňce 1166/1, Prague 5 - Smíchov, 150 00, Czech Republic"
+      }
     }
   },
   "Hero": {

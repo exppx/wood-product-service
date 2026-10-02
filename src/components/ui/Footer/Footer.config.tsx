@@ -7,15 +7,18 @@ import PhoneCallSvg from "@/components/svg/PhoneCallSvg";
 const CONTACTS: {
   Icon: ComponentProps<typeof Contact>["Icon"];
   contact: TranslationKey;
-  nowrap?: ComponentProps<typeof Contact>["nowrap"];
+  label: TranslationKey;
+  nowrap?: boolean;
 }[] = [
   {
     Icon: GeoSvg,
-    contact: "Footer.contacts.address",
+    contact: "Footer.contacts.address.value",
+    label: "Footer.contacts.address.label",
   },
   {
     Icon: PhoneCallSvg,
-    contact: "Footer.contacts.phone",
+    contact: "Footer.contacts.phone.value",
+    label: "Footer.contacts.phone.label",
     nowrap: true,
   },
 ];

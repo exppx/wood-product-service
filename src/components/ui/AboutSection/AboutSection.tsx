@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import clsx from "clsx";
 import Container from "@/components/ui/Container/Container";
 import Section from "@/components/ui/Section/Section";
 import SectionFilled from "@/components/ui/SectionFilled/SectionFilled";
@@ -7,9 +8,12 @@ import image_1 from "@/assets/images/about_1.webp";
 import image_2 from "@/assets/images/about_2.webp";
 import image_3 from "@/assets/images/about_3.webp";
 import styles from "./AboutSection.module.scss";
-import clsx from "clsx";
 
-function AboutSection() {
+interface AboutSectionProps {
+  isMainSection?: boolean;
+}
+
+function AboutSection({ isMainSection }: AboutSectionProps) {
   const { t } = useTranslation();
 
   return (
@@ -21,9 +25,15 @@ function AboutSection() {
         >
           <div className={styles["about"]}>
             <div className={styles["about__info-container"]}>
-              <h2 className={styles["about__title"]}>
-                {t("AboutSection.title")}
-              </h2>
+              {isMainSection ? (
+                <h1 className={styles["about__title"]}>
+                  {t("AboutSection.title")}
+                </h1>
+              ) : (
+                <h2 className={styles["about__title"]}>
+                  {t("AboutSection.title")}
+                </h2>
+              )}
               <p className={styles["about__text"]}>
                 <b>{t("AboutSection.text.company")}</b>
                 {t("AboutSection.text.description")}

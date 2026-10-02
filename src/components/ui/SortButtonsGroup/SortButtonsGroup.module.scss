@@ -1,0 +1,33 @@
+@use "@/sass/mixins.scss" as *;
+
+.sort-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.sort-buttons__title {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-lg);
+
+  @include media-tablet {
+    font-size: var(--font-size-lg);
+  }
+
+  @include media-desktop {
+    font-size: var(--font-size-lg);
+  }
+}
+
+.sort-buttons__buttons {
+  display: flex;
+  gap: var(--gap-md);
+
+  @include media-desktop {
+    gap: var(--gap-lg);
+  }
+}
+
+.sort-buttons__status {
+  @include visually-hidden;
+}

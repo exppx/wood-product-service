@@ -1,0 +1,19 @@
+@use "@/sass/mixins.scss" as *;
+
+.filter-select {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+}
+
+.filter-select__label {
+  font-size: var(--font-size-md);
+
+  @include media-tablet {
+    font-size: var(--font-size-lg);
+  }
+
+  @include media-desktop {
+    font-size: var(--font-size-lg);
+  }
+}

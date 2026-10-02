@@ -17,4 +17,12 @@ describe("AboutSection", () => {
 
     expect(images).toHaveLength(3);
   });
+
+  it("renders title in h1 tag if isMainSection is true", () => {
+    render(<AboutSection isMainSection={true} />);
+
+    const title = screen.getByRole("heading", { level: 1 });
+
+    expect(title).toBeInTheDocument();
+  });
 });

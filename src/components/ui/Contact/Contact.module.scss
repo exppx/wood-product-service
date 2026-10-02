@@ -17,6 +17,13 @@
   width: var(--spacing-lg);
   height: var(--spacing-lg);
   flex-shrink: 0;
+
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.contact__label {
+  @include visually-hidden;
 }
 
 .contact__text {

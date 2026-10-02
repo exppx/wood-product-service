@@ -22,14 +22,18 @@ function Footer() {
 
             <address>
               <ul className={styles["footer__contacts"]}>
-                {CONTACTS.map(({ Icon, contact, nowrap }) => (
+                {CONTACTS.map(({ Icon, contact, label, nowrap }) => (
                   <li
                     key={contact}
                     className={clsx({
                       [styles["footer__contact_nowrap"]]: nowrap,
                     })}
                   >
-                    <Contact Icon={Icon} contact={t(contact)} />
+                    <Contact
+                      Icon={Icon}
+                      label={t(label)}
+                      contact={t(contact)}
+                    />
                   </li>
                 ))}
               </ul>

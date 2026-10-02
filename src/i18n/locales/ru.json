@@ -67,12 +67,82 @@
   },
   "Navigation": {
     "gallery": "Галерея",
-    "prices": "Цены на услуги",
+    "prices": "Цены на материалы",
     "about": "О нас",
     "contacts": "Контакты"
   },
   "OurWorksSection": {
     "title": "Наши работы"
+  },
+  "PriceListFilters": {
+    "all": "все",
+    "reset": "Сбросить",
+    "filterLabels": {
+      "wood": "Дерево",
+      "length": "Длина, мм",
+      "width": "Ширина, мм",
+      "height": "Высота, мм"
+    },
+    "sortLabels": {
+      "price": {
+        "aria": "Цена за штуку",
+        "visible": "$ / шт"
+      },
+      "priceM3": {
+        "aria": "Цена за кубический метр",
+        "visible": "$ / м³"
+      }
+    },
+    "error": "Не удалось загрузить опции фильтров"
+  },
+  "PriceListSection": {
+    "title": "Прайс лист"
+  },
+  "PriceListTable": {
+    "error": "Не удалось загрузить прайслист",
+    "headers": {
+      "wood": {
+        "visible": "Дерево",
+        "readable": "Дерево"
+      },
+      "length": {
+        "visible": "Длина, мм",
+        "readable": "Длина в миллиметрах"
+      },
+      "width": {
+        "visible": "Ширина, мм",
+        "readable": "Ширина в миллиметрах"
+      },
+      "height": {
+        "visible": "Высота, мм",
+        "readable": "Высота в миллиметрах"
+      },
+      "volume": {
+        "visible": "Объем, m³",
+        "readable": "Объем в кубических метрах"
+      },
+      "price": {
+        "visible": "$ / шт",
+        "readable": "Цена за штуку в долларах"
+      },
+      "priceM3": {
+        "visible": "$ / м³",
+        "readable": "Цена за кубический метр в долларах"
+      }
+    }
+  },
+  "PricesPage": {
+    "metadata": {
+      "title": "Bio CWT | Цены",
+      "description": "Цены на древесину"
+    }
+  },
+  "SortButtonsGroup": {
+    "sortBy": "Сортировать по",
+    "asc": "возрастанию",
+    "desc": "убыванию",
+    "notSorted": "Не отсортировано",
+    "sortStatus": "Отсортировано по {{ by }}, по {{ direction }}"
   },
   "QuestionsForm": {
     "submit": "Отправить",

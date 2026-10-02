@@ -67,12 +67,83 @@
   },
   "Navigation": {
     "gallery": "Gallery",
-    "prices": "Prices of services",
+    "prices": "Prices of materials",
     "about": "About us",
     "contacts": "Contacts"
   },
   "OurWorksSection": {
     "title": "Our works"
+  },
+  "PriceListFilters": {
+    "all": "all",
+    "reset": "Reset",
+    "filterLabels": {
+      "wood": "Wood",
+      "length": "Length, mm",
+      "width": "Width, mm",
+      "height": "Height, mm",
+      "priceM3": "Price per m³"
+    },
+    "sortLabels": {
+      "price": {
+        "aria": "Price per piece in dollars",
+        "visible": "$ / pc"
+      },
+      "priceM3": {
+        "aria": "Price per cubic meter",
+        "visible": "$ / m³"
+      }
+    },
+    "error": "Failed to load filter options"
+  },
+  "PriceListSection": {
+    "title": "Price list"
+  },
+  "PriceListTable": {
+    "error": "Failed to load price list",
+    "headers": {
+      "wood": {
+        "visible": "Wood",
+        "readable": "Wood"
+      },
+      "length": {
+        "visible": "Length, mm",
+        "readable": "Length in millimeters"
+      },
+      "width": {
+        "visible": "Width, mm",
+        "readable": "Width in millimeters"
+      },
+      "height": {
+        "visible": "Height, mm",
+        "readable": "Height in millimeters"
+      },
+      "volume": {
+        "visible": "Volume, m³",
+        "readable": "Volume in cubic meters"
+      },
+      "price": {
+        "visible": "$ / pc",
+        "readable": "Price per piece in dollars"
+      },
+      "priceM3": {
+        "visible": "$ / m³",
+        "readable": "Price per cubic meter in dollars"
+      }
+    }
+  },
+  "PricesPage": {
+    "metadata": {
+      "title": "Bio CWT | Prices",
+      "description": "Wood prices"
+    }
+  },
+  "SortButtonsGroup": {
+    "sortBy": "Sort by",
+    "asc": "ascending",
+    "desc": "descending",
+    "notSorted": "Not sorted",
+    "sortStatus": "Sorted by {{ by }}, {{ direction }}"
   },
   "QuestionsForm": {
     "submit": "Send",

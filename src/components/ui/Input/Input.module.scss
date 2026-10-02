@@ -3,7 +3,7 @@
 .input {
   width: 100%;
   padding: 12px 20px;
-  border: 2px solid var(--color-primary-2);
+  border: 2px solid var(--color-border-form-control);
   border-radius: var(--border-radius-rounded);
   font-size: var(--font-size-md);
   line-height: var(--line-height-xl);
@@ -16,6 +16,7 @@
 
   &:focus-visible {
     outline: none;
+    background-color: var(--color-background-form-control-hover);
     box-shadow: 0 0 0 3px var(--color-shadow-form-control);
   }
 
@@ -24,6 +25,12 @@
     color: var(--color-text-form-control-disabled);
     background-color: var(--color-background-form-control-disabled);
     cursor: not-allowed;
+  }
+
+  @include hover {
+    &:hover:not(:disabled) {
+      background-color: var(--color-background-form-control-hover);
+    }
   }
 
   @include media-tablet {

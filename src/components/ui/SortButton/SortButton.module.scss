@@ -1,0 +1,78 @@
+@use "@/sass/mixins.scss" as *;
+
+.sort-button {
+  --icon-width: 8px;
+  --icon-height: 24px;
+  --icon-offset-x: 8px;
+
+  position: relative;
+  padding: 12px calc(var(--icon-offset-x) * 3 + var(--icon-width));
+  border: 2px solid var(--color-border-form-control);
+  border-radius: var(--border-radius-sm);
+  color: inherit;
+  transition: var(--transition-default);
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: none;
+    background-color: var(--color-background-form-control-hover);
+    box-shadow: 0 0 0 3px var(--color-shadow-form-control);
+  }
+
+  &:disabled {
+    border-color: var(--color-border-form-control-disabled);
+    color: var(--color-text-form-control-disabled);
+    background-color: var(--color-background-form-control-disabled);
+    cursor: not-allowed;
+  }
+
+  @include hover {
+    &:hover:not(:disabled) {
+      background-color: var(--color-background-form-control-hover);
+    }
+  }
+}
+
+.sort-button_active {
+  background-color: var(--color-background-form-control-hover);
+}
+
+.sort-button__label {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-xl);
+
+  @include media-tablet {
+    font-size: var(--font-size-lg);
+  }
+
+  @include media-desktop {
+    font-size: var(--font-size-lg);
+  }
+}
+
+.sort-button__icon {
+  position: absolute;
+  right: var(--icon-offset-x);
+  top: calc(50% - var(--icon-height) / 2);
+
+  width: var(--icon-width);
+  height: var(--icon-height);
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  stroke: currentColor;
+
+  transition: var(--transition-default);
+}
+
+.sort-button__icon_asc {
+  display: flex;
+  transform: scaleY(1);
+}
+
+.sort-button__icon_desc {
+  display: flex;
+  transform: scaleY(-1);
+}

@@ -115,6 +115,12 @@
     transparent 50%
   );
 
+  --color-border-form-control: var(--color-primary-2);
+  --color-background-form-control-hover: color-mix(
+    in oklab,
+    var(--color-primary-1) 10%,
+    transparent 90%
+  );
   --color-background-form-control-error: color-mix(
     in oklab,
     var(--color-error-5) 10%,
@@ -125,6 +131,14 @@
   --color-text-form-control-disabled: var(--color-tertiary-3);
   --color-placeholder-form-control-disabled: var(--color-tertiary-4);
   --color-border-form-control-disabled: var(--color-tertiary-2);
+
+  --color-table-cell-background: #d9d9d9;
+  --color-table-cell-background-accent: var(--color-secondary-5);
+  --color-table-cell-divider: color-mix(
+    in oklab,
+    var(--color-secondary-3) 37%,
+    transparent 63%
+  );
 
   --shadow-main: 0 4px 52px 0 var(--color-shadow);
 
@@ -211,6 +225,11 @@
   --color-text-alter: #32353c;
   --color-text-placeholder: #d9d9d9;
 
+  --color-background-form-control-hover: color-mix(
+    in oklab,
+    var(--color-primary-3) 10%,
+    transparent 90%
+  );
   --color-background-form-control-disabled: var(--color-tertiary-7);
   --color-text-form-control-disabled: var(--color-tertiary-4);
   --color-placeholder-form-control-disabled: var(--color-tertiary-6);

@@ -1,0 +1,85 @@
+@use "@/sass/mixins.scss" as *;
+
+$arrow-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%230a0a0a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+$arrow-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23f5f5f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+
+.select-wrapper {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 12px;
+    height: 8px;
+    background-image: $arrow-light;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    transition: var(--transition-default);
+    pointer-events: none;
+  }
+
+  &:has(.select:open)::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.select {
+  appearance: none;
+  width: 100%;
+  padding: 12px 20px;
+  padding-right: calc(20px + 12px + 20px);
+  border: 2px solid var(--color-border-form-control);
+  border-radius: var(--border-radius-rounded);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-xl);
+  color: inherit;
+  transition: var(--transition-default);
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: none;
+    background-color: var(--color-background-form-control-hover);
+    box-shadow: 0 0 0 3px var(--color-shadow-form-control);
+  }
+
+  &:disabled {
+    border-color: var(--color-border-form-control-disabled);
+    color: var(--color-text-form-control-disabled);
+    background-color: var(--color-background-form-control-disabled);
+    cursor: not-allowed;
+  }
+
+  @include hover {
+    &:hover:not(:disabled) {
+      background-color: var(--color-background-form-control-hover);
+    }
+  }
+
+  @include media-tablet {
+    font-size: var(--font-size-lg);
+  }
+
+  @include media-desktop {
+    font-size: var(--font-size-lg);
+  }
+}
+
+.select__option {
+  background-color: var(--color-surface);
+}
+
+:root[data-theme="dark"] {
+  .select-wrapper {
+    &::after {
+      background-image: $arrow-dark;
+    }
+  }
+
+  .select {
+    &::placeholder {
+      color: var(--color-tertiary-5);
+    }
+  }
+}

@@ -1,4 +1,5 @@
 import { act, render, screen, waitFor } from "@/test-utils/test-utils";
+import createDeferred from "@/test-utils/createDeferred";
 import userEvent from "@testing-library/user-event";
 import {
   MIN_QUESTION_LENGTH,
@@ -36,16 +37,6 @@ const fillField = async (
 ) => {
   await user.click(field);
   await user.paste(value);
-};
-
-const createDeferred = <T,>() => {
-  let resolve!: (value: T) => void;
-  let reject!: (reason?: unknown) => void;
-  const promise = new Promise<T>((res, rej) => {
-    resolve = res;
-    reject = rej;
-  });
-  return { promise, resolve, reject };
 };
 
 describe("QuestionsForm", () => {

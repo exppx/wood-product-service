@@ -6,7 +6,11 @@ import SideMenu from "./SideMenu/SideMenu";
 
 import styles from "./Header.module.scss";
 
-function Header() {
+interface HeaderProps {
+  isFilled?: boolean;
+}
+
+function Header({ isFilled = false }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -27,7 +31,7 @@ function Header() {
       className={clsx([
         styles["header"],
         {
-          [styles["header_filled"]]: isScrolled,
+          [styles["header_filled"]]: isFilled || isScrolled,
         },
       ])}
     >

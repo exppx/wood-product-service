@@ -6,6 +6,7 @@ import GalleryPage from "@/pages/GalleryPage/GalleryPage";
 import PricesPage from "@/pages/PricesPage/PricesPage";
 import AboutPage from "@/pages/AboutPage/AboutPage";
 import ContactsPage from "@/pages/ContactsPage/ContactsPage";
+import NoFooterLayout from "@/components/layouts/NoFooterLayout/NoFooterLayout";
 import NotFoundPage from "@/pages/NotFoundPage/NotFoundPage";
 
 const router = createBrowserRouter([
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
         path: "/contacts",
         Component: ContactsPage,
       },
+    ],
+  },
+  {
+    Component: NoFooterLayout,
+    children: [
       {
         path: "*",
         Component: NotFoundPage,

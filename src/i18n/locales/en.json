@@ -96,6 +96,12 @@
     "about": "About us",
     "contacts": "Contacts"
   },
+  "NotFoundPage": {
+    "heading": "Page not found",
+    "title": "Whoops",
+    "message": "Oh, you must be lost, there is no such page.",
+    "buttonText": "Go to the home page"
+  },
   "OurWorksSection": {
     "title": "Our works"
   },

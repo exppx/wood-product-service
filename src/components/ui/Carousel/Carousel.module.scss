@@ -47,8 +47,11 @@
   }
 }
 
+.carousel__button-container_disabled {
+  cursor: not-allowed;
+}
+
 .carousel__button {
-  position: relative;
   transition: var(--transition-default);
 }
 
@@ -56,6 +59,10 @@
   @include hover {
     &:hover:not(:disabled) {
       transform: translateX(-4px);
+
+      @include reduced-motion {
+        transform: none;
+      }
     }
   }
 }
@@ -64,12 +71,12 @@
   @include hover {
     &:hover:not(:disabled) {
       transform: translateX(4px);
+
+      @include reduced-motion {
+        transform: none;
+      }
     }
   }
-}
-
-.carousel__button-container_disabled {
-  cursor: not-allowed;
 }
 
 .carousel__image-container {

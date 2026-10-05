@@ -49,19 +49,7 @@
 
 .carousel__button {
   position: relative;
-  width: var(--spacing-lg);
-  height: var(--spacing-lg);
   transition: var(--transition-default);
-
-  @include media-tablet {
-    width: var(--spacing-xl);
-    height: var(--spacing-xl);
-  }
-
-  @include media-desktop {
-    width: var(--spacing-xxl);
-    height: var(--spacing-xxl);
-  }
 }
 
 .carousel__button_left {

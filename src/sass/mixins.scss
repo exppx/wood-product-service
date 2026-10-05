@@ -24,6 +24,12 @@
   }
 }
 
+@mixin reduced-motion {
+  @media (prefers-reduced-motion: reduce) {
+    @content;
+  }
+}
+
 @mixin custom-scrollbar($type: vertical) {
   &::-webkit-scrollbar {
     @if ($type == vertical) {

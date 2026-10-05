@@ -266,6 +266,10 @@ h1,
 h2 {
   font-size: 30px;
 
+  @include media-tablet {
+    font-size: 45px;
+  }
+
   @include media-desktop {
     font-size: 90px;
   }

@@ -24,4 +24,12 @@
 
 .contacts__map {
   border-radius: var(--border-radius-md);
+
+  @include media-tablet {
+    border-radius: var(--border-radius-lg);
+  }
+
+  @include media-desktop {
+    border-radius: var(--border-radius-xxl);
+  }
 }

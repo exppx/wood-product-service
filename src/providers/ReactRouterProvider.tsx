@@ -9,44 +9,50 @@ import PricesPage from "@/pages/PricesPage/PricesPage";
 import AboutPage from "@/pages/AboutPage/AboutPage";
 import ContactsPage from "@/pages/ContactsPage/ContactsPage";
 import NotFoundPage from "@/pages/NotFoundPage/NotFoundPage";
+import ScrollRestorationLayout from "@/components/layouts/ScrollRestorationLayout/ScrollRestorationLayout";
 
 const router = createBrowserRouter([
   {
-    Component: AppLayout,
+    Component: ScrollRestorationLayout,
     children: [
       {
-        path: "/",
-        Component: HomePage,
-      },
-    ],
-  },
-  {
-    Component: FilledHeaderAppLayout,
-    children: [
-      {
-        path: "/gallery",
-        Component: GalleryPage,
+        Component: AppLayout,
+        children: [
+          {
+            path: "/",
+            Component: HomePage,
+          },
+        ],
       },
       {
-        path: "/prices",
-        Component: PricesPage,
+        Component: FilledHeaderAppLayout,
+        children: [
+          {
+            path: "/gallery",
+            Component: GalleryPage,
+          },
+          {
+            path: "/prices",
+            Component: PricesPage,
+          },
+          {
+            path: "/about",
+            Component: AboutPage,
+          },
+          {
+            path: "/contacts",
+            Component: ContactsPage,
+          },
+        ],
       },
       {
-        path: "/about",
-        Component: AboutPage,
-      },
-      {
-        path: "/contacts",
-        Component: ContactsPage,
-      },
-    ],
-  },
-  {
-    Component: NoFooterLayout,
-    children: [
-      {
-        path: "*",
-        Component: NotFoundPage,
+        Component: NoFooterLayout,
+        children: [
+          {
+            path: "*",
+            Component: NotFoundPage,
+          },
+        ],
       },
     ],
   },

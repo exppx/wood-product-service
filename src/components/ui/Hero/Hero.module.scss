@@ -34,10 +34,12 @@
 
   @include media-tablet {
     grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: none;
   }
 
   @include media-desktop {
     grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: none;
   }
 }
 
@@ -46,6 +48,12 @@
   height: 1px;
   background-color: var(--color-divider);
   margin: var(--margin-xxxl) 0;
+
+  @include media-tablet {
+    width: 1px;
+    height: 100%;
+    margin: 0 var(--margin-xl);
+  }
 
   @include media-desktop {
     width: 1px;
@@ -80,24 +88,19 @@
 
   @include media-desktop {
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(14, 1fr);
+    grid-template-rows: repeat(12, 1fr);
   }
 }
 
 .hero__image-aside {
-  width: 90px;
-  height: 90px;
+  max-width: 100%;
   border-radius: var(--border-radius-md);
 
   @include media-tablet {
-    width: 120px;
-    height: 120px;
     border-radius: var(--border-radius-lg);
   }
 
   @include media-desktop {
-    width: 205px;
-    height: 205px;
     border-radius: var(--border-radius-xxxl);
   }
 }
@@ -118,7 +121,7 @@
 
   @include media-desktop {
     grid-column: 1 / 5;
-    grid-row: 7 / 12;
+    grid-row: 6 / 11;
   }
 }
 
@@ -128,7 +131,7 @@
 
   @include media-desktop {
     grid-column: 6 / 10;
-    grid-row: 9 / 14;
+    grid-row: 9 / 13;
   }
 }
 

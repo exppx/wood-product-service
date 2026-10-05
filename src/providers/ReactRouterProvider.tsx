@@ -1,12 +1,13 @@
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import AppLayout from "@/components/layouts/AppLayout/AppLayout";
+import FilledHeaderAppLayout from "@/components/layouts/FilledHeaderAppLayout/FilledHeaderAppLayout";
+import NoFooterLayout from "@/components/layouts/NoFooterLayout/NoFooterLayout";
 import HomePage from "@/pages/HomePage/HomePage";
 import GalleryPage from "@/pages/GalleryPage/GalleryPage";
 import PricesPage from "@/pages/PricesPage/PricesPage";
 import AboutPage from "@/pages/AboutPage/AboutPage";
 import ContactsPage from "@/pages/ContactsPage/ContactsPage";
-import NoFooterLayout from "@/components/layouts/NoFooterLayout/NoFooterLayout";
 import NotFoundPage from "@/pages/NotFoundPage/NotFoundPage";
 
 const router = createBrowserRouter([
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
         path: "/",
         Component: HomePage,
       },
+    ],
+  },
+  {
+    Component: FilledHeaderAppLayout,
+    children: [
       {
         path: "/gallery",
         Component: GalleryPage,

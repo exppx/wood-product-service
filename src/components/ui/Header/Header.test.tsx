@@ -18,6 +18,14 @@ describe("Header", () => {
     expect(headerEl.className).not.toContain("header_filled");
   });
 
+  it("has background color if isFilled is true", () => {
+    render(<Header isFilled={true} />);
+
+    const headerEl = screen.getByTestId("header");
+
+    expect(headerEl.className).toContain("header_filled");
+  });
+
   it("becomes filled if page is scrolled", () => {
     const { rerender } = render(<Header />);
     const headerEl = screen.getByTestId("header");

@@ -1,4 +1,10 @@
 {
+  "AboutPage": {
+    "metadata": {
+      "title": "Bio CWT | About us",
+      "description": "We manufacture solid wood products according to individual drawings. We make chairs, armchairs, wardrobes, beds and much more in our own workshop, equipped with all the necessary industrial equipment"
+    }
+  },
   "AboutSection": {
     "title": "About us",
     "text": {
@@ -57,6 +63,12 @@
         "label": "Address",
         "value": "Na Plzeňce 1166/1, Prague 5 - Smíchov, 150 00, Czech Republic"
       }
+    }
+  },
+  "GalleryPage": {
+    "metadata": {
+      "title": "Bio CWT | Gallery",
+      "description": "Examples of our works and materials we work with"
     }
   },
   "Hero": {

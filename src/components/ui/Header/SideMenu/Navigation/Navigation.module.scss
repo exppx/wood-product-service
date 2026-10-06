@@ -26,7 +26,7 @@
   text-align: center;
 
   &:not(:last-child) {
-    border-bottom: 2px solid var(--color-divider);
+    border-bottom: var(--border-width-md) solid var(--color-divider);
 
     @include media-desktop {
       border: none;

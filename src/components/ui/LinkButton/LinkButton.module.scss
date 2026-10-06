@@ -5,40 +5,39 @@
   align-items: center;
   justify-content: center;
   width: fit-content;
-  padding: var(--padding-sm) var(--padding-lg);
-  border-radius: var(--border-radius-rounded);
-  background-color: var(--color-primary-2);
-  color: var(--color-text);
+  padding: var(--button-padding);
+  border: var(--button-border);
+  border-radius: var(--button-border-radius);
+  background-color: var(--button-background-color);
   font-size: var(--font-size-md);
+  line-height: var(--line-height-xl);
   font-weight: bold;
   transition: var(--transition-default);
 
   &:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 3px var(--color-shadow-form-control);
+    box-shadow: var(--button-shadow);
   }
 
   &:disabled {
-    opacity: 0.5;
+    opacity: var(--button-disabled-opacity);
   }
 
   @include hover {
     &:hover:not(:disabled) {
-      background-color: var(--color-primary-3);
+      background-color: var(--button-hover-background-color);
     }
 
     &:active:not(:disabled) {
-      background-color: var(--color-primary-1);
+      background-color: var(--button-active-background-color);
     }
   }
 
   @include media-tablet {
-    padding: var(--padding-sm) var(--padding-xxl);
     font-size: var(--font-size-lg);
   }
 
   @include media-desktop {
-    padding: var(--padding-md) calc(var(--padding-xxxl) * 1.5);
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
   }
 }

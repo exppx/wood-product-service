@@ -83,7 +83,7 @@
   grid-column: 1 / 9;
   grid-row: 2 / 10;
   z-index: 10;
-  box-shadow: 0 0 0 var(--spacing-sm) var(--color-surface);
+  box-shadow: 0 0 0 var(--size-sm) var(--color-surface);
 
   @include media-desktop {
     box-shadow: 0 0 0 10px var(--color-surface);

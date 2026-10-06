@@ -36,6 +36,7 @@
 }
 
 :root {
+  // General colors
   --color-primary-1: #5f7489;
   --color-primary-2: #728bad;
   --color-primary-3: #a3b8d7;
@@ -81,6 +82,7 @@
   --color-success-7: #6bff6b;
   --color-success-8: #9fff9f;
 
+  // Layout colors
   --color-white: #f0f0f0;
   --color-black: #0a0a0a;
 
@@ -89,59 +91,8 @@
   --color-surface: #fafafa;
 
   --color-text: #0a0a0a;
-  --color-text-alter: #cdcac3;
-  --color-text-placeholder: #262626;
 
-  --color-hover-icon: color-mix(
-    in oklab,
-    var(--color-text) 5%,
-    transparent 95%
-  );
-  --color-active-icon: color-mix(
-    in oklab,
-    var(--color-text) 10%,
-    transparent 90%
-  );
-
-  --color-shadow: color-mix(in oklab, var(--color-text) 17%, transparent 83%);
-  --color-shadow-form-control: color-mix(
-    in oklab,
-    var(--color-primary-2) 50%,
-    transparent 50%
-  );
-  --color-shadow-form-control-error: color-mix(
-    in oklab,
-    var(--color-error-6) 50%,
-    transparent 50%
-  );
-
-  --color-border-form-control: var(--color-primary-2);
-  --color-background-form-control-hover: color-mix(
-    in oklab,
-    var(--color-primary-1) 10%,
-    transparent 90%
-  );
-  --color-background-form-control-error: color-mix(
-    in oklab,
-    var(--color-error-5) 10%,
-    transparent 90%
-  );
-  --color-border-form-control-error: var(--color-error-5);
-  --color-background-form-control-disabled: var(--color-tertiary-5);
-  --color-text-form-control-disabled: var(--color-tertiary-3);
-  --color-placeholder-form-control-disabled: var(--color-tertiary-4);
-  --color-border-form-control-disabled: var(--color-tertiary-2);
-
-  --color-table-cell-background: #d9d9d9;
-  --color-table-cell-background-accent: var(--color-secondary-5);
-  --color-table-cell-divider: color-mix(
-    in oklab,
-    var(--color-secondary-3) 37%,
-    transparent 63%
-  );
-
-  --shadow-main: 0 4px 52px 0 var(--color-shadow);
-
+  // Breakpoints
   --break-xs: #{$break-xs};
   --break-sm: #{$break-sm};
   --break-md: #{$break-md};
@@ -149,49 +100,56 @@
   --break-xl: #{$break-xl};
   --break-xxl: #{$break-xxl};
 
-  --spacing-none: 0;
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-xxl: 2.5rem;
-  --spacing-xxxl: 3rem;
+  // General sizing
+  --size-none: 0;
+  --size-xs: 0.25rem;
+  --size-sm: 0.5rem;
+  --size-md: 1rem;
+  --size-lg: 1.5rem;
+  --size-xl: 2rem;
+  --size-xxl: 2.5rem;
+  --size-xxxl: 3rem;
 
-  --padding-xs: var(--spacing-xs);
-  --padding-sm: var(--spacing-sm);
-  --padding-md: var(--spacing-md);
-  --padding-lg: var(--spacing-lg);
-  --padding-xl: var(--spacing-xl);
-  --padding-xxl: var(--spacing-xxl);
-  --padding-xxxl: var(--spacing-xxxl);
+  --padding-xs: var(--size-xs);
+  --padding-sm: var(--size-sm);
+  --padding-md: var(--size-md);
+  --padding-lg: var(--size-lg);
+  --padding-xl: var(--size-xl);
+  --padding-xxl: var(--size-xxl);
+  --padding-xxxl: var(--size-xxxl);
 
-  --margin-xs: var(--spacing-xs);
-  --margin-sm: var(--spacing-sm);
-  --margin-md: var(--spacing-md);
-  --margin-lg: var(--spacing-lg);
-  --margin-xl: var(--spacing-xl);
-  --margin-xxl: var(--spacing-xxl);
-  --margin-xxxl: var(--spacing-xxxl);
+  --margin-xs: var(--size-xs);
+  --margin-sm: var(--size-sm);
+  --margin-md: var(--size-md);
+  --margin-lg: var(--size-lg);
+  --margin-xl: var(--size-xl);
+  --margin-xxl: var(--size-xxl);
+  --margin-xxxl: var(--size-xxxl);
 
-  --gap-xs: var(--spacing-xs);
-  --gap-sm: var(--spacing-sm);
-  --gap-md: var(--spacing-md);
-  --gap-lg: var(--spacing-lg);
-  --gap-xl: var(--spacing-xl);
-  --gap-xxl: var(--spacing-xxl);
-  --gap-xxxl: var(--spacing-xxxl);
+  --gap-xs: var(--size-xs);
+  --gap-sm: var(--size-sm);
+  --gap-md: var(--size-md);
+  --gap-lg: var(--size-lg);
+  --gap-xl: var(--size-xl);
+  --gap-xxl: var(--size-xxl);
+  --gap-xxxl: var(--size-xxxl);
 
-  --border-radius-none: var(--spacing-none);
-  --border-radius-xs: var(--spacing-xs);
-  --border-radius-sm: var(--spacing-sm);
-  --border-radius-md: var(--spacing-md);
-  --border-radius-lg: var(--spacing-lg);
-  --border-radius-xl: var(--spacing-xl);
-  --border-radius-xxl: var(--spacing-xxl);
-  --border-radius-xxxl: var(--spacing-xxxl);
+  --border-radius-none: var(--size-none);
+  --border-radius-xs: var(--size-xs);
+  --border-radius-sm: var(--size-sm);
+  --border-radius-md: var(--size-md);
+  --border-radius-lg: var(--size-lg);
+  --border-radius-xl: var(--size-xl);
+  --border-radius-xxl: var(--size-xxl);
+  --border-radius-xxxl: var(--size-xxxl);
   --border-radius-rounded: 9000px;
 
+  --border-width-sm: 1px;
+  --border-width-md: 2px;
+  --border-width-lg: 3px;
+  --border-width-xl: 4px;
+
+  // Font sizing
   --font-size-xs: 0.5rem;
   --font-size-sm: 0.75rem;
   --font-size-md: 1rem;
@@ -205,15 +163,173 @@
   --line-height-xl: calc(1 + 1 / 3);
   --line-height-xxl: 1.5;
 
+  // Transitions
   --transition-default: all 0.2s ease;
 
+  // Shadows
+  --color-shadow: color-mix(in oklab, var(--color-text) 17%, transparent 83%);
+  --shadow-main: 0 4px 52px 0 var(--color-shadow);
+
+  // Constants
   --sqrt-2: 1.41;
 
+  // Layout sizing
   --header-height: 68px;
 
   @include media-desktop {
     --header-height: 82px;
   }
+
+  // Components
+  // - Icon
+  --icon-size: var(--size-xxl);
+  @include media-desktop {
+    --icon-size: var(--size-xl);
+  }
+  --icon-padding: var(--size-xs);
+  --icon-hover-background-color: color-mix(
+    in oklab,
+    var(--color-text) 5%,
+    transparent 95%
+  );
+  --icon-active-background-color: color-mix(
+    in oklab,
+    var(--color-text) 10%,
+    transparent 90%
+  );
+
+  // - Form control
+  --form-control-background-color: transparent;
+
+  --form-control-border-color: var(--color-primary-2);
+  --form-control-border-style: solid;
+  --form-control-border-width: var(--border-width-md);
+  --form-control-border: var(--form-control-border-width)
+    var(--form-control-border-style) var(--form-control-border-color);
+  --form-control-border-radius: var(--border-radius-rounded);
+
+  --form-control-shadow-color: color-mix(
+    in oklab,
+    var(--color-primary-2) 50%,
+    transparent 50%
+  );
+  --form-control-shadow: 0 0 0 3px var(--form-control-shadow-color);
+
+  --form-control-placeholder-color: var(--color-tertiary-5);
+
+  --form-control-padding: var(--size-sm) var(--size-md);
+
+  // - Form control :hover
+  --form-control-hover-background-color: color-mix(
+    in oklab,
+    var(--color-primary-1) 10%,
+    transparent 90%
+  );
+
+  // - Form control :focus
+  --form-control-focus-background-color: color-mix(
+    in oklab,
+    var(--color-primary-1) 10%,
+    transparent 90%
+  );
+
+  // - Form control :disabled
+  --form-control-disabled-opacity: 0.5;
+
+  // - Form control (error)
+  --form-control-error-background-color: color-mix(
+    in oklab,
+    var(--color-error-4) 10%,
+    transparent 90%
+  );
+
+  --form-control-error-border-color: var(--color-error-5);
+
+  --form-control-error-shadow-color: color-mix(
+    in oklab,
+    var(--color-error-5) 50%,
+    transparent 50%
+  );
+  --form-control-error-shadow: 0 0 0 3px var(--form-control-error-shadow-color);
+
+  --form-control-error-placeholder-color: var(--color-error-7);
+
+  // - Form control :hover (error)
+  --form-control-error-hover-background-color: color-mix(
+    in oklab,
+    var(--color-error-5) 10%,
+    transparent 90%
+  );
+
+  // - Form control :focus (error)
+  --form-control-error-focus-background-color: color-mix(
+    in oklab,
+    var(--color-error-5) 10%,
+    transparent 90%
+  );
+
+  // - Button
+  --button-background-color: var(--color-primary-2);
+
+  --button-border-width: var(--border-width-md);
+  --button-border-style: solid;
+  --button-border-color: transparent;
+  --button-border: var(--button-border-width) var(--button-border-style)
+    var(--button-border-color);
+  --button-border-radius: var(--border-radius-rounded);
+
+  --button-shadow-color: color-mix(
+    in oklab,
+    var(--color-primary-2) 50%,
+    transparent 50%
+  );
+  --button-shadow: 0 0 0 3px var(--form-control-shadow-color);
+
+  --button-padding: var(--padding-sm) var(--padding-lg);
+
+  @include media-tablet {
+    --button-padding: var(--padding-sm) var(--padding-xxl);
+  }
+
+  @include media-desktop {
+    --button-padding: var(--padding-sm) calc(var(--padding-xl));
+  }
+
+  // - Button :hover
+  --button-hover-background-color: var(--color-primary-3);
+
+  // - Button :active
+  --button-active-background-color: var(--color-primary-1);
+
+  // - Button :disabled
+  --button-disabled-opacity: 0.5;
+
+  // - Table
+  --table-text-color: var(--color-black);
+  --table-cell-background-color: #d9d9d9;
+  --table-cell-background-color-accent: var(--color-secondary-5);
+  --table-cell-divider-color: color-mix(
+    in oklab,
+    var(--color-secondary-3) 37%,
+    transparent 63%
+  );
+  --table-cell-divider-size: var(--border-width-md);
+  --table-cell-divider-style: solid;
+  --table-cell-divider: var(--table-cell-divider-size)
+    var(--table-cell-divider-style) var(--table-cell-divider-color);
+  --table-gap: var(--size-sm);
+  --table-padding: var(--size-sm);
+
+  @include media-tablet {
+    --table-gap: var(--size-md);
+    --table-padding: var(--size-md);
+  }
+
+  @include media-desktop {
+    --table-gap: var(--size-md);
+    --table-padding: var(--size-md);
+  }
+  --table-border-radius: var(--border-radius-md);
 }
 
 :root[data-theme="dark"] {
@@ -222,18 +338,24 @@
   --color-surface: #1e0c06;
 
   --color-text: #f5f5f5;
-  --color-text-alter: #32353c;
-  --color-text-placeholder: #d9d9d9;
 
-  --color-background-form-control-hover: color-mix(
+  // Components
+  // - Form control
+  --form-control-hover-background-color: color-mix(
     in oklab,
     var(--color-primary-3) 10%,
     transparent 90%
   );
-  --color-background-form-control-disabled: var(--color-tertiary-7);
-  --color-text-form-control-disabled: var(--color-tertiary-4);
-  --color-placeholder-form-control-disabled: var(--color-tertiary-6);
-  --color-border-form-control-disabled: var(--color-tertiary-5);
+
+  --form-control-placeholder-color: var(--color-tertiary-4);
+
+  // - Form control (error)
+  --form-control-error-border-color: var(--color-error-4);
+  --form-control-error-shadow-color: color-mix(
+    in oklab,
+    var(--color-error-4) 50%,
+    transparent 50%
+  );
 }
 
 * {
@@ -277,7 +399,6 @@ h2 {
 
 a {
   text-decoration: none;
-  color: inherit;
 }
 
 ul,
@@ -286,7 +407,9 @@ ol {
 }
 
 button,
-input {
+input,
+select,
+textarea {
   &:disabled {
     cursor: not-allowed;
   }

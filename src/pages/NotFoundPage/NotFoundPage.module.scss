@@ -63,7 +63,6 @@
 
 .not-found__title {
   font-size: var(--font-size-xxxl);
-  line-height: var(--line-height-xl);
 
   @include media-tablet {
     font-size: calc(var(--font-size-xxxl) * 1.5);
@@ -75,17 +74,7 @@
 }
 
 .not-found__message {
-  font-size: var(--font-size-md);
-  line-height: var(--line-height-xl);
   color: var(--color-secondary-3);
-
-  @include media-tablet {
-    font-size: var(--font-size-lg);
-  }
-
-  @include media-desktop {
-    font-size: var(--font-size-xl);
-  }
 }
 
 :root[data-theme="dark"] {

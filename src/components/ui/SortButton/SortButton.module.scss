@@ -6,48 +6,32 @@
   --icon-offset-x: 8px;
 
   position: relative;
-  padding: 12px calc(var(--icon-offset-x) * 3 + var(--icon-width));
-  border: 2px solid var(--color-border-form-control);
+  padding: var(--form-control-padding);
+  padding-left: calc(var(--icon-offset-x) * 3 + var(--icon-width));
+  padding-right: calc(var(--icon-offset-x) * 3 + var(--icon-width));
+  border: var(--form-control-border);
   border-radius: var(--border-radius-sm);
-  color: inherit;
   transition: var(--transition-default);
-  cursor: pointer;
 
   &:focus-visible {
     outline: none;
-    background-color: var(--color-background-form-control-hover);
-    box-shadow: 0 0 0 3px var(--color-shadow-form-control);
+    background-color: var(--form-control-focus-background-color);
+    box-shadow: var(--form-control-shadow);
   }
 
   &:disabled {
-    border-color: var(--color-border-form-control-disabled);
-    color: var(--color-text-form-control-disabled);
-    background-color: var(--color-background-form-control-disabled);
-    cursor: not-allowed;
+    opacity: var(--form-control-disabled-opacity);
   }
 
   @include hover {
     &:hover:not(:disabled) {
-      background-color: var(--color-background-form-control-hover);
+      background-color: var(--form-control-hover-background-color);
     }
   }
 }
 
 .sort-button_active {
-  background-color: var(--color-background-form-control-hover);
-}
-
-.sort-button__label {
-  font-size: var(--font-size-md);
-  line-height: var(--line-height-xl);
-
-  @include media-tablet {
-    font-size: var(--font-size-lg);
-  }
-
-  @include media-desktop {
-    font-size: var(--font-size-lg);
-  }
+  background-color: var(--form-control-focus-background-color);
 }
 
 .sort-button__icon {

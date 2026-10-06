@@ -1,9 +1,9 @@
 @use "@/sass/mixins.scss" as *;
 
 .icon-button {
-  width: var(--spacing-xxl);
-  height: var(--spacing-xxl);
-  padding: var(--spacing-xs);
+  width: var(--icon-size);
+  height: var(--icon-size);
+  padding: var(--icon-padding);
   border-radius: var(--border-radius-rounded);
   transition: var(--transition-default);
 
@@ -13,17 +13,12 @@
 
   @include hover {
     &:hover:not(:disabled) {
-      background-color: var(--color-hover-icon);
+      background-color: var(--icon-hover-background-color);
     }
 
     &:active:not(:disabled) {
-      background-color: var(--color-active-icon);
+      background-color: var(--icon-active-background-color);
     }
-  }
-
-  @include media-desktop {
-    width: var(--spacing-xl);
-    height: var(--spacing-xl);
   }
 }
 

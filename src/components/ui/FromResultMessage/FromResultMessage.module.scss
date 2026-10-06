@@ -9,17 +9,11 @@
 .form-result__text {
   overflow: hidden;
   min-height: 0;
-  font-size: var(--font-size-md);
   padding: var(--padding-sm) var(--padding-md);
   border-radius: var(--border-radius-sm);
-  border: 2px solid;
-
-  @include media-tablet {
-    font-size: var(--font-size-lg);
-  }
+  border: var(--border-width-md) solid;
 
   @include media-desktop {
-    font-size: var(--font-size-xl);
     padding: var(--padding-md) var(--padding-md);
   }
 }

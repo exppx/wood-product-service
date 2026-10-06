@@ -34,7 +34,7 @@ function AboutSection({ isMainSection }: AboutSectionProps) {
                   {t("AboutSection.title")}
                 </h2>
               )}
-              <p className={styles["about__text"]}>
+              <p>
                 <b>{t("AboutSection.text.company")}</b>
                 {t("AboutSection.text.description")}
               </p>

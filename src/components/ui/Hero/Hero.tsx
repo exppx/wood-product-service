@@ -31,7 +31,7 @@ function Hero() {
           className={styles["hero__section-filled"]}
         >
           <div className={styles["hero__left"]}>
-            <h1>{t("Hero.title")}</h1>
+            <h1 className={styles["hero__title"]}>{t("Hero.title")}</h1>
             <p className={styles["hero__price"]}>
               {t("Hero.price.left")}
               <b>{t("Hero.price.price")}</b>

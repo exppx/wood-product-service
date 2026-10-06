@@ -1,6 +1,9 @@
 @use "@/sass/mixins.scss" as *;
 
 .carousel {
+  --button-shift-right: 4px;
+  --button-shift-left: calc(0px - var(--button-shift-right));
+
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -19,6 +22,7 @@
 .carousel__main {
   display: grid;
   grid-template-columns: auto 1fr auto;
+  justify-items: center;
   max-width: 100%;
   width: 100%;
 }
@@ -58,7 +62,7 @@
 .carousel__button_left {
   @include hover {
     &:hover:not(:disabled) {
-      transform: translateX(-4px);
+      transform: translateX(var(--button-shift-left));
 
       @include reduced-motion {
         transform: none;
@@ -70,7 +74,7 @@
 .carousel__button_right {
   @include hover {
     &:hover:not(:disabled) {
-      transform: translateX(4px);
+      transform: translateX(var(--button-shift-right));
 
       @include reduced-motion {
         transform: none;
@@ -80,24 +84,26 @@
 }
 
 .carousel__image-container {
+  --additional-space: 80px;
+
   display: flex;
   align-items: center;
   justify-content: center;
   aspect-ratio: 16 / 9;
+
+  @include media-desktop {
+    --additional-space: 100px;
+  }
+
+  @include media-landscape {
+    max-height: calc(100dvh - var(--header-height) - var(--additional-space));
+  }
 }
 
 .carousel__image {
   max-width: 100%;
   max-height: 100%;
-  border-radius: var(--border-radius-md);
-
-  @include media-tablet {
-    border-radius: var(--border-radius-lg);
-  }
-
-  @include media-desktop {
-    border-radius: var(--border-radius-xxl);
-  }
+  border-radius: var(--border-radius-default);
 }
 
 .carousel__progress {
@@ -116,22 +122,22 @@
 }
 
 .carousel__progress-item {
-  width: var(--spacing-sm);
-  height: var(--spacing-sm);
-  border: 2px solid var(--color-primary-1);
+  width: var(--size-sm);
+  height: var(--size-sm);
+  border: var(--border-width-md) solid var(--color-primary-1);
   border-radius: var(--border-radius-rounded);
   transition: var(--transition-default);
 
   @include media-tablet {
-    width: var(--spacing-md);
-    height: var(--spacing-md);
-    border-width: 3px;
+    width: var(--size-md);
+    height: var(--size-md);
+    border-width: var(--border-width-lg);
   }
 
   @include media-desktop {
-    width: var(--spacing-lg);
-    height: var(--spacing-lg);
-    border-width: 4px;
+    width: var(--size-lg);
+    height: var(--size-lg);
+    border-width: var(--border-width-xl);
   }
 }
 

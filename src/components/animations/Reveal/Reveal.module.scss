@@ -1,8 +1,10 @@
 @use "@/sass/mixins.scss" as *;
 
 .reveal {
+  --translation-size: 24px;
+
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(var(--translation-size));
   transition:
     opacity 0.6s ease-out,
     transform 0.6s ease-out;

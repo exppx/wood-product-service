@@ -4,7 +4,7 @@
   background-color: var(--color-surface);
   padding: var(--padding-xxxl);
   box-shadow: var(--shadow-main);
-  border-radius: var(--border-radius-md);
+  border-radius: var(--border-radius-default);
 
   @include media-desktop {
     border-radius: var(--border-radius-xxxl);

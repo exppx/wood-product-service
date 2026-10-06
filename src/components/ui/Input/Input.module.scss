@@ -2,63 +2,49 @@
 
 .input {
   width: 100%;
-  padding: 12px 20px;
-  border: 2px solid var(--color-border-form-control);
-  border-radius: var(--border-radius-rounded);
-  font-size: var(--font-size-md);
-  line-height: var(--line-height-xl);
-  color: inherit;
+  padding: var(--form-control-padding);
+  background-color: var(--form-control-background-color);
+  border: var(--form-control-border);
+  border-radius: var(--form-control-border-radius);
   transition: var(--transition-default);
-
-  &::placeholder {
-    color: var(--color-tertiary-4);
-  }
 
   &:focus-visible {
     outline: none;
-    background-color: var(--color-background-form-control-hover);
-    box-shadow: 0 0 0 3px var(--color-shadow-form-control);
+    background-color: var(--form-control-focus-background-color);
+    box-shadow: var(--form-control-shadow);
   }
 
   &:disabled {
-    border-color: var(--color-border-form-control-disabled);
-    color: var(--color-text-form-control-disabled);
-    background-color: var(--color-background-form-control-disabled);
-    cursor: not-allowed;
+    opacity: var(--form-control-disabled-opacity);
+  }
+
+  &::placeholder {
+    color: var(--form-control-placeholder-color);
   }
 
   @include hover {
     &:hover:not(:disabled) {
-      background-color: var(--color-background-form-control-hover);
+      background-color: var(--form-control-hover-background-color);
     }
-  }
-
-  @include media-tablet {
-    font-size: var(--font-size-lg);
-  }
-
-  @include media-desktop {
-    font-size: var(--font-size-lg);
   }
 }
 
 .input_invalid {
-  border-color: var(--color-border-form-control-error);
-  background-color: var(--color-background-form-control-error);
+  border-color: var(--form-control-error-border-color);
+  background-color: var(--form-control-error-background-color);
 
   &:focus-visible {
-    box-shadow: 0 0 0 3px var(--color-shadow-form-control-error);
+    box-shadow: var(--form-control-error-shadow);
+    background-color: var(--form-control-error-hover-background-color);
   }
-}
 
-:root[data-theme="dark"] {
-  .input {
-    &::placeholder {
-      color: var(--color-tertiary-5);
+  &::placeholder {
+    color: var(--form-control-error-placeholder-color);
+  }
+
+  @include hover {
+    &:hover:not(:disabled) {
+      background-color: var(--form-control-error-hover-background-color);
     }
-  }
-
-  .input_invalid {
-    border-color: var(--color-error-4);
   }
 }

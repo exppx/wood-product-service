@@ -2,16 +2,16 @@
   position: absolute;
   top: 24px;
   right: 24px;
-  width: var(--spacing-xl);
-  height: var(--spacing-xl);
+  width: var(--size-xl);
+  height: var(--size-xl);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .close-side-menu__lines {
-  width: var(--spacing-lg);
-  height: var(--spacing-lg);
+  width: var(--size-lg);
+  height: var(--size-lg);
   position: relative;
 }
 

@@ -1,13 +1,13 @@
 .burger-button {
-  width: var(--spacing-xl);
-  height: var(--spacing-xl);
+  width: var(--size-xl);
+  height: var(--size-xl);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .burger-button__lines {
-  width: var(--spacing-lg);
+  width: var(--size-lg);
   height: 15px;
   display: flex;
   flex-direction: column;

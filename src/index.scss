@@ -163,6 +163,17 @@
   --line-height-xl: calc(1 + 1 / 3);
   --line-height-xxl: 1.5;
 
+  // Border radiuses
+  --border-radius-default: var(--border-radius-md);
+
+  @include media-tablet {
+    --border-radius-default: var(--border-radius-lg);
+  }
+
+  @include media-desktop {
+    --border-radius-default: var(--border-radius-xxl);
+  }
+
   // Transitions
   --transition-default: all 0.2s ease;
 
@@ -288,7 +299,7 @@
   --button-padding: var(--padding-sm) var(--padding-lg);
 
   @include media-tablet {
-    --button-padding: var(--padding-sm) var(--padding-xxl);
+    --button-padding: var(--padding-sm) var(--padding-xl);
   }
 
   @include media-desktop {
@@ -371,6 +382,17 @@ body {
   background-color: var(--color-background);
   color: var(--color-text);
   min-height: 100dvh;
+
+  line-height: var(--line-height-xl);
+  font-size: var(--font-size-md);
+
+  @include media-tablet {
+    font-size: var(--font-size-lg);
+  }
+
+  @include media-desktop {
+    font-size: var(--font-size-xl);
+  }
 }
 
 h1,
@@ -393,7 +415,7 @@ h2 {
   }
 
   @include media-desktop {
-    font-size: 90px;
+    font-size: 60px;
   }
 }
 

@@ -13,18 +13,8 @@
 
 .price-table {
   color: var(--table-text-color);
-  font-size: var(--font-size-md);
-  line-height: var(--line-height-lg);
   border-collapse: collapse;
   transition: opacity 0.2s ease;
-
-  @include media-tablet {
-    font-size: var(--font-size-lg);
-  }
-
-  @include media-desktop {
-    font-size: var(--font-size-lg);
-  }
 }
 
 .price-table_stale {
@@ -94,15 +84,5 @@
 }
 
 .price-list-table__error {
-  font-size: var(--font-size-md);
-  line-height: var(--line-height-lg);
   color: var(--color-error-5);
-
-  @include media-tablet {
-    font-size: var(--font-size-lg);
-  }
-
-  @include media-desktop {
-    font-size: var(--font-size-xxl);
-  }
 }

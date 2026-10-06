@@ -6,19 +6,6 @@
   gap: var(--gap-sm);
 }
 
-.sort-buttons__title {
-  font-size: var(--font-size-md);
-  line-height: var(--line-height-lg);
-
-  @include media-tablet {
-    font-size: var(--font-size-lg);
-  }
-
-  @include media-desktop {
-    font-size: var(--font-size-lg);
-  }
-}
-
 .sort-buttons__buttons {
   display: flex;
   gap: var(--gap-md);

@@ -29,15 +29,7 @@
 
 .advantages__image {
   max-width: 100%;
-  border-radius: var(--border-radius-md);
-
-  @include media-tablet {
-    border-radius: var(--border-radius-lg);
-  }
-
-  @include media-desktop {
-    border-radius: var(--border-radius-xxl);
-  }
+  border-radius: var(--border-radius-default);
 }
 
 .advantages__list {
@@ -50,19 +42,6 @@
   }
 }
 
-.advantages__item {
-  font-size: var(--font-size-md);
-  line-height: var(--line-height-xl);
-
-  @include media-tablet {
-    font-size: var(--font-size-lg);
-  }
-
-  @include media-desktop {
-    font-size: var(--font-size-xxl);
-  }
-}
-
 .advantages__button-container {
   margin-top: var(--margin-xxxl);
 
@@ -71,6 +50,6 @@
   }
 
   @include media-desktop {
-    margin-top: calc(var(--margin-xxxl) * 2);
+    margin-top: calc(var(--margin-xxxl) * 1.5);
   }
 }

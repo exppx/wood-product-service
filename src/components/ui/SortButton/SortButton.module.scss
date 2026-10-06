@@ -34,19 +34,6 @@
   background-color: var(--form-control-focus-background-color);
 }
 
-.sort-button__label {
-  font-size: var(--font-size-md);
-  line-height: var(--line-height-xl);
-
-  @include media-tablet {
-    font-size: var(--font-size-lg);
-  }
-
-  @include media-desktop {
-    font-size: var(--font-size-lg);
-  }
-}
-
 .sort-button__icon {
   position: absolute;
   right: var(--icon-offset-x);

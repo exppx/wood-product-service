@@ -4,17 +4,14 @@
   display: grid;
   grid-template-rows: 1fr;
   animation: 0.2s ease spread-vertical;
-
   color: var(--color-error-5);
-  font-size: var(--font-size-md);
-  line-height: var(--line-height-xl);
 
   @include media-tablet {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
   }
 
   @include media-desktop {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-md);
   }
 }
 

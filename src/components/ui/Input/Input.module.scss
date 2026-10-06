@@ -6,8 +6,6 @@
   background-color: var(--form-control-background-color);
   border: var(--form-control-border);
   border-radius: var(--form-control-border-radius);
-  font-size: var(--font-size-md);
-  line-height: var(--line-height-xl);
   transition: var(--transition-default);
 
   &:focus-visible {
@@ -28,14 +26,6 @@
     &:hover:not(:disabled) {
       background-color: var(--form-control-hover-background-color);
     }
-  }
-
-  @include media-tablet {
-    font-size: var(--font-size-lg);
-  }
-
-  @include media-desktop {
-    font-size: var(--font-size-lg);
   }
 }
 

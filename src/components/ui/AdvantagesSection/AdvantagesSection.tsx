@@ -22,15 +22,9 @@ function AdvantagesSection() {
             />
 
             <ul className={styles["advantages__list"]}>
-              <li className={styles["advantages__item"]}>
-                {t("AdvantagesSection.text.1")}
-              </li>
-              <li className={styles["advantages__item"]}>
-                {t("AdvantagesSection.text.2")}
-              </li>
-              <li className={styles["advantages__item"]}>
-                {t("AdvantagesSection.text.3")}
-              </li>
+              <li>{t("AdvantagesSection.text.1")}</li>
+              <li>{t("AdvantagesSection.text.2")}</li>
+              <li>{t("AdvantagesSection.text.3")}</li>
             </ul>
           </Container>
 

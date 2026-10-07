@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { HERO_IMAGE_URL } from "./NotFoundPage.config";
-import Container from "@/components/ui/Container/Container";
-import FourOhFourSvg from "@/components/svg/FourOhFourSvg";
-import LinkButton from "@/components/ui/LinkButton/LinkButton";
+import Container from "@/shared/ui/Container/Container";
+import FourOhFourSvg from "@/shared/ui/icons/FourOhFourSvg";
+import LinkButton from "@/shared/ui/LinkButton/LinkButton";
 
 import styles from "./NotFoundPage.module.scss";
 

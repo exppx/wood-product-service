@@ -1,9 +1,9 @@
 import { render, screen } from "@/test-utils/test-utils";
-import FromResultMessage from "./FromResultMessage";
+import FormResultMessage from "./FormResultMessage";
 
-describe("FromResultMessage", () => {
+describe("FormResultMessage", () => {
   it("renders without breaking", () => {
-    render(<FromResultMessage result="success" message="test_message" />);
+    render(<FormResultMessage result="success" message="test_message" />);
 
     const status = screen.getByRole("status");
 
@@ -11,7 +11,7 @@ describe("FromResultMessage", () => {
   });
 
   it("renders empty status element if result is null", () => {
-    render(<FromResultMessage result={null} message="test_message" />);
+    render(<FormResultMessage result={null} message="test_message" />);
 
     const status = screen.getByRole("status");
 
@@ -19,7 +19,7 @@ describe("FromResultMessage", () => {
   });
 
   it("renders passed message if result is not null", () => {
-    render(<FromResultMessage result="success" message="test_message" />);
+    render(<FormResultMessage result="success" message="test_message" />);
 
     const message = screen.getByText("test_message");
 

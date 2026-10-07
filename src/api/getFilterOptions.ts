@@ -1,4 +1,4 @@
-import type { Locale } from "@/types/locales";
+import type { Locale } from "@/shared/types/locales";
 import type {
   PriceFilterSelectOptions,
   PriceFilters,

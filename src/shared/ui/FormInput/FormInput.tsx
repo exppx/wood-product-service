@@ -1,6 +1,6 @@
 import { useId, type ComponentProps } from "react";
-import Input from "@/components/ui/Input/Input";
-import FormErrorMessage from "@/components/ui/FormErrorMessage/FormErrorMessage";
+import Input from "@/shared/ui/Input/Input";
+import FormErrorMessage from "@/shared/ui/FormErrorMessage/FormErrorMessage";
 
 import styles from "./FormInput.module.scss";
 

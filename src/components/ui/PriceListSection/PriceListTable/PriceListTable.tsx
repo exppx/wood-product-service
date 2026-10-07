@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
-import type { Locale } from "@/types/locales";
+import type { Locale } from "@/shared/types/locales";
 import type { Material } from "@/types/db";
 import {
   COLUMN_GROUPS_END_INDEXES,

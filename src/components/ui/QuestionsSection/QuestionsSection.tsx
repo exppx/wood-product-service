@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import useMedia from "@/hooks/useMedia/useMedia";
-import Container from "@/components/ui/Container/Container";
-import Section from "@/components/ui/Section/Section";
+import useMedia from "@/shared/lib/hooks/useMedia/useMedia";
+import Container from "@/shared/ui/Container/Container";
+import Section from "@/shared/ui/Section/Section";
 import QuestionsForm from "./QuestionsForm/QuestionsForm";
 
 import logImage from "@/assets/images/cut-log.webp";

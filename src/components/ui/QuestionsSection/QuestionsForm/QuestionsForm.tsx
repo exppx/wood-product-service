@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useForm, type SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import type { TranslationKey } from "@/types/locales";
+import type { TranslationKey } from "@/shared/types/locales";
 import sendQuestion from "@/api/sendQuestion";
 import {
   DEFAULT_VALUES,
@@ -13,10 +13,10 @@ import {
   RESULT_MESSAGE_TIME,
   type QuestionsFormInputs,
 } from "./QuestionsForm.config";
-import FormInput from "@/components/ui/FormInput/FormInput";
-import FormTextArea from "@/components/ui/FormTextArea/FormTextArea";
-import SubmitButton from "@/components/ui/SubmitButton/SubmitButton";
-import FromResultMessage from "@/components/ui/FromResultMessage/FromResultMessage";
+import FormInput from "@/shared/ui/FormInput/FormInput";
+import FormTextArea from "@/shared/ui/FormTextArea/FormTextArea";
+import SubmitButton from "@/shared/ui/SubmitButton/SubmitButton";
+import FromResultMessage from "@/shared/ui/FormResultMessage/FormResultMessage";
 
 import styles from "./QuestionsForm.module.scss";
 

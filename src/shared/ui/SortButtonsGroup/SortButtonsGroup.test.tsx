@@ -1,7 +1,7 @@
 import { render, screen } from "@/test-utils/test-utils";
 import userEvent from "@testing-library/user-event";
-import useSortParams from "@/hooks/useSortParams/useSortParams";
-import type { TranslationKey } from "@/types/locales";
+import useSortParams from "@/shared/lib/hooks/useSortParams/useSortParams";
+import type { TranslationKey } from "@/shared/types/locales";
 import SortButtonsGroup, { type SortButtonOptions } from "./SortButtonsGroup";
 
 vi.mock("@/hooks/useSortParams/useSortParams", () => ({

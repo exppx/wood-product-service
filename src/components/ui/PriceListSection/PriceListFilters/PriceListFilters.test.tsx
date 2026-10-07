@@ -2,7 +2,7 @@ import { render, screen, within } from "@/test-utils/test-utils";
 import userEvent from "@testing-library/user-event";
 import usePriceFilters from "@/hooks/usePriceFilters/usePriceFilters";
 import usePriceFilterOptions from "@/hooks/usePriceFilterOptions/usePriceFilterOptions";
-import useSortParams from "@/hooks/useSortParams/useSortParams";
+import useSortParams from "@/shared/lib/hooks/useSortParams/useSortParams";
 import { SORT_BUTTONS_OPTIONS } from "./PriceListFilters.config";
 import PriceListFilters from "./PriceListFilters";
 import SearchParamsDisplay from "@/test-utils/SearchParamsDisplay";

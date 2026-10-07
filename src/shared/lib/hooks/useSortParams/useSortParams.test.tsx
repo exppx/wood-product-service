@@ -6,7 +6,7 @@ import {
   SORT_DIRECTION,
   SORT_DIRECTION_KEY,
   type SortParams,
-} from "@/components/ui/SortButton/SortButton.config";
+} from "@/shared/ui/SortButton/SortButton.config";
 import useSortParams from "./useSortParams";
 
 const NAME: SortParams["sortBy"] = "name";

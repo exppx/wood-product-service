@@ -1,6 +1,6 @@
 import { useId, type ChangeEvent } from "react";
 import { useSearchParams } from "react-router";
-import Select, { type SelectProps } from "@/components/ui/Select/Select";
+import Select, { type SelectProps } from "@/shared/ui/Select/Select";
 
 import styles from "./FilterSelect.module.scss";
 

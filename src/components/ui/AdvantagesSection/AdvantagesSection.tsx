@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { QUESTIONS_FORM_ID } from "@/components/ui/QuestionsSection/QuestionsForm/QuestionsForm.config";
-import Container from "@/components/ui/Container/Container";
-import Section from "@/components/ui/Section/Section";
-import LinkButton from "@/components/ui/LinkButton/LinkButton";
+import Container from "@/shared/ui/Container/Container";
+import Section from "@/shared/ui/Section/Section";
+import LinkButton from "@/shared/ui/LinkButton/LinkButton";
 
 import advantagesImage from "@/assets/images/advantages.webp";
 import styles from "./AdvantagesSection.module.scss";

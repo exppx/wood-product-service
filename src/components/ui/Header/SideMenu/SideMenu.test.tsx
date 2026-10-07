@@ -1,6 +1,6 @@
 import { render, screen } from "@/test-utils/test-utils";
-import type { MediaState } from "@/hooks/useMedia/useMedia";
-import useMedia from "@/hooks/useMedia/useMedia";
+import type { MediaState } from "@/shared/lib/hooks/useMedia/useMedia";
+import useMedia from "@/shared/lib/hooks/useMedia/useMedia";
 import SideMenu from "./SideMenu";
 import { SIDE_MENU_ID } from "./SideMenu.config";
 import userEvent from "@testing-library/user-event";

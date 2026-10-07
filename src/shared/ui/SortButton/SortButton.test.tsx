@@ -2,7 +2,7 @@ import { render, screen } from "@/test-utils/test-utils";
 import userEvent from "@testing-library/user-event";
 import SearchParamsDisplay from "@/test-utils/SearchParamsDisplay";
 import type { ComponentProps, MouseEvent } from "react";
-import useSortParams from "@/hooks/useSortParams/useSortParams";
+import useSortParams from "@/shared/lib/hooks/useSortParams/useSortParams";
 import { type SortParams } from "./SortButton.config";
 import SortButton from "./SortButton";
 

@@ -7,10 +7,10 @@ import {
   HERO_IMAGE_3_URL,
   HERO_IMAGE_URL,
 } from "./Hero.config";
-import Container from "@/components/ui/Container/Container";
-import Section from "@/components/ui/Section/Section";
-import SectionFilled from "@/components/ui/SectionFilled/SectionFilled";
-import LinkButton from "@/components/ui/LinkButton/LinkButton";
+import Container from "@/shared/ui/Container/Container";
+import Section from "@/shared/ui/Section/Section";
+import SectionFilled from "@/shared/ui/SectionFilled/SectionFilled";
+import LinkButton from "@/shared/ui/LinkButton/LinkButton";
 
 import styles from "./Hero.module.scss";
 

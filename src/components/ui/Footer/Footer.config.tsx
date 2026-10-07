@@ -1,8 +1,8 @@
 import type { ComponentProps } from "react";
-import type { TranslationKey } from "@/types/locales";
-import Contact from "@/components/ui/Contact/Contact";
-import GeoSvg from "@/components/svg/GeoSvg";
-import PhoneCallSvg from "@/components/svg/PhoneCallSvg";
+import type { TranslationKey } from "@/shared/types/locales";
+import Contact from "@/shared/ui/Contact/Contact";
+import GeoSvg from "@/shared/ui/icons/GeoSvg";
+import PhoneCallSvg from "@/shared/ui/icons/PhoneCallSvg";
 
 const CONTACTS: {
   Icon: ComponentProps<typeof Contact>["Icon"];

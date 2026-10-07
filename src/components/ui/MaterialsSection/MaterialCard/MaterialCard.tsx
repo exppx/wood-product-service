@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import CheckMarkSvg from "@/components/svg/CheckMarkSvg";
-import CrossSvg from "@/components/svg/CrossSvg";
+import CheckMarkSvg from "@/shared/ui/icons/CheckMarkSvg";
+import CrossSvg from "@/shared/ui/icons/CrossSvg";
 
 import styles from "./MaterialCard.module.scss";
 

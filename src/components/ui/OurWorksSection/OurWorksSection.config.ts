@@ -1,4 +1,4 @@
-import type { CarouselProps } from "@/components/ui/Carousel/Carousel";
+import type { CarouselProps } from "@/shared/ui/Carousel/Carousel";
 import kitchenImage from "@/assets/images/modern-wooden-kitchen.webp";
 import stairsImage from "@/assets/images/wooden-stairs.webp";
 import tableImage from "@/assets/images/wooden-table.webp";

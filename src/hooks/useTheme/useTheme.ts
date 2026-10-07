@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import useLocalStorage from "@/hooks/useLocalStorage/useLocalStorage";
+import useLocalStorage from "@/shared/lib/hooks/useLocalStorage/useLocalStorage";
 import {
   THEME_DEFAULT_VALUE,
   THEME_LOCAL_STORAGE_KEY,
 } from "./useTheme.config";
-import { type Theme } from "@/types/theme";
+import { type Theme } from "@/shared/types/theme";
 
 export default function useTheme() {
   const [theme, setTheme] = useLocalStorage(

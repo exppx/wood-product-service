@@ -2,7 +2,7 @@ import { act, renderHook, waitFor } from "@/test-utils/test-utils";
 import createDeferred from "@/test-utils/createDeferred";
 import type { Material } from "@/types/db";
 import usePriceFilters from "@/hooks/usePriceFilters/usePriceFilters";
-import useSortParams from "@/hooks/useSortParams/useSortParams";
+import useSortParams from "@/shared/lib/hooks/useSortParams/useSortParams";
 import getPriceListTableData from "@/api/getPriceListTableData";
 import usePriceListTableData from "./usePriceListTableData";
 

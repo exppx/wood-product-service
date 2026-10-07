@@ -1,13 +1,13 @@
 import clsx from "clsx";
 
-import styles from "./FromResultMessage.module.scss";
+import styles from "./FormResultMessage.module.scss";
 
-interface FromResultMessageProps {
+interface FormResultMessageProps {
   result: null | "success" | "fail";
   message: string;
 }
 
-function FromResultMessage({ result, message }: FromResultMessageProps) {
+function FormResultMessage({ result, message }: FormResultMessageProps) {
   function renderContent() {
     if (!result) return null;
 
@@ -35,4 +35,4 @@ function FromResultMessage({ result, message }: FromResultMessageProps) {
   );
 }
 
-export default FromResultMessage;
+export default FormResultMessage;

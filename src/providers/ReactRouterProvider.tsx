@@ -1,15 +1,15 @@
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
-import AppLayout from "@/components/layouts/AppLayout/AppLayout";
-import FilledHeaderAppLayout from "@/components/layouts/FilledHeaderAppLayout/FilledHeaderAppLayout";
-import NoFooterLayout from "@/components/layouts/NoFooterLayout/NoFooterLayout";
+import AppLayout from "@/app/layouts/AppLayout/AppLayout";
+import FilledHeaderAppLayout from "@/app/layouts/FilledHeaderAppLayout/FilledHeaderAppLayout";
+import NoFooterLayout from "@/app/layouts/NoFooterLayout/NoFooterLayout";
 import HomePage from "@/pages/HomePage/HomePage";
 import GalleryPage from "@/pages/GalleryPage/GalleryPage";
 import PricesPage from "@/pages/PricesPage/PricesPage";
 import AboutPage from "@/pages/AboutPage/AboutPage";
 import ContactsPage from "@/pages/ContactsPage/ContactsPage";
 import NotFoundPage from "@/pages/NotFoundPage/NotFoundPage";
-import ScrollRestorationLayout from "@/components/layouts/ScrollRestorationLayout/ScrollRestorationLayout";
+import ScrollRestorationLayout from "@/app/layouts/ScrollRestorationLayout/ScrollRestorationLayout";
 
 const router = createBrowserRouter([
   {

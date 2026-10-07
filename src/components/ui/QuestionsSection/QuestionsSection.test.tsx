@@ -1,5 +1,5 @@
 import { render, screen } from "@/test-utils/test-utils";
-import useMedia from "@/hooks/useMedia/useMedia";
+import useMedia from "@/shared/lib/hooks/useMedia/useMedia";
 import QuestionsSection from "./QuestionsSection";
 
 vi.mock("@/hooks/useMedia/useMedia", () => ({

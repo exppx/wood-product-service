@@ -1,6 +1,6 @@
-import Button from "@/components/ui/Button/Button";
+import Button from "@/shared/ui/Button/Button";
 import type { ComponentProps, PropsWithChildren } from "react";
-import Spinner from "@/components/ui/Spinner/Spinner";
+import Spinner from "@/shared/ui/Spinner/Spinner";
 
 import styles from "./SubmitButton.module.scss";
 

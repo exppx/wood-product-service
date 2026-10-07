@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import i18n from "@/i18n";
-import type { Locale } from "@/types/locales";
+import i18n from "@/shared/config/i18n";
+import type { Locale } from "@/shared/types/locales";
 
 export default function useLocale() {
   const [locale, setLocale] = useState<Locale>(i18n.language as Locale);

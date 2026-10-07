@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import clsx from "clsx";
-import Container from "../Container/Container";
-import Logo from "@/components/ui/Logo/Logo";
+import Container from "../../../shared/ui/Container/Container";
+import Logo from "@/shared/ui/Logo/Logo";
 import SideMenu from "./SideMenu/SideMenu";
 
 import styles from "./Header.module.scss";

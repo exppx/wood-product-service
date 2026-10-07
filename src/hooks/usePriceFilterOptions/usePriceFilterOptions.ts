@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import type { Locale } from "@/types/locales";
+import type { Locale } from "@/shared/types/locales";
 import getFilterOptions from "@/api/getFilterOptions";
 import type {
   PriceFilterSelectOptions,

@@ -1,4 +1,4 @@
-import type { Theme } from "@/types/theme";
+import type { Theme } from "@/shared/types/theme";
 
 const THEME_DEFAULT_VALUE: Theme = "dark";
 const THEME_LOCAL_STORAGE_KEY = "bio-cwt-theme";

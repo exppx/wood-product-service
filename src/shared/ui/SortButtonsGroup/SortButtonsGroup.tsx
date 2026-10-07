@@ -1,9 +1,9 @@
 import { useId, useState } from "react";
 import { useTranslation } from "react-i18next";
-import type { TranslationKey } from "@/types/locales";
-import type { SortParams } from "@/components/ui/SortButton/SortButton.config";
-import useSortParams from "@/hooks/useSortParams/useSortParams";
-import SortButton from "@/components/ui/SortButton/SortButton";
+import type { TranslationKey } from "@/shared/types/locales";
+import type { SortParams } from "@/shared/ui/SortButton/SortButton.config";
+import useSortParams from "@/shared/lib/hooks/useSortParams/useSortParams";
+import SortButton from "@/shared/ui/SortButton/SortButton";
 
 import styles from "./SortButtonsGroup.module.scss";
 

@@ -1,4 +1,4 @@
-import type { TranslationKey } from "@/types/locales";
+import type { TranslationKey } from "@/shared/types/locales";
 import type { Material } from "@/types/db";
 
 interface PriceListTableData {

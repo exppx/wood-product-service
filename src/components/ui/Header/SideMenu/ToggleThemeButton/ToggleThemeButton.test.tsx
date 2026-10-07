@@ -1,6 +1,6 @@
 import { render, screen } from "@/test-utils/test-utils";
 import userEvent from "@testing-library/user-event";
-import type { Theme } from "@/types/theme";
+import type { Theme } from "@/shared/types/theme";
 import useTheme from "@/hooks/useTheme/useTheme";
 import ToggleThemeButton from "./ToggleThemeButton";
 

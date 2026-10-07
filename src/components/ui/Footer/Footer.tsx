@@ -2,9 +2,9 @@ import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 import { CONTACTS, COPYRIGHT } from "./Footer.config";
-import Container from "@/components/ui/Container/Container";
-import Logo from "@/components/ui/Logo/Logo";
-import Contact from "@/components/ui/Contact/Contact";
+import Container from "@/shared/ui/Container/Container";
+import Logo from "@/shared/ui/Logo/Logo";
+import Contact from "@/shared/ui/Contact/Contact";
 
 import styles from "./Footer.module.scss";
 

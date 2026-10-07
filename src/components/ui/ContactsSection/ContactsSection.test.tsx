@@ -1,5 +1,5 @@
 import { render, screen } from "@/test-utils/test-utils";
-import useMedia from "@/hooks/useMedia/useMedia";
+import useMedia from "@/shared/lib/hooks/useMedia/useMedia";
 import { MAP_HEIGHTS } from "./ContactsSection.config";
 import ContactsSection from "./ContactsSection";
 

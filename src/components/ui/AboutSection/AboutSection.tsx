@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
-import Container from "@/components/ui/Container/Container";
-import Section from "@/components/ui/Section/Section";
-import SectionFilled from "@/components/ui/SectionFilled/SectionFilled";
+import Container from "@/shared/ui/Container/Container";
+import Section from "@/shared/ui/Section/Section";
+import SectionFilled from "@/shared/ui/SectionFilled/SectionFilled";
 
 import image_1 from "@/assets/images/about_1.webp";
 import image_2 from "@/assets/images/about_2.webp";

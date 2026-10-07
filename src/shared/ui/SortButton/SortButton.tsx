@@ -1,8 +1,8 @@
 import type { ComponentProps, MouseEvent } from "react";
 import clsx from "clsx";
 import { type SortParams } from "./SortButton.config";
-import useSortParams from "@/hooks/useSortParams/useSortParams";
-import ArrowToUpThinSvg from "@/components/svg/ArrowToUpThinSvg";
+import useSortParams from "@/shared/lib/hooks/useSortParams/useSortParams";
+import ArrowToUpThinSvg from "@/shared/ui/icons/ArrowToUpThinSvg";
 
 import styles from "./SortButton.module.scss";
 

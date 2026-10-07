@@ -1,6 +1,6 @@
-import type { TranslationKey } from "@/types/locales";
-import type { SelectOption } from "@/components/ui/Select/Select";
-import type { SortButtonOptions } from "@/components/ui/SortButtonsGroup/SortButtonsGroup";
+import type { TranslationKey } from "@/shared/types/locales";
+import type { SelectOption } from "@/shared/ui/Select/Select";
+import type { SortButtonOptions } from "@/shared/ui/SortButtonsGroup/SortButtonsGroup";
 
 const FILTER_NAMES = {
   wood: "wood",

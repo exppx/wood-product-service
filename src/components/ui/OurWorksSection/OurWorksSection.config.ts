@@ -1,7 +1,11 @@
-import type { CarouselProps } from "@/shared/ui/Carousel/Carousel";
-import kitchenImage from "@/assets/images/modern-wooden-kitchen.webp";
-import stairsImage from "@/assets/images/wooden-stairs.webp";
-import tableImage from "@/assets/images/wooden-table.webp";
+import type { ComponentProps } from "react";
+import type { Carousel } from "@/shared/ui";
+
+import kitchenImage from "@/shared/assets/images/modern-wooden-kitchen.webp";
+import stairsImage from "@/shared/assets/images/wooden-stairs.webp";
+import tableImage from "@/shared/assets/images/wooden-table.webp";
+
+type CarouselProps = ComponentProps<typeof Carousel>;
 
 const CAROUSEL_IMAGES: {
   en: CarouselProps["images"];

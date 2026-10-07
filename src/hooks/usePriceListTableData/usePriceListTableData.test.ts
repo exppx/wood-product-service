@@ -2,12 +2,14 @@ import { act, renderHook, waitFor } from "@/test-utils/test-utils";
 import createDeferred from "@/test-utils/createDeferred";
 import type { Material } from "@/types/db";
 import usePriceFilters from "@/hooks/usePriceFilters/usePriceFilters";
-import useSortParams from "@/shared/lib/hooks/useSortParams/useSortParams";
+import { useSortParams } from "@/shared/lib/hooks";
 import getPriceListTableData from "@/api/getPriceListTableData";
 import usePriceListTableData from "./usePriceListTableData";
 
 vi.mock("@/hooks/usePriceFilters/usePriceFilters");
-vi.mock("@/hooks/useSortParams/useSortParams");
+vi.mock("@/shared/lib/hooks", () => ({
+  useSortParams: vi.fn(),
+}));
 vi.mock("@/api/getPriceListTableData");
 
 const { stableT } = vi.hoisted(() => ({

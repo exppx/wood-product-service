@@ -1,9 +1,7 @@
 import { useTranslation } from "react-i18next";
 import type { Locale } from "@/shared/types/locales";
 import { CAROUSEL_IMAGES } from "./OurWorksSection.config";
-import Container from "@/shared/ui/Container/Container";
-import Section from "@/shared/ui/Section/Section";
-import Carousel from "@/shared/ui/Carousel/Carousel";
+import { Carousel, Container, Section } from "@/shared/ui";
 
 interface OurWorksSectionProps {
   isMainSection?: boolean;

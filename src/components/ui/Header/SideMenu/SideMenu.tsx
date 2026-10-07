@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 import { SIDE_MENU_ID } from "./SideMenu.config";
-import useMedia from "@/shared/lib/hooks/useMedia/useMedia";
+import { useMedia } from "@/shared/lib/hooks";
 import Navigation from "./Navigation/Navigation";
 import BurgerButton from "./BurgerButton/BurgerButton";
 import CloseSideMenuButton from "./CloseSideMenuButton/CloseSideMenuButton";

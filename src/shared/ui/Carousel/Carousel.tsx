@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
-import IconButton from "@/shared/ui/IconButton/IconButton";
-import ArrowToLeftSvg from "@/shared/ui/icons/ArrowToLeftSvg";
-import ArrowToRightSvg from "@/shared/ui/icons/ArrowToRightSvg";
+import { IconButton } from "@/shared/ui";
+import { ArrowToLeftSvg, ArrowToRightSvg } from "@/shared/ui/icons";
 
 import styles from "./Carousel.module.scss";
 
-export interface CarouselProps {
+interface CarouselProps {
   images: { imageUrl: string; alt: string }[];
 }
 

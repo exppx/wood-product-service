@@ -1,12 +1,10 @@
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
-import Container from "@/shared/ui/Container/Container";
-import Section from "@/shared/ui/Section/Section";
-import SectionFilled from "@/shared/ui/SectionFilled/SectionFilled";
+import { Container, Section, SectionFilled } from "@/shared/ui";
 
-import image_1 from "@/assets/images/about_1.webp";
-import image_2 from "@/assets/images/about_2.webp";
-import image_3 from "@/assets/images/about_3.webp";
+import image_1 from "@/shared/assets/images/about_1.webp";
+import image_2 from "@/shared/assets/images/about_2.webp";
+import image_3 from "@/shared/assets/images/about_3.webp";
 import styles from "./AboutSection.module.scss";
 
 interface AboutSectionProps {

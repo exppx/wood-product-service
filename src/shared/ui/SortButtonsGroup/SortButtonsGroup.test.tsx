@@ -1,15 +1,16 @@
 import { render, screen } from "@/test-utils/test-utils";
 import userEvent from "@testing-library/user-event";
-import useSortParams from "@/shared/lib/hooks/useSortParams/useSortParams";
+import { useSortParams } from "@/shared/lib/hooks";
 import type { TranslationKey } from "@/shared/types/locales";
-import SortButtonsGroup, { type SortButtonOptions } from "./SortButtonsGroup";
+import type { SortButtonOptions } from "@/shared/types/sort";
+import SortButtonsGroup from "./SortButtonsGroup";
 
-vi.mock("@/hooks/useSortParams/useSortParams", () => ({
-  default: vi.fn(),
+vi.mock("@/shared/lib/hooks", () => ({
+  useSortParams: vi.fn(),
 }));
 
-vi.mock("@/components/ui/SortButton/SortButton", () => ({
-  default: ({
+vi.mock("@/shared/ui", () => ({
+  SortButton: ({
     label,
     sortByValue,
     onClick,

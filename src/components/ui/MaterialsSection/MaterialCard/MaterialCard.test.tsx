@@ -1,5 +1,8 @@
 import { render, screen } from "@/test-utils/test-utils";
-import MaterialCard, { type MaterialCardProps } from "./MaterialCard";
+import type { ComponentProps } from "react";
+import MaterialCard from "./MaterialCard";
+
+type MaterialCardProps = ComponentProps<typeof MaterialCard>;
 
 describe("MaterialCard", () => {
   const testCardData: MaterialCardProps = {

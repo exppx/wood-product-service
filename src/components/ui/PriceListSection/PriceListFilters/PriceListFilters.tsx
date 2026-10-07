@@ -7,10 +7,8 @@ import {
 } from "./PriceListFilters.config";
 import usePriceFilters from "@/hooks/usePriceFilters/usePriceFilters";
 import usePriceFilterOptions from "@/hooks/usePriceFilterOptions/usePriceFilterOptions";
-import useSortParams from "@/shared/lib/hooks/useSortParams/useSortParams";
-import FilterSelect from "@/shared/ui/FilterSelect/FilterSelect";
-import Button from "@/shared/ui/Button/Button";
-import SortButtonsGroup from "@/shared/ui/SortButtonsGroup/SortButtonsGroup";
+import { useSortParams } from "@/shared/lib/hooks";
+import { Button, FilterSelect, SortButtonsGroup } from "@/shared/ui";
 
 import styles from "./PriceListFilters.module.scss";
 

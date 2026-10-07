@@ -1,11 +1,11 @@
 import { render, screen, within } from "@/test-utils/test-utils";
+import SearchParamsDisplay from "@/test-utils/SearchParamsDisplay";
 import userEvent from "@testing-library/user-event";
 import usePriceFilters from "@/hooks/usePriceFilters/usePriceFilters";
 import usePriceFilterOptions from "@/hooks/usePriceFilterOptions/usePriceFilterOptions";
-import useSortParams from "@/shared/lib/hooks/useSortParams/useSortParams";
+import { useSortParams } from "@/shared/lib/hooks";
 import { SORT_BUTTONS_OPTIONS } from "./PriceListFilters.config";
 import PriceListFilters from "./PriceListFilters";
-import SearchParamsDisplay from "@/test-utils/SearchParamsDisplay";
 
 vi.mock("./PriceListFilters.config", () => ({
   FILTER_NAMES: { wood: "wood" },
@@ -36,10 +36,21 @@ vi.mock("@/hooks/usePriceFilters/usePriceFilters", () => ({
 vi.mock("@/hooks/usePriceFilterOptions/usePriceFilterOptions", () => ({
   default: vi.fn(),
 }));
-vi.mock("@/hooks/useSortParams/useSortParams", () => ({ default: vi.fn() }));
+vi.mock("@/shared/lib/hooks", () => ({ useSortParams: vi.fn() }));
 
-vi.mock("@/components/ui/FilterSelect/FilterSelect", () => ({
-  default: ({
+vi.mock("@/shared/ui", () => ({
+  Button: ({
+    children,
+    onClick,
+  }: {
+    children: React.ReactNode;
+    onClick?: () => void;
+  }) => (
+    <button type="button" onClick={onClick}>
+      {children}
+    </button>
+  ),
+  FilterSelect: ({
     label,
     searchKey,
     name,
@@ -65,28 +76,11 @@ vi.mock("@/components/ui/FilterSelect/FilterSelect", () => ({
       ))}
     </select>
   ),
-}));
-
-vi.mock("@/components/ui/SortButtonsGroup/SortButtonsGroup", () => ({
-  default: ({ options }: { options: unknown[] }) => (
+  SortButtonsGroup: ({ options }: { options: unknown[] }) => (
     <div
       data-testid="sort-buttons-group"
       data-options={JSON.stringify(options)}
     />
-  ),
-}));
-
-vi.mock("@/components/ui/Button/Button", () => ({
-  default: ({
-    children,
-    onClick,
-  }: {
-    children: React.ReactNode;
-    onClick?: () => void;
-  }) => (
-    <button type="button" onClick={onClick}>
-      {children}
-    </button>
   ),
 }));
 

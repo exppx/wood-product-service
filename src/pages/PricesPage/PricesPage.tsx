@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import usePageMetadata from "@/shared/lib/hooks/usePageMetadata/usePageMetadata";
+import { usePageMetadata } from "@/shared/lib/hooks";
 import PriceListSection from "@/components/ui/PriceListSection/PriceListSection";
 import QuestionsSection from "@/components/ui/QuestionsSection/QuestionsSection";
 

@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
-import CheckMarkSvg from "@/shared/ui/icons/CheckMarkSvg";
-import CrossSvg from "@/shared/ui/icons/CrossSvg";
+import { CheckMarkSvg, CrossSvg } from "@/shared/ui/icons";
 
 import styles from "./MaterialCard.module.scss";
 
@@ -9,7 +8,7 @@ interface MaterialProperty {
   isPositive: boolean;
 }
 
-export interface MaterialCardProps {
+interface MaterialCardProps {
   imageUrl: string;
   name: string;
   properties: MaterialProperty[];

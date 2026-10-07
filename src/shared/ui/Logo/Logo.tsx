@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
-import LogoSvg from "@/shared/ui/icons/LogoSvg";
+import { LogoSvg } from "@/shared/ui/icons";
 
 import styles from "./Logo.module.scss";
 

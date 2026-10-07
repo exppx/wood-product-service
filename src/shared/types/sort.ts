@@ -1,3 +1,5 @@
+import type { TranslationKey } from "@/shared/types/locales";
+
 const SORT_BY_KEY = "sortBy";
 const SORT_DIRECTION_KEY = "sort";
 
@@ -18,6 +20,12 @@ type SortParams = {
   sortBy: string;
 };
 
+interface SortButtonOptions {
+  visibleLabel: TranslationKey;
+  readableLabel: TranslationKey;
+  sortByValue: SortParams["sortBy"];
+}
+
 export {
   SORT_BY_KEY,
   SORT_DIRECTION_KEY,
@@ -25,4 +33,5 @@ export {
   isSortDirection,
   type SortDirection,
   type SortParams,
+  type SortButtonOptions,
 };

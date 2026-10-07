@@ -1,7 +1,6 @@
 import type { ComponentType } from "react";
 import type { TranslationKey } from "@/shared/types/locales";
-import PhoneCallSvg from "@/shared/ui/icons/PhoneCallSvg";
-import GeoSvg from "@/shared/ui/icons/GeoSvg";
+import { PhoneCallSvg, GeoSvg } from "@/shared/ui/icons";
 
 const CONTACTS: {
   Icon: ComponentType;

@@ -1,6 +1,5 @@
 import { useId, type ComponentProps } from "react";
-import TextArea from "@/shared/ui/TextArea/TextArea";
-import FormErrorMessage from "@/shared/ui/FormErrorMessage/FormErrorMessage";
+import { TextArea, FormErrorMessage } from "@/shared/ui";
 
 import styles from "./FormTextArea.module.scss";
 

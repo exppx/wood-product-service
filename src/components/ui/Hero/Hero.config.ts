@@ -1,7 +1,7 @@
-import heroImageUrl from "@/assets/images/hero_bg.webp";
-import heroImage1Url from "@/assets/images/hero_1.webp";
-import heroImage2Url from "@/assets/images/hero_2.webp";
-import heroImage3Url from "@/assets/images/hero_3.webp";
+import heroImageUrl from "@/shared/assets/images/hero_bg.webp";
+import heroImage1Url from "@/shared/assets/images/hero_1.webp";
+import heroImage2Url from "@/shared/assets/images/hero_2.webp";
+import heroImage3Url from "@/shared/assets/images/hero_3.webp";
 
 const HERO_IMAGE_URL = heroImageUrl;
 const HERO_IMAGE_1_URL = heroImage1Url;

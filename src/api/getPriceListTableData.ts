@@ -1,5 +1,5 @@
 import type { PriceFilters } from "@/components/ui/PriceListSection/PriceListFilters/PriceListFilters.config";
-import type { SortParams } from "@/shared/ui/SortButton/SortButton.config";
+import type { SortParams } from "@/shared/types/sort";
 import type { Material } from "@/types/db";
 import type { PriceListTableData } from "@/components/ui/PriceListSection/PriceListTable/PriceListTable.config";
 

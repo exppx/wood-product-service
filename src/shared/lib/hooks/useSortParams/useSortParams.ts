@@ -6,7 +6,7 @@ import {
   SORT_DIRECTION_KEY,
   type SortDirection,
   type SortParams,
-} from "@/shared/ui/SortButton/SortButton.config";
+} from "@/shared/types/sort";
 
 function useSortParams() {
   const [searchParams, setSearchParams] = useSearchParams();

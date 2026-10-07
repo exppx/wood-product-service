@@ -1,8 +1,11 @@
-import type { MaterialCardProps } from "./MaterialCard/MaterialCard";
+import type { ComponentProps } from "react";
+import type MaterialCard from "./MaterialCard/MaterialCard";
 
-import oakUrl from "@/assets/images/oak.webp";
-import bukUrl from "@/assets/images/buk.webp";
-import ashUrl from "@/assets/images/ash.webp";
+import oakUrl from "@/shared/assets/images/oak.webp";
+import bukUrl from "@/shared/assets/images/buk.webp";
+import ashUrl from "@/shared/assets/images/ash.webp";
+
+type MaterialCardProps = ComponentProps<typeof MaterialCard>;
 
 const MATERIALS: {
   en: MaterialCardProps[];

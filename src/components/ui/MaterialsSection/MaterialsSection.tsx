@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
 import type { Locale } from "@/shared/types/locales";
 import { MATERIALS } from "./MaterialsSection.config";
-import Container from "@/shared/ui/Container/Container";
-import Section from "@/shared/ui/Section/Section";
+import { Container, Section } from "@/shared/ui";
 import MaterialCard from "./MaterialCard/MaterialCard";
 
 import styles from "./MaterialsSection.module.scss";

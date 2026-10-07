@@ -1,9 +1,5 @@
 import { useEffect } from "react";
-
-export interface PageMetadata {
-  title?: string;
-  description?: string;
-}
+import type { PageMetadata } from "@/shared/types/pageMetadata";
 
 export default function usePageMetadata({ title, description }: PageMetadata) {
   useEffect(() => {

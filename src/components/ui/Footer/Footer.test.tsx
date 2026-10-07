@@ -2,9 +2,14 @@ import { render, screen } from "@/test-utils/test-utils";
 import { CONTACTS } from "./Footer.config";
 import Footer from "./Footer";
 
-vi.mock("@/components/ui/Logo/Logo", () => ({
-  default: () => <div data-testid="logo">Logo</div>,
-}));
+vi.mock("@/shared/ui", async (importOriginal) => {
+  const original = await importOriginal<typeof import("@/shared/ui")>();
+
+  return {
+    ...original,
+    Logo: () => <div data-testid="logo">Logo</div>,
+  };
+});
 
 describe("Footer", () => {
   it("renders without breaking", () => {

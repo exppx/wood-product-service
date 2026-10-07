@@ -1,5 +1,5 @@
 import { renderHook } from "@testing-library/react";
-import usePageMetadata from "./usePageMetadata";
+import { usePageMetadata } from "@/shared/lib/hooks";
 
 describe("usePageMetadata", () => {
   afterEach(() => {

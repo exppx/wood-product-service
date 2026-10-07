@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
 import useTheme from "@/hooks/useTheme/useTheme";
-import IconButton from "@/shared/ui/IconButton/IconButton";
-import BulbOffSvg from "@/shared/ui/icons/BulbOffSvg";
-import BulbOnSvg from "@/shared/ui/icons/BulbOnSvg";
+import { IconButton } from "@/shared/ui";
+import { BulbOnSvg, BulbOffSvg } from "@/shared/ui/icons";
 
 import styles from "./ToggleThemeButton.module.scss";
 

@@ -1,9 +1,9 @@
 import { render, screen } from "@/test-utils/test-utils";
-import useMedia from "@/shared/lib/hooks/useMedia/useMedia";
+import { useMedia } from "@/shared/lib/hooks";
 import QuestionsSection from "./QuestionsSection";
 
-vi.mock("@/hooks/useMedia/useMedia", () => ({
-  default: vi.fn(),
+vi.mock("@/shared/lib/hooks", () => ({
+  useMedia: vi.fn(),
 }));
 
 vi.mock("./QuestionsForm/QuestionsForm", () => ({

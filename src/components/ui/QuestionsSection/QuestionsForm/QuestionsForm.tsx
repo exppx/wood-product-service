@@ -13,10 +13,12 @@ import {
   RESULT_MESSAGE_TIME,
   type QuestionsFormInputs,
 } from "./QuestionsForm.config";
-import FormInput from "@/shared/ui/FormInput/FormInput";
-import FormTextArea from "@/shared/ui/FormTextArea/FormTextArea";
-import SubmitButton from "@/shared/ui/SubmitButton/SubmitButton";
-import FromResultMessage from "@/shared/ui/FormResultMessage/FormResultMessage";
+import {
+  FormInput,
+  FormResultMessage,
+  FormTextArea,
+  SubmitButton,
+} from "@/shared/ui";
 
 import styles from "./QuestionsForm.module.scss";
 
@@ -119,7 +121,7 @@ function QuestionsForm() {
         {t("QuestionsForm.submit")}
       </SubmitButton>
 
-      <FromResultMessage
+      <FormResultMessage
         result={result}
         message={
           result === "success"

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import useLocale from "@/hooks/useLocale/useLocale";
-import IconButton from "@/shared/ui/IconButton/IconButton";
+import { IconButton } from "@/shared/ui";
 
 import styles from "./ToggleLocaleButton.module.scss";
 

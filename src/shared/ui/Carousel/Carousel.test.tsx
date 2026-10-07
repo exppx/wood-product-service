@@ -1,7 +1,9 @@
 import userEvent from "@testing-library/user-event";
 import { render, screen } from "@/test-utils/test-utils";
-import type { CarouselProps } from "./Carousel";
+import type { ComponentProps } from "react";
 import Carousel from "./Carousel";
+
+type CarouselProps = ComponentProps<typeof Carousel>;
 
 const mockImages: CarouselProps["images"] = [
   { imageUrl: "image_url_1", alt: "alt_1" },

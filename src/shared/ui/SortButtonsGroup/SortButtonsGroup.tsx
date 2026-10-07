@@ -1,17 +1,11 @@
 import { useId, useState } from "react";
 import { useTranslation } from "react-i18next";
 import type { TranslationKey } from "@/shared/types/locales";
-import type { SortParams } from "@/shared/ui/SortButton/SortButton.config";
-import useSortParams from "@/shared/lib/hooks/useSortParams/useSortParams";
-import SortButton from "@/shared/ui/SortButton/SortButton";
+import type { SortButtonOptions } from "@/shared/types/sort";
+import { useSortParams } from "@/shared/lib/hooks";
+import { SortButton } from "@/shared/ui";
 
 import styles from "./SortButtonsGroup.module.scss";
-
-export interface SortButtonOptions {
-  visibleLabel: TranslationKey;
-  readableLabel: TranslationKey;
-  sortByValue: SortParams["sortBy"];
-}
 
 interface SortButtonsGroupProps {
   options: SortButtonOptions[];

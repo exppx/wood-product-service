@@ -1,10 +1,10 @@
-import { useId, type ChangeEvent } from "react";
+import { useId, type ChangeEvent, type ComponentProps } from "react";
 import { useSearchParams } from "react-router";
-import Select, { type SelectProps } from "@/shared/ui/Select/Select";
+import { Select } from "@/shared/ui";
 
 import styles from "./FilterSelect.module.scss";
 
-interface FilterSelectProps extends SelectProps {
+interface FilterSelectProps extends ComponentProps<typeof Select> {
   searchKey: string;
   label: string;
 }

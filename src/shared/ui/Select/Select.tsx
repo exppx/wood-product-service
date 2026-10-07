@@ -1,18 +1,20 @@
 import type { ComponentProps } from "react";
 import clsx from "clsx";
+import type { SelectOption } from "@/shared/types/select";
 
 import styles from "./Select.module.scss";
 
-export interface SelectOption<T extends string | number> {
-  label: string;
-  value: T;
+interface SelectProps<
+  T extends string | number,
+> extends ComponentProps<"select"> {
+  options: SelectOption<T>[];
 }
 
-export interface SelectProps extends ComponentProps<"select"> {
-  options: SelectOption<string | number>[];
-}
-
-function Select({ options, className, ...rest }: SelectProps) {
+function Select<T extends string | number>({
+  options,
+  className,
+  ...rest
+}: SelectProps<T>) {
   return (
     <div className={styles["select-wrapper"]}>
       <select {...rest} className={clsx([className, styles["select"]])}>

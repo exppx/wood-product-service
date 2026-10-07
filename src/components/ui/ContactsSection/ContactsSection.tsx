@@ -1,9 +1,7 @@
 import { useTranslation } from "react-i18next";
-import useMedia from "@/shared/lib/hooks/useMedia/useMedia";
+import { useMedia } from "@/shared/lib/hooks";
 import { CONTACTS, MAP_HEIGHTS } from "./ContactsSection.config";
-import Container from "@/shared/ui/Container/Container";
-import Section from "@/shared/ui/Section/Section";
-import Contact from "@/shared/ui/Contact/Contact";
+import { Contact, Container, Section } from "@/shared/ui";
 
 import styles from "./ContactsSection.module.scss";
 

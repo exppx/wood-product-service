@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
-import Container from "@/shared/ui/Container/Container";
-import Section from "@/shared/ui/Section/Section";
+import { Container, Section } from "@/shared/ui";
 import PriceListFilters from "./PriceListFilters/PriceListFilters";
 import PriceListTable from "./PriceListTable/PriceListTable";
 

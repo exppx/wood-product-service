@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import useLocalStorage from "@/shared/lib/hooks/useLocalStorage/useLocalStorage";
+import { useLocalStorage } from "@/shared/lib/hooks";
 import {
   THEME_DEFAULT_VALUE,
   THEME_LOCAL_STORAGE_KEY,

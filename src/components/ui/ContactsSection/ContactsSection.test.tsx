@@ -1,10 +1,10 @@
 import { render, screen } from "@/test-utils/test-utils";
-import useMedia from "@/shared/lib/hooks/useMedia/useMedia";
+import { useMedia } from "@/shared/lib/hooks";
 import { MAP_HEIGHTS } from "./ContactsSection.config";
 import ContactsSection from "./ContactsSection";
 
-vi.mock("@/hooks/useMedia/useMedia", () => ({
-  default: vi.fn(),
+vi.mock("@/shared/lib/hooks", () => ({
+  useMedia: vi.fn(),
 }));
 
 describe("ContactsSection", () => {

@@ -1,10 +1,9 @@
 import { useTranslation } from "react-i18next";
-import useMedia from "@/shared/lib/hooks/useMedia/useMedia";
-import Container from "@/shared/ui/Container/Container";
-import Section from "@/shared/ui/Section/Section";
+import { useMedia } from "@/shared/lib/hooks";
+import { Container, Section } from "@/shared/ui";
 import QuestionsForm from "./QuestionsForm/QuestionsForm";
 
-import logImage from "@/assets/images/cut-log.webp";
+import logImage from "@/shared/assets/images/cut-log.webp";
 import styles from "./QuestionsSection.module.scss";
 
 function QuestionsSection() {

@@ -2,16 +2,16 @@ import { render, screen } from "@/test-utils/test-utils";
 import userEvent from "@testing-library/user-event";
 import SearchParamsDisplay from "@/test-utils/SearchParamsDisplay";
 import type { ComponentProps, MouseEvent } from "react";
-import useSortParams from "@/shared/lib/hooks/useSortParams/useSortParams";
-import { type SortParams } from "./SortButton.config";
+import { useSortParams } from "@/shared/lib/hooks";
+import { type SortParams } from "@/shared/types/sort";
 import SortButton from "./SortButton";
 
-vi.mock("@/hooks/useSortParams/useSortParams", () => ({
-  default: vi.fn(),
+vi.mock("@/shared/lib/hooks", () => ({
+  useSortParams: vi.fn(),
 }));
 
-vi.mock("@/components/svg/ArrowToUpThinSvg", () => ({
-  default: () => <svg data-testid="arrow-icon" />,
+vi.mock("@/shared/ui/icons", () => ({
+  ArrowToUpThinSvg: () => <svg data-testid="arrow-icon" />,
 }));
 
 const TEST_LABEL = "test_label";

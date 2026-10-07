@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import usePriceFilters from "@/hooks/usePriceFilters/usePriceFilters";
-import useSortParams from "@/shared/lib/hooks/useSortParams/useSortParams";
+import { useSortParams } from "@/shared/lib/hooks";
 import type { PriceListTableData } from "@/components/ui/PriceListSection/PriceListTable/PriceListTable.config";
 import getPriceListTableData from "@/api/getPriceListTableData";
 

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import usePageMetadata from "@/shared/lib/hooks/usePageMetadata/usePageMetadata";
+import { usePageMetadata } from "@/shared/lib/hooks";
 import ContactsSection from "@/components/ui/ContactsSection/ContactsSection";
 
 import styles from "./ContactsPage.module.scss";

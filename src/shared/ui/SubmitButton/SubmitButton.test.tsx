@@ -1,9 +1,14 @@
 import { render, screen } from "@/test-utils/test-utils";
 import SubmitButton from "./SubmitButton";
 
-vi.mock("@/components/ui/Spinner/Spinner", () => ({
-  default: () => <div data-testid="spinner"></div>,
-}));
+vi.mock("@/shared/ui", async (importOriginal) => {
+  const original = await importOriginal<typeof import("@/shared/ui")>();
+
+  return {
+    ...original,
+    Spinner: () => <div data-testid="spinner"></div>,
+  };
+});
 
 describe("SubmitButton", () => {
   it("renders without breaking", () => {

@@ -1,4 +1,4 @@
-import heroImageUrl from "@/assets/images/hero_bg.webp";
+import heroImageUrl from "@/shared/assets/images/hero_bg.webp";
 
 const HERO_IMAGE_URL = heroImageUrl;
 

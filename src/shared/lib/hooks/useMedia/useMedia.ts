@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
 import { BREAKPOINTS } from "./useMedia.config";
-
-export interface MediaState {
-  isMobile: boolean;
-  isTablet: boolean;
-  isDesktop: boolean;
-}
+import type { MediaState } from "@/shared/types/media";
 
 function getMediaState(): MediaState {
   return {

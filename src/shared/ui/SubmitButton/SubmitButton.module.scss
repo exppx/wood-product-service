@@ -1,4 +1,4 @@
-@use "@/sass/mixins.scss" as *;
+@use "@/app/styles/mixins.scss" as *;
 
 .submit-button__spinner-container {
   width: calc(var(--font-size-md) * var(--line-height-lg));

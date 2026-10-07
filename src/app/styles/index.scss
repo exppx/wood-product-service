@@ -1,5 +1,5 @@
-@use "./sass/constants.scss" as *;
-@use "./sass/mixins.scss" as *;
+@use "./constants.scss" as *;
+@use "./mixins.scss" as *;
 @import url("ress/ress.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
@@ -7,7 +7,7 @@
   font-family: "KyivTypeSans";
   font-style: normal;
   font-weight: 300;
-  src: url("./shared/assets/fonts/KyivTypeSans-Light-.otf") format("opentype");
+  src: url("@/shared/assets/fonts/KyivTypeSans-Light-.otf") format("opentype");
   font-display: swap;
 }
 
@@ -15,7 +15,7 @@
   font-family: "KyivTypeSans";
   font-style: normal;
   font-weight: 400;
-  src: url("./shared/assets/fonts/KyivTypeSans-Regular-.otf") format("opentype");
+  src: url("@/shared/assets/fonts/KyivTypeSans-Regular-.otf") format("opentype");
   font-display: swap;
 }
 
@@ -23,7 +23,7 @@
   font-family: "KyivTypeSans";
   font-style: normal;
   font-weight: 500;
-  src: url("./shared/assets/fonts/KyivTypeSans-Medium-.otf") format("opentype");
+  src: url("@/shared/assets/fonts/KyivTypeSans-Medium-.otf") format("opentype");
   font-display: swap;
 }
 
@@ -31,7 +31,7 @@
   font-family: "KyivTypeSans";
   font-style: normal;
   font-weight: 700;
-  src: url("./shared/assets/fonts/KyivTypeSans-Black-.otf") format("opentype");
+  src: url("@/shared/assets/fonts/KyivTypeSans-Black-.otf") format("opentype");
   font-display: swap;
 }
 

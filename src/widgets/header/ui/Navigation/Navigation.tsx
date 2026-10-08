@@ -23,12 +23,9 @@ function Navigation({ onClose }: NavigationProps) {
               preventScrollReset={false}
               onClick={onClose}
               className={({ isActive }) =>
-                clsx([
-                  styles["navigation__link"],
-                  {
-                    [styles["navigation__link_active"]]: isActive,
-                  },
-                ])
+                clsx(styles["navigation__link"], {
+                  [styles["navigation__link_active"]]: isActive,
+                })
               }
             >
               {t(item.name)}

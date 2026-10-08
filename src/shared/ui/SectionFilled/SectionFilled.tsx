@@ -16,14 +16,10 @@ function SectionFilled({
   return (
     <div
       {...rest}
-      className={clsx([
-        className,
-        styles["section-filled"],
-        {
-          [styles["section-filled_left"]]: position === "left",
-          [styles["section-filled_right"]]: position === "right",
-        },
-      ])}
+      className={clsx(className, styles["section-filled"], {
+        [styles["section-filled_left"]]: position === "left",
+        [styles["section-filled_right"]]: position === "right",
+      })}
     >
       {children}
     </div>

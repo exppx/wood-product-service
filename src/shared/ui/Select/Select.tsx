@@ -17,7 +17,7 @@ function Select<T extends string | number>({
 }: SelectProps<T>) {
   return (
     <div className={styles["select-wrapper"]}>
-      <select {...rest} className={clsx([className, styles["select"]])}>
+      <select {...rest} className={clsx(className, styles["select"])}>
         {options.map((opt) => (
           <option
             key={opt.value}

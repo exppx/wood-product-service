@@ -14,13 +14,10 @@ function Logo({ color }: LogoProps) {
 
   return (
     <div
-      className={clsx([
-        styles["logo-container"],
-        {
-          [styles["logo-container_light"]]: color === "light",
-          [styles["logo-container_adaptive"]]: color === "adaptive",
-        },
-      ])}
+      className={clsx(styles["logo-container"], {
+        [styles["logo-container_light"]]: color === "light",
+        [styles["logo-container_adaptive"]]: color === "adaptive",
+      })}
     >
       <Link to="/" aria-label={t("Logo.label")} className={styles["logo-link"]}>
         <LogoSvg />

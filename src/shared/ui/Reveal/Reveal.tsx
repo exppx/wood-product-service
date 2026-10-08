@@ -49,12 +49,9 @@ function Reveal({
     <div
       ref={wrapperRef}
       style={{ transitionDelay: `${delay}ms` }}
-      className={clsx([
-        styles["reveal"],
-        {
-          [styles["reveal_revealed"]]: isRevealed,
-        },
-      ])}
+      className={clsx(styles["reveal"], {
+        [styles["reveal_revealed"]]: isRevealed,
+      })}
     >
       {children}
     </div>

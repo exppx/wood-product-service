@@ -46,20 +46,17 @@ function PriceListTable({ data, isLoading, error }: PriceListTableProps) {
               })}
             >
               <div
-                className={clsx([
-                  styles["cell-content-wrapper"],
-                  {
-                    [styles["cell-content-wrapper_first-in-group"]]:
-                      isFirstColumn || isFirstColumnInGroup,
-                    [styles["cell-content-wrapper_top-left"]]:
-                      isFirstColumn || isFirstColumnInGroup,
-                    [styles["cell-content-wrapper_last-in-group"]]:
-                      isLastColumn || isLastColumnInGroup,
-                    [styles["cell-content-wrapper_top-right"]]:
-                      isLastColumn || isLastColumnInGroup,
-                    [styles["cell-content-wrapper_last-col"]]: isLastColumn,
-                  },
-                ])}
+                className={clsx(styles["cell-content-wrapper"], {
+                  [styles["cell-content-wrapper_first-in-group"]]:
+                    isFirstColumn || isFirstColumnInGroup,
+                  [styles["cell-content-wrapper_top-left"]]:
+                    isFirstColumn || isFirstColumnInGroup,
+                  [styles["cell-content-wrapper_last-in-group"]]:
+                    isLastColumn || isLastColumnInGroup,
+                  [styles["cell-content-wrapper_top-right"]]:
+                    isLastColumn || isLastColumnInGroup,
+                  [styles["cell-content-wrapper_last-col"]]: isLastColumn,
+                })}
               >
                 <div className={styles["cell-content"]}>
                   {t(header.visible)}
@@ -82,24 +79,24 @@ function PriceListTable({ data, isLoading, error }: PriceListTableProps) {
     return (
       <th
         rowSpan={materialsCount}
-        className={clsx([
+        className={clsx(
           styles["cell_group-name"],
           styles["cell_group-name_bottom-left"],
           styles["cell_last-row-in-group"],
           {
             [styles["cell_group-name_top-left"]]: !isFirstGroup,
           },
-        ])}
+        )}
       >
         <div
-          className={clsx([
+          className={clsx(
             styles["cell-content-wrapper"],
             styles["cell-content-wrapper_first-in-group"],
             styles["cell-content-wrapper_bottom-left"],
             {
               [styles["cell-content-wrapper_top-left"]]: !isFirstGroup,
             },
-          ])}
+          )}
         >
           <div className={styles["cell-content"]}>{groupName}</div>
         </div>
@@ -136,27 +133,24 @@ function PriceListTable({ data, isLoading, error }: PriceListTableProps) {
           })}
         >
           <div
-            className={clsx([
-              styles["cell-content-wrapper"],
-              {
-                [styles["cell-content-wrapper_first-in-group"]]:
-                  isFirstColumnInGroup,
-                [styles["cell-content-wrapper_last-in-group"]]:
-                  isLastColumnInGroup || isLastColumn,
-                [styles["cell-content-wrapper_top-left"]]:
-                  !isFirstGroup && isFirstRowInGroup && isFirstColumnInGroup,
-                [styles["cell-content-wrapper_top-right"]]:
-                  !isFirstGroup &&
-                  isFirstRowInGroup &&
-                  (isLastColumnInGroup || isLastColumn),
-                [styles["cell-content-wrapper_bottom-right"]]:
-                  isLastRowInGroup && (isLastColumnInGroup || isLastColumn),
-                [styles["cell-content-wrapper_bottom-left"]]:
-                  isLastRowInGroup && isFirstColumnInGroup,
-                [styles["cell-content-wrapper_last-col"]]: isLastColumn,
-                [styles["cell-content-wrapper_last-row"]]: isLastRowInGroup,
-              },
-            ])}
+            className={clsx(styles["cell-content-wrapper"], {
+              [styles["cell-content-wrapper_first-in-group"]]:
+                isFirstColumnInGroup,
+              [styles["cell-content-wrapper_last-in-group"]]:
+                isLastColumnInGroup || isLastColumn,
+              [styles["cell-content-wrapper_top-left"]]:
+                !isFirstGroup && isFirstRowInGroup && isFirstColumnInGroup,
+              [styles["cell-content-wrapper_top-right"]]:
+                !isFirstGroup &&
+                isFirstRowInGroup &&
+                (isLastColumnInGroup || isLastColumn),
+              [styles["cell-content-wrapper_bottom-right"]]:
+                isLastRowInGroup && (isLastColumnInGroup || isLastColumn),
+              [styles["cell-content-wrapper_bottom-left"]]:
+                isLastRowInGroup && isFirstColumnInGroup,
+              [styles["cell-content-wrapper_last-col"]]: isLastColumn,
+              [styles["cell-content-wrapper_last-row"]]: isLastRowInGroup,
+            })}
           >
             <div className={styles["cell-content"]}>{property}</div>
           </div>
@@ -199,12 +193,9 @@ function PriceListTable({ data, isLoading, error }: PriceListTableProps) {
     <div className={styles["price-table-container"]}>
       <div className={styles["price-table-wrapper"]}>
         <table
-          className={clsx([
-            styles["price-table"],
-            {
-              [styles["price-table_stale"]]: isLoading,
-            },
-          ])}
+          className={clsx(styles["price-table"], {
+            [styles["price-table_stale"]]: isLoading,
+          })}
         >
           <thead>{renderHeaders()}</thead>
 

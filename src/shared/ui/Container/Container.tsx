@@ -12,11 +12,11 @@ function Container({ width, children, className, ...rest }: ContainerProps) {
   return (
     <div
       {...rest}
-      className={clsx([
+      className={clsx(
         className,
         styles["container"],
         styles[`container_${width}`],
-      ])}
+      )}
     >
       {children}
     </div>

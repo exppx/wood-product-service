@@ -39,12 +39,9 @@ function SideMenu() {
         inert={!isDesktop && !showSideMenu}
         id={SIDE_MENU_ID}
         data-testid={SIDE_MENU_ID}
-        className={clsx([
-          styles["side-menu__panel"],
-          {
-            [styles["side-menu__panel_active"]]: showSideMenu,
-          },
-        ])}
+        className={clsx(styles["side-menu__panel"], {
+          [styles["side-menu__panel_active"]]: showSideMenu,
+        })}
       >
         <CloseSideMenuButton
           title={t("SideMenu.closeButtonLabel")}

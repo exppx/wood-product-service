@@ -29,22 +29,19 @@ function SortButton({
     <button
       {...rest}
       onClick={handleClick}
-      className={clsx([className, styles["sort-button"]], {
+      className={clsx(className, styles["sort-button"], {
         [styles["sort-button_active"]]: sortByValue === sortBy,
       })}
     >
       <div className={styles["sort-button__label"]}>{label}</div>
       <div
         aria-hidden="true"
-        className={clsx([
-          styles["sort-button__icon"],
-          {
-            [styles["sort-button__icon_asc"]]:
-              sortByValue === sortBy && sortDirection === "asc",
-            [styles["sort-button__icon_desc"]]:
-              sortByValue === sortBy && sortDirection === "desc",
-          },
-        ])}
+        className={clsx(styles["sort-button__icon"], {
+          [styles["sort-button__icon_asc"]]:
+            sortByValue === sortBy && sortDirection === "asc",
+          [styles["sort-button__icon_desc"]]:
+            sortByValue === sortBy && sortDirection === "desc",
+        })}
       >
         <ArrowToUpThinSvg />
       </div>

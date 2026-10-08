@@ -7,7 +7,7 @@ type ButtonProps = PropsWithChildren & ComponentProps<"button">;
 
 function Button({ className, children, ...rest }: ButtonProps) {
   return (
-    <button {...rest} className={clsx([className, styles["button"]])}>
+    <button {...rest} className={clsx(className, styles["button"])}>
       {children}
     </button>
   );

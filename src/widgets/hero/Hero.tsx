@@ -49,26 +49,26 @@ function Hero() {
             <img
               src={HERO_IMAGE_1_URL}
               alt={t("Hero.image1Alt")}
-              className={clsx([
+              className={clsx(
                 styles["hero__image-aside"],
                 styles["hero__image-aside_1"],
-              ])}
+              )}
             />
             <img
               src={HERO_IMAGE_2_URL}
               alt={t("Hero.image2Alt")}
-              className={clsx([
+              className={clsx(
                 styles["hero__image-aside"],
                 styles["hero__image-aside_2"],
-              ])}
+              )}
             />
             <img
               src={HERO_IMAGE_3_URL}
               alt={t("Hero.image3Alt")}
-              className={clsx([
+              className={clsx(
                 styles["hero__image-aside"],
                 styles["hero__image-aside_3"],
-              ])}
+              )}
             />
           </div>
         </SectionFilled>

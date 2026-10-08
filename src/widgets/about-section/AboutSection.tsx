@@ -38,26 +38,26 @@ function AboutSection({ isMainSection }: AboutSectionProps) {
 
             <div className={styles["about__images"]}>
               <img
-                className={clsx([
+                className={clsx(
                   styles["about__image"],
                   styles["about__image_1"],
-                ])}
+                )}
                 src={IMAGE_1}
                 alt={t("AboutSection.images.image1Alt")}
               />
               <img
-                className={clsx([
+                className={clsx(
                   styles["about__image"],
                   styles["about__image_2"],
-                ])}
+                )}
                 src={IMAGE_2}
                 alt={t("AboutSection.images.image2Alt")}
               />
               <img
-                className={clsx([
+                className={clsx(
                   styles["about__image"],
                   styles["about__image_3"],
-                ])}
+                )}
                 src={IMAGE_3}
                 alt={t("AboutSection.images.image3Alt")}
               />

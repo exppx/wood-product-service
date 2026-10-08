@@ -11,13 +11,9 @@ function TextArea({ isError, className, ...rest }: TextAreaProps) {
   return (
     <textarea
       {...rest}
-      className={clsx([
-        className,
-        styles["textarea"],
-        {
-          [styles["textarea_invalid"]]: isError,
-        },
-      ])}
+      className={clsx(className, styles["textarea"], {
+        [styles["textarea_invalid"]]: isError,
+      })}
       aria-invalid={isError}
     ></textarea>
   );

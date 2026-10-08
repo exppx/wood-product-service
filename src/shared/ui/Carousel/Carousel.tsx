@@ -42,21 +42,18 @@ function Carousel({ images }: CarouselProps) {
     >
       <div className={styles["carousel__main"]}>
         <div
-          className={clsx([
-            styles["carousel__button-container"],
-            {
-              [styles["carousel__button-container_disabled"]]: isFirstPosition,
-            },
-          ])}
+          className={clsx(styles["carousel__button-container"], {
+            [styles["carousel__button-container_disabled"]]: isFirstPosition,
+          })}
           onClick={prev}
           data-testid="prev-button-container"
         >
           <IconButton
             aria-label={t("Carousel.buttonLeftLabel")}
-            className={clsx([
+            className={clsx(
               styles["carousel__button"],
               styles["carousel__button_left"],
-            ])}
+            )}
             Icon={<ArrowToLeftSvg />}
             disabled={isFirstPosition}
           />
@@ -78,21 +75,18 @@ function Carousel({ images }: CarouselProps) {
         </div>
 
         <div
-          className={clsx([
-            styles["carousel__button-container"],
-            {
-              [styles["carousel__button-container_disabled"]]: isLastPosition,
-            },
-          ])}
+          className={clsx(styles["carousel__button-container"], {
+            [styles["carousel__button-container_disabled"]]: isLastPosition,
+          })}
           onClick={next}
           data-testid="next-button-container"
         >
           <IconButton
             aria-label={t("Carousel.buttonRightLabel")}
-            className={clsx([
+            className={clsx(
               styles["carousel__button"],
               styles["carousel__button_right"],
-            ])}
+            )}
             Icon={<ArrowToRightSvg />}
             disabled={isLastPosition}
           />
@@ -103,12 +97,9 @@ function Carousel({ images }: CarouselProps) {
         {Array.from({ length: images.length }).map((_, index) => (
           <div
             key={index}
-            className={clsx([
-              styles["carousel__progress-item"],
-              {
-                [styles["carousel__progress-item_active"]]: index === position,
-              },
-            ])}
+            className={clsx(styles["carousel__progress-item"], {
+              [styles["carousel__progress-item_active"]]: index === position,
+            })}
           ></div>
         ))}
       </div>

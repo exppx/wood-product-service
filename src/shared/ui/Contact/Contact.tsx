@@ -11,7 +11,7 @@ interface ContactProps extends ComponentProps<"div"> {
 
 function Contact({ Icon, contact, label, className, ...rest }: ContactProps) {
   return (
-    <div {...rest} className={clsx([className, styles["contact"]])}>
+    <div {...rest} className={clsx(className, styles["contact"])}>
       <div className={styles["contact__icon"]}>
         <Icon />
       </div>

@@ -14,13 +14,10 @@ function FormResultMessage({ result, message }: FormResultMessageProps) {
     return (
       <div className={styles["form-result"]}>
         <div
-          className={clsx([
-            styles["form-result__text"],
-            {
-              [styles["form-result__text_success"]]: result === "success",
-              [styles["form-result__text_fail"]]: result === "fail",
-            },
-          ])}
+          className={clsx(styles["form-result__text"], {
+            [styles["form-result__text_success"]]: result === "success",
+            [styles["form-result__text_fail"]]: result === "fail",
+          })}
         >
           {message}
         </div>

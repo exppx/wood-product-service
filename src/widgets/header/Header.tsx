@@ -27,12 +27,9 @@ function Header({ isFilled = false }: HeaderProps) {
   return (
     <header
       data-testid="header"
-      className={clsx([
-        styles["header"],
-        {
-          [styles["header_filled"]]: isFilled || isScrolled,
-        },
-      ])}
+      className={clsx(styles["header"], {
+        [styles["header_filled"]]: isFilled || isScrolled,
+      })}
     >
       <Container width="xl" className={styles["header__container"]}>
         <div className={styles["header__logo-container"]}>

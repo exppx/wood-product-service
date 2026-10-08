@@ -18,27 +18,21 @@ function Section({
   ...rest
 }: SectionProps) {
   return (
-    <section {...rest} className={clsx([className, styles["section"]])}>
+    <section {...rest} className={clsx(className, styles["section"])}>
       {title &&
         (isMainSection ? (
           <h1
-            className={clsx([
-              styles["section__title"],
-              {
-                [styles["section__title_right"]]: titlePosition === "right",
-              },
-            ])}
+            className={clsx(styles["section__title"], {
+              [styles["section__title_right"]]: titlePosition === "right",
+            })}
           >
             {title}
           </h1>
         ) : (
           <h2
-            className={clsx([
-              styles["section__title"],
-              {
-                [styles["section__title_right"]]: titlePosition === "right",
-              },
-            ])}
+            className={clsx(styles["section__title"], {
+              [styles["section__title_right"]]: titlePosition === "right",
+            })}
           >
             {title}
           </h2>

@@ -11,13 +11,9 @@ function Input({ isError, className, ...rest }: InputProps) {
   return (
     <input
       {...rest}
-      className={clsx([
-        className,
-        styles["input"],
-        {
-          [styles["input_invalid"]]: isError,
-        },
-      ])}
+      className={clsx(className, styles["input"], {
+        [styles["input_invalid"]]: isError,
+      })}
       aria-invalid={isError}
     />
   );

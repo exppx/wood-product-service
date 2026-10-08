@@ -20,19 +20,11 @@ function LinkButton({
     typeof to === "string" ? to : (to.hash ?? "") + (to.search ?? "");
 
   return isHash ? (
-    <a
-      {...rest}
-      href={href}
-      className={clsx([className, styles["link-button"]])}
-    >
+    <a {...rest} href={href} className={clsx(className, styles["link-button"])}>
       {children}
     </a>
   ) : (
-    <Link
-      {...rest}
-      to={to}
-      className={clsx([className, styles["link-button"]])}
-    >
+    <Link {...rest} to={to} className={clsx(className, styles["link-button"])}>
       {children}
     </Link>
   );

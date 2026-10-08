@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import styles from "./FormResultMessage.module.scss";
+import s from "./FormResultMessage.module.scss";
 
 interface FormResultMessageProps {
   result: null | "success" | "fail";
@@ -12,11 +12,11 @@ function FormResultMessage({ result, message }: FormResultMessageProps) {
     if (!result) return null;
 
     return (
-      <div className={styles["form-result"]}>
+      <div className={s["form-result"]}>
         <div
-          className={clsx(styles["form-result__text"], {
-            [styles["form-result__text_success"]]: result === "success",
-            [styles["form-result__text_fail"]]: result === "fail",
+          className={clsx(s["form-result__text"], {
+            [s["form-result__text_success"]]: result === "success",
+            [s["form-result__text_fail"]]: result === "fail",
           })}
         >
           {message}

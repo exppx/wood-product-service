@@ -4,27 +4,27 @@ import clsx from "clsx";
 import { Contact, Container, Logo } from "@/shared/ui";
 import { CONTACTS, COPYRIGHT } from "./model";
 
-import styles from "./Footer.module.scss";
+import s from "./Footer.module.scss";
 
 function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className={styles["footer"]}>
+    <footer className={s["footer"]}>
       <Container width="xl">
-        <div className={styles["footer-inner"]}>
-          <div className={styles["footer__main"]}>
-            <div className={styles["footer__logo-container"]}>
+        <div className={s["footer-inner"]}>
+          <div className={s["footer__main"]}>
+            <div className={s["footer__logo-container"]}>
               <Logo color="adaptive" />
             </div>
 
             <address>
-              <ul className={styles["footer__contacts"]}>
+              <ul className={s["footer__contacts"]}>
                 {CONTACTS.map(({ Icon, contact, label, nowrap }) => (
                   <li
                     key={contact}
                     className={clsx({
-                      [styles["footer__contact_nowrap"]]: nowrap,
+                      [s["footer__contact_nowrap"]]: nowrap,
                     })}
                   >
                     <Contact
@@ -38,11 +38,11 @@ function Footer() {
             </address>
           </div>
 
-          <div className={styles["footer__bottom"]}>
+          <div className={s["footer__bottom"]}>
             <div>
               &copy; {COPYRIGHT.year} {COPYRIGHT.company}
             </div>
-            <Link to={"#"} className={styles["footer__bottom-link"]}>
+            <Link to={"#"} className={s["footer__bottom-link"]}>
               {t("Footer.privacy")}
             </Link>
           </div>

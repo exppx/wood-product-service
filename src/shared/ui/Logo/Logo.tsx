@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 import { LogoSvg } from "@/shared/ui/icons";
 
-import styles from "./Logo.module.scss";
+import s from "./Logo.module.scss";
 
 interface LogoProps {
   color: "light" | "adaptive";
@@ -14,12 +14,12 @@ function Logo({ color }: LogoProps) {
 
   return (
     <div
-      className={clsx(styles["logo-container"], {
-        [styles["logo-container_light"]]: color === "light",
-        [styles["logo-container_adaptive"]]: color === "adaptive",
+      className={clsx(s["logo-container"], {
+        [s["logo-container_light"]]: color === "light",
+        [s["logo-container_adaptive"]]: color === "adaptive",
       })}
     >
-      <Link to="/" aria-label={t("Logo.label")} className={styles["logo-link"]}>
+      <Link to="/" aria-label={t("Logo.label")} className={s["logo-link"]}>
         <LogoSvg />
       </Link>
     </div>

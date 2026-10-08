@@ -4,32 +4,30 @@ import { Container, Section } from "@/shared/ui";
 import { QuestionsForm } from "@/features/send-question";
 import { LOG_IMAGE } from "./model";
 
-import styles from "./QuestionsSection.module.scss";
+import s from "./QuestionsSection.module.scss";
 
 function QuestionsSection() {
   const { t } = useTranslation();
   const { isDesktop } = useMedia();
 
   return (
-    <Container width="xl" className={styles["questions-container"]}>
+    <Container width="xl" className={s["questions-container"]}>
       <Section
         title={t("QuestionsSection.title")}
         titlePosition={isDesktop ? "right" : "left"}
         id="questions-form"
-        className={styles["questions-section"]}
+        className={s["questions-section"]}
       >
-        <div className={styles["questions"]}>
-          <p className={styles["questions__text"]}>
-            {t("QuestionsSection.text")}
-          </p>
+        <div className={s["questions"]}>
+          <p className={s["questions__text"]}>{t("QuestionsSection.text")}</p>
 
-          <div className={styles["questions-form__form-container"]}>
+          <div className={s["questions-form__form-container"]}>
             <QuestionsForm />
           </div>
 
           {isDesktop && (
             <img
-              className={styles["questions__image"]}
+              className={s["questions__image"]}
               src={LOG_IMAGE}
               alt={t("QuestionsSection.imageAlt")}
             />

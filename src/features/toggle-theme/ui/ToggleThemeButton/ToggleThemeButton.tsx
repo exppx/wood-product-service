@@ -3,7 +3,7 @@ import { IconButton } from "@/shared/ui";
 import { BulbOnSvg, BulbOffSvg } from "@/shared/ui/icons";
 import { useTheme } from "../../model";
 
-import styles from "./ToggleThemeButton.module.scss";
+import s from "./ToggleThemeButton.module.scss";
 
 function ToggleThemeButton() {
   const { t } = useTranslation();
@@ -20,13 +20,13 @@ function ToggleThemeButton() {
     <IconButton
       title={title}
       aria-label={title}
-      className={styles["toggle-theme-button"]}
+      className={s["toggle-theme-button"]}
       onClick={toggleTheme}
       Icon={
         currentTheme === "dark" ? (
-          <BulbOffSvg className={styles["toggle-theme-button__icon"]} />
+          <BulbOffSvg className={s["toggle-theme-button__icon"]} />
         ) : (
-          <BulbOnSvg className={styles["toggle-theme-button__icon"]} />
+          <BulbOnSvg className={s["toggle-theme-button__icon"]} />
         )
       }
     />

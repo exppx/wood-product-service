@@ -6,7 +6,7 @@ import {
   REVEAL_THRESHOLD,
 } from "./Reveal.config";
 
-import styles from "./Reveal.module.scss";
+import s from "./Reveal.module.scss";
 
 interface RevealProps extends PropsWithChildren {
   delay?: number;
@@ -49,8 +49,8 @@ function Reveal({
     <div
       ref={wrapperRef}
       style={{ transitionDelay: `${delay}ms` }}
-      className={clsx(styles["reveal"], {
-        [styles["reveal_revealed"]]: isRevealed,
+      className={clsx(s["reveal"], {
+        [s["reveal_revealed"]]: isRevealed,
       })}
     >
       {children}

@@ -4,7 +4,7 @@ import { AboutSection } from "@/widgets/about-section";
 import { OurWorksSection } from "@/widgets/our-works-section";
 import { QuestionsSection } from "@/widgets/questions-section";
 
-import styles from "./AboutPage.module.scss";
+import s from "./AboutPage.module.scss";
 
 function AboutPage() {
   const { t } = useTranslation();
@@ -14,7 +14,7 @@ function AboutPage() {
   });
 
   return (
-    <main className={styles["about-page"]}>
+    <main className={s["about-page"]}>
       <AboutSection isMainSection={true} />
       <OurWorksSection />
       <QuestionsSection />

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { CheckMarkSvg, CrossSvg } from "@/shared/ui/icons";
 
-import styles from "./MaterialCard.module.scss";
+import s from "./MaterialCard.module.scss";
 
 interface MaterialProperty {
   name: string;
@@ -18,27 +18,27 @@ function MaterialCard({ imageUrl, name, properties }: MaterialCardProps) {
   const { t } = useTranslation();
 
   return (
-    <div className={styles["material"]}>
-      <img src={imageUrl} alt={name} className={styles["material__image"]} />
+    <div className={s["material"]}>
+      <img src={imageUrl} alt={name} className={s["material__image"]} />
 
-      <p className={styles["material__name"]}>{name}</p>
+      <p className={s["material__name"]}>{name}</p>
 
-      <ul className={styles["material__properties"]}>
+      <ul className={s["material__properties"]}>
         {properties.map((property) => (
-          <li key={property.name} className={styles["material__property"]}>
+          <li key={property.name} className={s["material__property"]}>
             <div
               aria-label={
                 property.isPositive
                   ? t("MaterialCard.property.positive")
                   : t("MaterialCard.property.negative")
               }
-              className={styles["material__property-icon"]}
+              className={s["material__property-icon"]}
               data-testid="list-mark"
             >
               {property.isPositive ? <CheckMarkSvg /> : <CrossSvg />}
             </div>
 
-            <span className={styles["material__property-name"]}>
+            <span className={s["material__property-name"]}>
               {property.name}
             </span>
           </li>

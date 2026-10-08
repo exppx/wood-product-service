@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { IconButton } from "@/shared/ui";
 import { useLocale } from "../../model";
 
-import styles from "./ToggleLocaleButton.module.scss";
+import s from "./ToggleLocaleButton.module.scss";
 
 function ToggleLocaleButton() {
   const { t } = useTranslation();
@@ -15,7 +15,7 @@ function ToggleLocaleButton() {
       title={title}
       aria-label={title}
       onClick={toggleLocale}
-      Icon={<span className={styles["locale"]}>{nextLocale}</span>}
+      Icon={<span className={s["locale"]}>{nextLocale}</span>}
     />
   );
 }

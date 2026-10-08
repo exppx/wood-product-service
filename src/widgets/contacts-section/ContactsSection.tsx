@@ -3,7 +3,7 @@ import { useMedia } from "@/shared/lib/hooks";
 import { Contact, Container, Section } from "@/shared/ui";
 import { CONTACTS, MAP_HEIGHTS } from "./model";
 
-import styles from "./ContactsSection.module.scss";
+import s from "./ContactsSection.module.scss";
 
 function ContactsSection() {
   const { t } = useTranslation();
@@ -12,8 +12,8 @@ function ContactsSection() {
   return (
     <Container width="xl">
       <Section>
-        <Container width="lg" className={styles["contacts"]}>
-          <div className={styles["contacts__text"]}>
+        <Container width="lg" className={s["contacts"]}>
+          <div className={s["contacts__text"]}>
             <h1>{t("ContactsSection.title")}</h1>
 
             {CONTACTS.map(({ Icon, label, value }) => (
@@ -27,7 +27,7 @@ function ContactsSection() {
           </div>
 
           <iframe
-            className={styles["contacts__map"]}
+            className={s["contacts__map"]}
             data-testid="map"
             src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae74d2429802c6fae09766bd0ee67bc84cfd39651649800be084d60e037a36643&amp;source=constructor"
             width="100%"

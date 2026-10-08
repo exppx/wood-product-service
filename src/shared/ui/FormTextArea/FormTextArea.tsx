@@ -1,7 +1,7 @@
 import { useId, type ComponentProps } from "react";
 import { TextArea, FormErrorMessage } from "@/shared/ui";
 
-import styles from "./FormTextArea.module.scss";
+import s from "./FormTextArea.module.scss";
 
 interface FormTextAreaProps extends ComponentProps<"textarea"> {
   label: string;
@@ -21,8 +21,8 @@ function FormTextArea({
   const errorId = `${id}-error`;
 
   return (
-    <div className={styles["form-textarea"]}>
-      <label htmlFor={textareaId} className={styles["form-textarea__label"]}>
+    <div className={s["form-textarea"]}>
+      <label htmlFor={textareaId} className={s["form-textarea__label"]}>
         {label}
       </label>
 

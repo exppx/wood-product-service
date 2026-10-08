@@ -3,36 +3,32 @@ import { Container, LinkButton } from "@/shared/ui";
 import { FourOhFourSvg } from "@/shared/ui/icons";
 import { HERO_IMAGE_URL } from "./model";
 
-import styles from "./NotFoundPage.module.scss";
+import s from "./NotFoundPage.module.scss";
 
 function NotFoundPage() {
   const { t } = useTranslation();
 
   return (
     <div>
-      <Container width="xl" className={styles["not-found-container"]}>
+      <Container width="xl" className={s["not-found-container"]}>
         <img
           src={HERO_IMAGE_URL}
           aria-hidden="true"
-          className={styles["bg-image"]}
+          className={s["bg-image"]}
         />
 
-        <h1 className={styles["not-found__heading"]}>
-          {t("NotFoundPage.heading")}
-        </h1>
+        <h1 className={s["not-found__heading"]}>{t("NotFoundPage.heading")}</h1>
 
-        <Container width="md" className={styles["not-found__inner-container"]}>
-          <div className={styles["not-found__404-container"]}>
+        <Container width="md" className={s["not-found__inner-container"]}>
+          <div className={s["not-found__404-container"]}>
             <FourOhFourSvg />
           </div>
 
-          <div className={styles["not-found__info"]}>
-            <div className={styles["not-found__text"]}>
-              <p className={styles["not-found__title"]}>
-                {t("NotFoundPage.title")}
-              </p>
+          <div className={s["not-found__info"]}>
+            <div className={s["not-found__text"]}>
+              <p className={s["not-found__title"]}>{t("NotFoundPage.title")}</p>
 
-              <p className={styles["not-found__message"]}>
+              <p className={s["not-found__message"]}>
                 {t("NotFoundPage.message")}
               </p>
             </div>

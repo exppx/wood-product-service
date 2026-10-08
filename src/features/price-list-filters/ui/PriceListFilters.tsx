@@ -10,7 +10,7 @@ import {
   SORT_BUTTONS_OPTIONS,
 } from "../model";
 
-import styles from "./PriceListFilters.module.scss";
+import s from "./PriceListFilters.module.scss";
 
 function PriceListFilters() {
   const { t } = useTranslation();
@@ -31,15 +31,15 @@ function PriceListFilters() {
 
   if (error) {
     return (
-      <p className={styles["price-list-filters__error"]} role="alert">
+      <p className={s["price-list-filters__error"]} role="alert">
         {error}
       </p>
     );
   }
 
   return (
-    <div className={styles["price-list-filters"]}>
-      <div className={styles["price-list-filters__filters"]}>
+    <div className={s["price-list-filters"]}>
+      <div className={s["price-list-filters__filters"]}>
         <FilterSelect
           label={t("PriceListFilters.filterLabels.wood")}
           searchKey={FILTER_NAMES.wood}
@@ -51,7 +51,7 @@ function PriceListFilters() {
           disabled={isLoading}
         />
 
-        <div className={styles["price-list-filters__size-filters"]}>
+        <div className={s["price-list-filters__size-filters"]}>
           {SIZE_FILTER_SELECTS_OPTIONS.map(({ label, searchKey, name }) => (
             <FilterSelect
               key={searchKey}

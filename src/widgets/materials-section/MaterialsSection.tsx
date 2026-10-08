@@ -4,7 +4,7 @@ import { Container, Section } from "@/shared/ui";
 import { MaterialCard } from "@/entities/material";
 import { MATERIALS } from "./model";
 
-import styles from "./MaterialsSection.module.scss";
+import s from "./MaterialsSection.module.scss";
 
 function MaterialsSection() {
   const { t, i18n } = useTranslation();
@@ -12,10 +12,10 @@ function MaterialsSection() {
   return (
     <Container width="xl">
       <Section title={t("MaterialsSection.title")}>
-        <div className={styles["materials__list-container"]}>
-          <ul className={styles["materials__list"]}>
+        <div className={s["materials__list-container"]}>
+          <ul className={s["materials__list"]}>
             {MATERIALS[i18n.language as Locale].map((material) => (
-              <li key={material.name} className={styles["materials__item"]}>
+              <li key={material.name} className={s["materials__item"]}>
                 <MaterialCard {...material} />
               </li>
             ))}

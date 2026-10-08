@@ -1,7 +1,7 @@
 import type { ComponentProps, PropsWithChildren } from "react";
 import { Button, Spinner } from "@/shared/ui";
 
-import styles from "./SubmitButton.module.scss";
+import s from "./SubmitButton.module.scss";
 
 interface SubmitButtonProps
   extends PropsWithChildren, ComponentProps<"button"> {
@@ -22,7 +22,7 @@ function SubmitButton({
       disabled={isSubmitting}
     >
       {isSubmitting ? (
-        <div className={styles["submit-button__spinner-container"]}>
+        <div className={s["submit-button__spinner-container"]}>
           <Spinner />
         </div>
       ) : (

@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { usePageMetadata } from "@/shared/lib/hooks";
 import { ContactsSection } from "@/widgets/contacts-section";
 
-import styles from "./ContactsPage.module.scss";
+import s from "./ContactsPage.module.scss";
 
 function ContactsPage() {
   const { t } = useTranslation();
@@ -12,7 +12,7 @@ function ContactsPage() {
   });
 
   return (
-    <div className={styles["contacts-page"]}>
+    <div className={s["contacts-page"]}>
       <ContactsSection />
     </div>
   );

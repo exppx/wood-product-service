@@ -8,7 +8,7 @@ import { AdvantagesSection } from "@/widgets/advantages-section";
 import { AboutSection } from "@/widgets/about-section";
 import { QuestionsSection } from "@/widgets/questions-section";
 
-import styles from "./HomePage.module.scss";
+import s from "./HomePage.module.scss";
 
 function HomePage() {
   const { t } = useTranslation();
@@ -18,7 +18,7 @@ function HomePage() {
   });
 
   return (
-    <main className={styles["home-page"]}>
+    <main className={s["home-page"]}>
       <Hero />
 
       <Reveal>

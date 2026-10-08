@@ -1,7 +1,7 @@
 import { useId, type ComponentProps } from "react";
 import { Input, FormErrorMessage } from "@/shared/ui";
 
-import styles from "./FormInput.module.scss";
+import s from "./FormInput.module.scss";
 
 interface FormInputProps extends ComponentProps<"input"> {
   label: string;
@@ -15,8 +15,8 @@ function FormInput({ label, name, error, className, ...rest }: FormInputProps) {
   const errorId = `${id}-error`;
 
   return (
-    <div className={styles["form-input"]}>
-      <label htmlFor={inputId} className={styles["form-input__label"]}>
+    <div className={s["form-input"]}>
+      <label htmlFor={inputId} className={s["form-input__label"]}>
         {label}
       </label>
 

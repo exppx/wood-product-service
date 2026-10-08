@@ -1,15 +1,15 @@
 import type { ComponentProps } from "react";
 import clsx from "clsx";
 
-import styles from "./BurgerButton.module.scss";
+import s from "./BurgerButton.module.scss";
 
 function BurgerButton({ className, ...rest }: ComponentProps<"button">) {
   return (
-    <button {...rest} className={clsx(styles["burger-button"], className)}>
-      <div className={styles["burger-button__lines"]}>
-        <div className={styles["burger-button__line"]} />
-        <div className={styles["burger-button__line"]} />
-        <div className={styles["burger-button__line"]} />
+    <button {...rest} className={clsx(s["burger-button"], className)}>
+      <div className={s["burger-button__lines"]}>
+        <div className={s["burger-button__line"]} />
+        <div className={s["burger-button__line"]} />
+        <div className={s["burger-button__line"]} />
       </div>
     </button>
   );

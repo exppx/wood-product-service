@@ -3,7 +3,7 @@ import { usePageMetadata } from "@/shared/lib/hooks";
 import { PriceListSection } from "@/widgets/price-list-section";
 import { QuestionsSection } from "@/widgets/questions-section";
 
-import styles from "./PricesPage.module.scss";
+import s from "./PricesPage.module.scss";
 
 function PricesPage() {
   const { t } = useTranslation();
@@ -13,7 +13,7 @@ function PricesPage() {
   });
 
   return (
-    <main className={styles["prices-page"]}>
+    <main className={s["prices-page"]}>
       <PriceListSection isMainSection={true} />
       <QuestionsSection />
     </main>

@@ -1,15 +1,15 @@
 import type { ComponentProps } from "react";
 import clsx from "clsx";
 
-import styles from "./CloseSideMenuButton.module.scss";
+import s from "./CloseSideMenuButton.module.scss";
 
 function CloseSideMenuButton({ className, ...rest }: ComponentProps<"button">) {
   return (
-    <button {...rest} className={clsx(className, styles["close-side-menu"])}>
-      <div className={styles["close-side-menu__lines"]}>
-        <div className={styles["close-side-menu__line"]} />
-        <div className={styles["close-side-menu__line"]} />
-        <div className={styles["close-side-menu__line"]} />
+    <button {...rest} className={clsx(className, s["close-side-menu"])}>
+      <div className={s["close-side-menu__lines"]}>
+        <div className={s["close-side-menu__line"]} />
+        <div className={s["close-side-menu__line"]} />
+        <div className={s["close-side-menu__line"]} />
       </div>
     </button>
   );

@@ -1,11 +1,11 @@
 import { Outlet } from "react-router";
 import { Header } from "@/widgets/header";
 
-import styles from "./NoFooterLayout.module.scss";
+import s from "./NoFooterLayout.module.scss";
 
 function NoFooterLayout() {
   return (
-    <div className={styles["no-footer-layout"]}>
+    <div className={s["no-footer-layout"]}>
       <Header />
       <Outlet />
     </div>

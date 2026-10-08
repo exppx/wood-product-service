@@ -4,7 +4,7 @@ import clsx from "clsx";
 import { IconButton } from "@/shared/ui";
 import { ArrowToLeftSvg, ArrowToRightSvg } from "@/shared/ui/icons";
 
-import styles from "./Carousel.module.scss";
+import s from "./Carousel.module.scss";
 
 interface CarouselProps {
   images: { imageUrl: string; alt: string }[];
@@ -38,22 +38,19 @@ function Carousel({ images }: CarouselProps) {
     <div
       role="region"
       aria-label={t("Carousel.label")}
-      className={styles["carousel"]}
+      className={s["carousel"]}
     >
-      <div className={styles["carousel__main"]}>
+      <div className={s["carousel__main"]}>
         <div
-          className={clsx(styles["carousel__button-container"], {
-            [styles["carousel__button-container_disabled"]]: isFirstPosition,
+          className={clsx(s["carousel__button-container"], {
+            [s["carousel__button-container_disabled"]]: isFirstPosition,
           })}
           onClick={prev}
           data-testid="prev-button-container"
         >
           <IconButton
             aria-label={t("Carousel.buttonLeftLabel")}
-            className={clsx(
-              styles["carousel__button"],
-              styles["carousel__button_left"],
-            )}
+            className={clsx(s["carousel__button"], s["carousel__button_left"])}
             Icon={<ArrowToLeftSvg />}
             disabled={isFirstPosition}
           />
@@ -65,40 +62,37 @@ function Carousel({ images }: CarouselProps) {
             current: position + 1,
             total: images.length,
           })}
-          className={styles["carousel__image-container"]}
+          className={s["carousel__image-container"]}
         >
           <img
-            className={styles["carousel__image"]}
+            className={s["carousel__image"]}
             src={currentImage.imageUrl}
             alt={currentImage.alt}
           />
         </div>
 
         <div
-          className={clsx(styles["carousel__button-container"], {
-            [styles["carousel__button-container_disabled"]]: isLastPosition,
+          className={clsx(s["carousel__button-container"], {
+            [s["carousel__button-container_disabled"]]: isLastPosition,
           })}
           onClick={next}
           data-testid="next-button-container"
         >
           <IconButton
             aria-label={t("Carousel.buttonRightLabel")}
-            className={clsx(
-              styles["carousel__button"],
-              styles["carousel__button_right"],
-            )}
+            className={clsx(s["carousel__button"], s["carousel__button_right"])}
             Icon={<ArrowToRightSvg />}
             disabled={isLastPosition}
           />
         </div>
       </div>
 
-      <div className={styles["carousel__progress"]} aria-hidden="true">
+      <div className={s["carousel__progress"]} aria-hidden="true">
         {Array.from({ length: images.length }).map((_, index) => (
           <div
             key={index}
-            className={clsx(styles["carousel__progress-item"], {
-              [styles["carousel__progress-item_active"]]: index === position,
+            className={clsx(s["carousel__progress-item"], {
+              [s["carousel__progress-item_active"]]: index === position,
             })}
           ></div>
         ))}

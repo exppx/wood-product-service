@@ -4,7 +4,7 @@ import { OurWorksSection } from "@/widgets/our-works-section";
 import { MaterialsSection } from "@/widgets/materials-section";
 import { QuestionsSection } from "@/widgets/questions-section";
 
-import styles from "./GalleryPage.module.scss";
+import s from "./GalleryPage.module.scss";
 
 function GalleryPage() {
   const { t } = useTranslation();
@@ -14,7 +14,7 @@ function GalleryPage() {
   });
 
   return (
-    <main className={styles["gallery-page"]}>
+    <main className={s["gallery-page"]}>
       <OurWorksSection isMainSection={true} />
       <MaterialsSection />
       <QuestionsSection />

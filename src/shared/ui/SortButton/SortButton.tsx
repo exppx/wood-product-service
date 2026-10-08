@@ -4,7 +4,7 @@ import { type SortParams } from "@/shared/types/sort";
 import { useSortParams } from "@/shared/lib/hooks";
 import { ArrowToUpThinSvg } from "@/shared/ui/icons";
 
-import styles from "./SortButton.module.scss";
+import s from "./SortButton.module.scss";
 
 interface SortButtonProps extends ComponentProps<"button"> {
   label: string;
@@ -29,17 +29,17 @@ function SortButton({
     <button
       {...rest}
       onClick={handleClick}
-      className={clsx(className, styles["sort-button"], {
-        [styles["sort-button_active"]]: sortByValue === sortBy,
+      className={clsx(className, s["sort-button"], {
+        [s["sort-button_active"]]: sortByValue === sortBy,
       })}
     >
-      <div className={styles["sort-button__label"]}>{label}</div>
+      <div className={s["sort-button__label"]}>{label}</div>
       <div
         aria-hidden="true"
-        className={clsx(styles["sort-button__icon"], {
-          [styles["sort-button__icon_asc"]]:
+        className={clsx(s["sort-button__icon"], {
+          [s["sort-button__icon_asc"]]:
             sortByValue === sortBy && sortDirection === "asc",
-          [styles["sort-button__icon_desc"]]:
+          [s["sort-button__icon_desc"]]:
             sortByValue === sortBy && sortDirection === "desc",
         })}
       >

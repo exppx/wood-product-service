@@ -5,7 +5,7 @@ import type { SortButtonOptions } from "@/shared/types/sort";
 import { useSortParams } from "@/shared/lib/hooks";
 import { SortButton } from "@/shared/ui";
 
-import styles from "./SortButtonsGroup.module.scss";
+import s from "./SortButtonsGroup.module.scss";
 
 interface SortButtonsGroupProps {
   options: SortButtonOptions[];
@@ -26,13 +26,13 @@ function SortButtonsGroup({ options }: SortButtonsGroupProps) {
   );
 
   return (
-    <div className={styles["sort-buttons"]}>
-      <p id={sortTitleId} className={styles["sort-buttons__title"]}>
+    <div className={s["sort-buttons"]}>
+      <p id={sortTitleId} className={s["sort-buttons__title"]}>
         {t("SortButtonsGroup.sortBy")}
       </p>
 
       <div
-        className={styles["sort-buttons__buttons"]}
+        className={s["sort-buttons__buttons"]}
         role="group"
         aria-labelledby={sortTitleId}
       >
@@ -47,7 +47,7 @@ function SortButtonsGroup({ options }: SortButtonsGroupProps) {
         ))}
       </div>
 
-      <div role="status" className={styles["sort-buttons__status"]}>
+      <div role="status" className={s["sort-buttons__status"]}>
         {sortDirection === "" || sortBy === ""
           ? t("SortButtonsGroup.notSorted")
           : t("SortButtonsGroup.sortStatus", {

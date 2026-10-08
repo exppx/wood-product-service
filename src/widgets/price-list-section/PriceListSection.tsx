@@ -9,7 +9,7 @@ import {
 } from "@/features/price-list-filters";
 import { PriceListTable } from "./ui";
 
-import styles from "./PriceListSection.module.scss";
+import s from "./PriceListSection.module.scss";
 
 interface PriceListSectionProps {
   isMainSection?: boolean;
@@ -32,7 +32,7 @@ function PriceListSection({ isMainSection }: PriceListSectionProps) {
         title={t("PriceListSection.title")}
         isMainSection={isMainSection}
       >
-        <div className={styles["price-list-content"]}>
+        <div className={s["price-list-content"]}>
           <PriceListFilters />
           <PriceListTable
             data={data[i18n.language as Locale]}

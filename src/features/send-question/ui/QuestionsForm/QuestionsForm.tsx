@@ -13,7 +13,7 @@ import {
   useSendQuestion,
 } from "../../model";
 
-import styles from "./QuestionsForm.module.scss";
+import s from "./QuestionsForm.module.scss";
 
 function QuestionsForm() {
   "use no memo";
@@ -25,7 +25,7 @@ function QuestionsForm() {
   return (
     <form
       id={QUESTIONS_FORM_ID}
-      className={styles["questions-form"]}
+      className={s["questions-form"]}
       onSubmit={onSubmit}
     >
       <FormInput
@@ -62,7 +62,7 @@ function QuestionsForm() {
 
       <FormTextArea
         {...register("question")}
-        className={styles["questions-form__textarea"]}
+        className={s["questions-form__textarea"]}
         label={t("QuestionsForm.questionInput.label")}
         placeholder={t("QuestionsForm.questionInput.placeholder")}
         disabled={isSubmitting}

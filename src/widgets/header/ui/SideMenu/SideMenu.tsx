@@ -9,7 +9,7 @@ import { BurgerButton } from "../BurgerButton";
 import { CloseSideMenuButton } from "../CloseSideMenuButton";
 import { SIDE_MENU_ID } from "../../model";
 
-import styles from "./SideMenu.module.scss";
+import s from "./SideMenu.module.scss";
 
 function SideMenu() {
   const { t } = useTranslation();
@@ -25,22 +25,22 @@ function SideMenu() {
   }
 
   return (
-    <div className={styles["side-menu"]}>
+    <div className={s["side-menu"]}>
       <BurgerButton
         title={t("SideMenu.burgerButtonLabel")}
         aria-label={t("SideMenu.burgerButtonLabel")}
         aria-controls={SIDE_MENU_ID}
         aria-expanded={showSideMenu ? "true" : "false"}
         onClick={openSideMenu}
-        className={styles["side-menu__burger-button"]}
+        className={s["side-menu__burger-button"]}
       />
 
       <div
         inert={!isDesktop && !showSideMenu}
         id={SIDE_MENU_ID}
         data-testid={SIDE_MENU_ID}
-        className={clsx(styles["side-menu__panel"], {
-          [styles["side-menu__panel_active"]]: showSideMenu,
+        className={clsx(s["side-menu__panel"], {
+          [s["side-menu__panel_active"]]: showSideMenu,
         })}
       >
         <CloseSideMenuButton
@@ -49,11 +49,11 @@ function SideMenu() {
           aria-controls={SIDE_MENU_ID}
           aria-expanded={showSideMenu ? "true" : "false"}
           onClick={closeSideMenu}
-          className={styles["side-menu__close-button"]}
+          className={s["side-menu__close-button"]}
         />
-        <div className={styles["side-menu__tools"]}>
+        <div className={s["side-menu__tools"]}>
           <Navigation onClose={closeSideMenu} />
-          <div className={styles["side-menu__options"]}>
+          <div className={s["side-menu__options"]}>
             <ToggleThemeButton />
             <ToggleLocaleButton />
           </div>

@@ -2,7 +2,7 @@ import type { ComponentProps, PropsWithChildren } from "react";
 import { Link } from "react-router";
 import clsx from "clsx";
 
-import styles from "./LinkButton.module.scss";
+import s from "./LinkButton.module.scss";
 
 interface LinkButtonProps
   extends PropsWithChildren, ComponentProps<typeof Link> {
@@ -20,11 +20,11 @@ function LinkButton({
     typeof to === "string" ? to : (to.hash ?? "") + (to.search ?? "");
 
   return isHash ? (
-    <a {...rest} href={href} className={clsx(className, styles["link-button"])}>
+    <a {...rest} href={href} className={clsx(className, s["link-button"])}>
       {children}
     </a>
   ) : (
-    <Link {...rest} to={to} className={clsx(className, styles["link-button"])}>
+    <Link {...rest} to={to} className={clsx(className, s["link-button"])}>
       {children}
     </Link>
   );

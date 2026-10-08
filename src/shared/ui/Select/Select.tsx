@@ -2,7 +2,7 @@ import type { ComponentProps } from "react";
 import clsx from "clsx";
 import type { SelectOption } from "@/shared/types/select";
 
-import styles from "./Select.module.scss";
+import s from "./Select.module.scss";
 
 interface SelectProps<
   T extends string | number,
@@ -16,13 +16,13 @@ function Select<T extends string | number>({
   ...rest
 }: SelectProps<T>) {
   return (
-    <div className={styles["select-wrapper"]}>
-      <select {...rest} className={clsx(className, styles["select"])}>
+    <div className={s["select-wrapper"]}>
+      <select {...rest} className={clsx(className, s["select"])}>
         {options.map((opt) => (
           <option
             key={opt.value}
             value={opt.value}
-            className={styles["select__option"]}
+            className={s["select__option"]}
           >
             {opt.label}
           </option>

@@ -1,4 +1,4 @@
-import styles from "./FormErrorMessage.module.scss";
+import s from "./FormErrorMessage.module.scss";
 
 interface FormErrorMessageProps {
   id?: string;
@@ -7,8 +7,8 @@ interface FormErrorMessageProps {
 
 function FormErrorMessage({ id, message }: FormErrorMessageProps) {
   return (
-    <div id={id} className={styles["form-error-message"]} role="alert">
-      <div className={styles["form-error-message__text"]}>{message}</div>
+    <div id={id} className={s["form-error-message"]} role="alert">
+      <div className={s["form-error-message__text"]}>{message}</div>
     </div>
   );
 }

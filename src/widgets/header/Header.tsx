@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { Container, Logo } from "@/shared/ui";
 import { SideMenu } from "./ui";
 
-import styles from "./Header.module.scss";
+import s from "./Header.module.scss";
 
 interface HeaderProps {
   isFilled?: boolean;
@@ -27,12 +27,12 @@ function Header({ isFilled = false }: HeaderProps) {
   return (
     <header
       data-testid="header"
-      className={clsx(styles["header"], {
-        [styles["header_filled"]]: isFilled || isScrolled,
+      className={clsx(s["header"], {
+        [s["header_filled"]]: isFilled || isScrolled,
       })}
     >
-      <Container width="xl" className={styles["header__container"]}>
-        <div className={styles["header__logo-container"]}>
+      <Container width="xl" className={s["header__container"]}>
+        <div className={s["header__logo-container"]}>
           <Logo color={isScrolled ? "adaptive" : "light"} />
         </div>
         <SideMenu />

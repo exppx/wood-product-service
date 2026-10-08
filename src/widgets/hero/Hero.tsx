@@ -9,27 +9,24 @@ import {
   HERO_IMAGE_URL,
 } from "./model";
 
-import styles from "./Hero.module.scss";
+import s from "./Hero.module.scss";
 
 function Hero() {
   const { t } = useTranslation();
 
   return (
-    <Container width="xl" className={styles["hero-container"]}>
+    <Container width="xl" className={s["hero-container"]}>
       <img
         src={HERO_IMAGE_URL}
         alt={t("Hero.imageAlt")}
-        className={styles["hero-image"]}
+        className={s["hero-image"]}
       />
 
-      <Section className={styles["hero__section"]}>
-        <SectionFilled
-          position="right"
-          className={styles["hero__section-filled"]}
-        >
-          <div className={styles["hero__left"]}>
-            <h1 className={styles["hero__title"]}>{t("Hero.title")}</h1>
-            <p className={styles["hero__price"]}>
+      <Section className={s["hero__section"]}>
+        <SectionFilled position="right" className={s["hero__section-filled"]}>
+          <div className={s["hero__left"]}>
+            <h1 className={s["hero__title"]}>{t("Hero.title")}</h1>
+            <p className={s["hero__price"]}>
               {t("Hero.price.left")}
               <b>{t("Hero.price.price")}</b>
               {t("Hero.price.right")}
@@ -37,38 +34,29 @@ function Hero() {
             <LinkButton
               isHash
               to={`#${QUESTIONS_FORM_ID}`}
-              className={styles["hero__button"]}
+              className={s["hero__button"]}
             >
               {t("Hero.cta")}
             </LinkButton>
           </div>
 
-          <div className={styles["hero__divider"]} />
+          <div className={s["hero__divider"]} />
 
-          <div className={styles["hero__right"]}>
+          <div className={s["hero__right"]}>
             <img
               src={HERO_IMAGE_1_URL}
               alt={t("Hero.image1Alt")}
-              className={clsx(
-                styles["hero__image-aside"],
-                styles["hero__image-aside_1"],
-              )}
+              className={clsx(s["hero__image-aside"], s["hero__image-aside_1"])}
             />
             <img
               src={HERO_IMAGE_2_URL}
               alt={t("Hero.image2Alt")}
-              className={clsx(
-                styles["hero__image-aside"],
-                styles["hero__image-aside_2"],
-              )}
+              className={clsx(s["hero__image-aside"], s["hero__image-aside_2"])}
             />
             <img
               src={HERO_IMAGE_3_URL}
               alt={t("Hero.image3Alt")}
-              className={clsx(
-                styles["hero__image-aside"],
-                styles["hero__image-aside_3"],
-              )}
+              className={clsx(s["hero__image-aside"], s["hero__image-aside_3"])}
             />
           </div>
         </SectionFilled>

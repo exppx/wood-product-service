@@ -2,7 +2,7 @@ import { useId, type ChangeEvent, type ComponentProps } from "react";
 import { useSearchParams } from "react-router";
 import { Select } from "@/shared/ui";
 
-import styles from "./FilterSelect.module.scss";
+import s from "./FilterSelect.module.scss";
 
 interface FilterSelectProps extends ComponentProps<typeof Select> {
   searchKey: string;
@@ -35,8 +35,8 @@ function FilterSelect({
   }
 
   return (
-    <div className={styles["filter-select"]}>
-      <label className={styles["filter-select__label"]} htmlFor={id}>
+    <div className={s["filter-select"]}>
+      <label className={s["filter-select__label"]} htmlFor={id}>
         {label}
       </label>
       <Select {...rest} value={value} onChange={handleChange} id={id} />

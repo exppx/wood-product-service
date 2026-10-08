@@ -1,13 +1,13 @@
 import type { ComponentProps, PropsWithChildren } from "react";
 import clsx from "clsx";
 
-import styles from "./Button.module.scss";
+import s from "./Button.module.scss";
 
 type ButtonProps = PropsWithChildren & ComponentProps<"button">;
 
 function Button({ className, children, ...rest }: ButtonProps) {
   return (
-    <button {...rest} className={clsx(className, styles["button"])}>
+    <button {...rest} className={clsx(className, s["button"])}>
       {children}
     </button>
   );

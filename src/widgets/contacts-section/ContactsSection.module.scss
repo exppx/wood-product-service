@@ -1,0 +1,27 @@
+@use "@/app/styles/mixins.scss" as *;
+
+.contacts {
+  display: grid;
+  grid-template-rows: auto;
+  gap: var(--gap-xxxl);
+
+  @include media-tablet {
+    grid-template-columns: 1fr 1fr;
+    gap: calc(var(--gap-xxxl) * 2);
+  }
+
+  @include media-desktop {
+    grid-template-columns: 1fr 1fr;
+    gap: calc(var(--gap-xxxl) * 3);
+  }
+}
+
+.contacts__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xxl);
+}
+
+.contacts__map {
+  border-radius: var(--border-radius-default);
+}

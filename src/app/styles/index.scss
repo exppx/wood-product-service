@@ -1,0 +1,442 @@
+@use "./constants.scss" as *;
+@use "./mixins.scss" as *;
+@import url("ress/ress.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+@font-face {
+  font-family: "KyivTypeSans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("@/shared/assets/fonts/KyivTypeSans-Light-.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KyivTypeSans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("@/shared/assets/fonts/KyivTypeSans-Regular-.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KyivTypeSans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("@/shared/assets/fonts/KyivTypeSans-Medium-.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "KyivTypeSans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("@/shared/assets/fonts/KyivTypeSans-Black-.otf") format("opentype");
+  font-display: swap;
+}
+
+:root {
+  // General colors
+  --color-primary-1: #5f7489;
+  --color-primary-2: #728bad;
+  --color-primary-3: #a3b8d7;
+  --color-primary-4: #d5dcee;
+  --color-primary-5: #b0b4bd;
+  --color-primary-6: #7a574b;
+  --color-primary-7: #9f8578;
+  --color-primary-8: #c8b2a7;
+
+  --color-secondary-1: #664033;
+  --color-secondary-2: #6c200b;
+  --color-secondary-3: #8e3921;
+  --color-secondary-4: #e1764d;
+  --color-secondary-5: #e59679;
+  --color-secondary-6: #fb9e6e;
+  --color-secondary-7: #ffc099;
+  --color-secondary-8: #ffdbbb;
+
+  --color-tertiary-1: #1e0c06;
+  --color-tertiary-2: #222021;
+  --color-tertiary-3: #32353c;
+  --color-tertiary-4: #5b6069;
+  --color-tertiary-5: #848891;
+  --color-tertiary-6: #7d746d;
+  --color-tertiary-7: #d2c8c6;
+  --color-tertiary-8: #f1ded0;
+
+  --color-error-1: #260000;
+  --color-error-2: #430000;
+  --color-error-3: #6a0000;
+  --color-error-4: #ac0000;
+  --color-error-5: #ff0000;
+  --color-error-6: #ff3535;
+  --color-error-7: #ff6b6b;
+  --color-error-8: #ff9f9f;
+
+  --color-success-1: #002600;
+  --color-success-2: #004300;
+  --color-success-3: #006a00;
+  --color-success-4: #00ac00;
+  --color-success-5: #00ff00;
+  --color-success-6: #35ff35;
+  --color-success-7: #6bff6b;
+  --color-success-8: #9fff9f;
+
+  // Layout colors
+  --color-white: #f0f0f0;
+  --color-black: #0a0a0a;
+
+  --color-divider: #0a0a0a;
+  --color-background: #f0f0f0;
+  --color-surface: #fafafa;
+
+  --color-text: #0a0a0a;
+
+  // Breakpoints
+  --break-xs: #{$break-xs};
+  --break-sm: #{$break-sm};
+  --break-md: #{$break-md};
+  --break-lg: #{$break-lg};
+  --break-xl: #{$break-xl};
+  --break-xxl: #{$break-xxl};
+
+  // General sizing
+  --size-none: 0;
+  --size-xs: 0.25rem;
+  --size-sm: 0.5rem;
+  --size-md: 1rem;
+  --size-lg: 1.5rem;
+  --size-xl: 2rem;
+  --size-xxl: 2.5rem;
+  --size-xxxl: 3rem;
+
+  --padding-xs: var(--size-xs);
+  --padding-sm: var(--size-sm);
+  --padding-md: var(--size-md);
+  --padding-lg: var(--size-lg);
+  --padding-xl: var(--size-xl);
+  --padding-xxl: var(--size-xxl);
+  --padding-xxxl: var(--size-xxxl);
+
+  --margin-xs: var(--size-xs);
+  --margin-sm: var(--size-sm);
+  --margin-md: var(--size-md);
+  --margin-lg: var(--size-lg);
+  --margin-xl: var(--size-xl);
+  --margin-xxl: var(--size-xxl);
+  --margin-xxxl: var(--size-xxxl);
+
+  --gap-xs: var(--size-xs);
+  --gap-sm: var(--size-sm);
+  --gap-md: var(--size-md);
+  --gap-lg: var(--size-lg);
+  --gap-xl: var(--size-xl);
+  --gap-xxl: var(--size-xxl);
+  --gap-xxxl: var(--size-xxxl);
+
+  --border-radius-none: var(--size-none);
+  --border-radius-xs: var(--size-xs);
+  --border-radius-sm: var(--size-sm);
+  --border-radius-md: var(--size-md);
+  --border-radius-lg: var(--size-lg);
+  --border-radius-xl: var(--size-xl);
+  --border-radius-xxl: var(--size-xxl);
+  --border-radius-xxxl: var(--size-xxxl);
+  --border-radius-rounded: 9000px;
+
+  --border-width-sm: 1px;
+  --border-width-md: 2px;
+  --border-width-lg: 3px;
+  --border-width-xl: 4px;
+
+  // Font sizing
+  --font-size-xs: 0.5rem;
+  --font-size-sm: 0.75rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 1.75rem;
+  --font-size-xxxl: 2rem;
+
+  --line-height-md: 1;
+  --line-height-lg: 1.2;
+  --line-height-xl: calc(1 + 1 / 3);
+  --line-height-xxl: 1.5;
+
+  // Border radiuses
+  --border-radius-default: var(--border-radius-md);
+
+  @include media-tablet {
+    --border-radius-default: var(--border-radius-lg);
+  }
+
+  @include media-desktop {
+    --border-radius-default: var(--border-radius-xxl);
+  }
+
+  // Transitions
+  --transition-default: all 0.2s ease;
+
+  // Shadows
+  --color-shadow: color-mix(in oklab, var(--color-text) 17%, transparent 83%);
+  --shadow-main: 0 4px 52px 0 var(--color-shadow);
+
+  // Constants
+  --sqrt-2: 1.41;
+
+  // Layout sizing
+  --header-height: 68px;
+
+  @include media-desktop {
+    --header-height: 82px;
+  }
+
+  // Components
+  // - Icon
+  --icon-size: var(--size-xxl);
+  @include media-desktop {
+    --icon-size: var(--size-xl);
+  }
+  --icon-padding: var(--size-xs);
+  --icon-hover-background-color: color-mix(
+    in oklab,
+    var(--color-text) 5%,
+    transparent 95%
+  );
+  --icon-active-background-color: color-mix(
+    in oklab,
+    var(--color-text) 10%,
+    transparent 90%
+  );
+
+  // - Form control
+  --form-control-background-color: transparent;
+
+  --form-control-border-color: var(--color-primary-2);
+  --form-control-border-style: solid;
+  --form-control-border-width: var(--border-width-md);
+  --form-control-border: var(--form-control-border-width)
+    var(--form-control-border-style) var(--form-control-border-color);
+  --form-control-border-radius: var(--border-radius-rounded);
+
+  --form-control-shadow-color: color-mix(
+    in oklab,
+    var(--color-primary-2) 50%,
+    transparent 50%
+  );
+  --form-control-shadow: 0 0 0 3px var(--form-control-shadow-color);
+
+  --form-control-placeholder-color: var(--color-tertiary-5);
+
+  --form-control-padding: var(--size-sm) var(--size-md);
+
+  // - Form control :hover
+  --form-control-hover-background-color: color-mix(
+    in oklab,
+    var(--color-primary-1) 10%,
+    transparent 90%
+  );
+
+  // - Form control :focus
+  --form-control-focus-background-color: color-mix(
+    in oklab,
+    var(--color-primary-1) 10%,
+    transparent 90%
+  );
+
+  // - Form control :disabled
+  --form-control-disabled-opacity: 0.5;
+
+  // - Form control (error)
+  --form-control-error-background-color: color-mix(
+    in oklab,
+    var(--color-error-4) 10%,
+    transparent 90%
+  );
+
+  --form-control-error-border-color: var(--color-error-5);
+
+  --form-control-error-shadow-color: color-mix(
+    in oklab,
+    var(--color-error-5) 50%,
+    transparent 50%
+  );
+  --form-control-error-shadow: 0 0 0 3px var(--form-control-error-shadow-color);
+
+  --form-control-error-placeholder-color: var(--color-error-7);
+
+  // - Form control :hover (error)
+  --form-control-error-hover-background-color: color-mix(
+    in oklab,
+    var(--color-error-5) 10%,
+    transparent 90%
+  );
+
+  // - Form control :focus (error)
+  --form-control-error-focus-background-color: color-mix(
+    in oklab,
+    var(--color-error-5) 10%,
+    transparent 90%
+  );
+
+  // - Button
+  --button-background-color: var(--color-primary-2);
+
+  --button-border-width: var(--border-width-md);
+  --button-border-style: solid;
+  --button-border-color: transparent;
+  --button-border: var(--button-border-width) var(--button-border-style)
+    var(--button-border-color);
+  --button-border-radius: var(--border-radius-rounded);
+
+  --button-shadow-color: color-mix(
+    in oklab,
+    var(--color-primary-2) 50%,
+    transparent 50%
+  );
+  --button-shadow: 0 0 0 3px var(--form-control-shadow-color);
+
+  --button-padding: var(--padding-sm) var(--padding-lg);
+
+  @include media-tablet {
+    --button-padding: var(--padding-sm) var(--padding-xl);
+  }
+
+  @include media-desktop {
+    --button-padding: var(--padding-sm) calc(var(--padding-xl));
+  }
+
+  // - Button :hover
+  --button-hover-background-color: var(--color-primary-3);
+
+  // - Button :active
+  --button-active-background-color: var(--color-primary-1);
+
+  // - Button :disabled
+  --button-disabled-opacity: 0.5;
+
+  // - Table
+  --table-text-color: var(--color-black);
+  --table-cell-background-color: #d9d9d9;
+  --table-cell-background-color-accent: var(--color-secondary-5);
+  --table-cell-divider-color: color-mix(
+    in oklab,
+    var(--color-secondary-3) 37%,
+    transparent 63%
+  );
+  --table-cell-divider-size: var(--border-width-md);
+  --table-cell-divider-style: solid;
+  --table-cell-divider: var(--table-cell-divider-size)
+    var(--table-cell-divider-style) var(--table-cell-divider-color);
+  --table-gap: var(--size-sm);
+  --table-padding: var(--size-sm);
+
+  @include media-tablet {
+    --table-gap: var(--size-md);
+    --table-padding: var(--size-md);
+  }
+
+  @include media-desktop {
+    --table-gap: var(--size-md);
+    --table-padding: var(--size-md);
+  }
+  --table-border-radius: var(--border-radius-md);
+}
+
+:root[data-theme="dark"] {
+  --color-divider: #f5f5f5;
+  --color-background: #222021;
+  --color-surface: #1e0c06;
+
+  --color-text: #f5f5f5;
+
+  // Components
+  // - Form control
+  --form-control-hover-background-color: color-mix(
+    in oklab,
+    var(--color-primary-3) 10%,
+    transparent 90%
+  );
+
+  --form-control-placeholder-color: var(--color-tertiary-4);
+
+  // - Form control (error)
+  --form-control-error-border-color: var(--color-error-4);
+  --form-control-error-shadow-color: color-mix(
+    in oklab,
+    var(--color-error-4) 50%,
+    transparent 50%
+  );
+}
+
+* {
+  color: inherit;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Inter";
+  background-color: var(--color-background);
+  color: var(--color-text);
+  min-height: 100dvh;
+
+  line-height: var(--line-height-xl);
+  font-size: var(--font-size-md);
+
+  @include media-tablet {
+    font-size: var(--font-size-lg);
+  }
+
+  @include media-desktop {
+    font-size: var(--font-size-xl);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "KyivTypeSans";
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  font-size: 30px;
+
+  @include media-tablet {
+    font-size: 45px;
+  }
+
+  @include media-desktop {
+    font-size: 60px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+address {
+  font-style: normal;
+}

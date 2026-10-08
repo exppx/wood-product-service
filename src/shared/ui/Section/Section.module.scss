@@ -1,0 +1,27 @@
+@use "@/app/styles/mixins.scss" as *;
+
+.section {
+  padding: var(--padding-xxxl) 0;
+
+  @include media-desktop {
+    padding: calc(var(--padding-xxxl) * 2) 0;
+  }
+}
+
+.section__title {
+  margin-bottom: var(--margin-xl);
+
+  @include media-tablet {
+    padding: 0 calc(var(--padding-xxxl) * 1.5);
+    margin-bottom: var(--margin-xxxl);
+  }
+
+  @include media-desktop {
+    padding: 0 calc(var(--padding-xxxl) * 3);
+    margin-bottom: calc(var(--margin-xxxl) * 1.5);
+  }
+}
+
+.section__title_right {
+  text-align: end;
+}

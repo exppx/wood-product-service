@@ -1,0 +1,1 @@
+export { PriceListTable } from "./PriceListTable";

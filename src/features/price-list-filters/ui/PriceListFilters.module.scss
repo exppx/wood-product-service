@@ -1,0 +1,44 @@
+@use "@/app/styles/mixins.scss" as *;
+
+.price-list-filters {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--gap-xl);
+
+  @include media-desktop {
+    flex-direction: row;
+    column-gap: var(--gap-xxxl);
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
+
+.price-list-filters__filters {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--gap-xl);
+
+  @include media-desktop {
+    flex-direction: row;
+    column-gap: var(--gap-xxxl);
+  }
+}
+
+.price-list-filters__size-filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--gap-md);
+
+  @include media-tablet {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  @include media-desktop {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap-lg);
+  }
+}
+
+.price-list-filters__error {
+  color: var(--color-error-5);
+}

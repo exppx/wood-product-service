@@ -1,4 +1,4 @@
-import type { Material } from "@/types/db";
+import type { Material } from "@/entities/material";
 
 export default [
   {

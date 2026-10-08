@@ -1,9 +1,4 @@
 import type { TranslationKey } from "@/shared/types/locales";
-import type { Material } from "@/types/db";
-
-interface PriceListTableData {
-  [key: Material["slug"]]: Material[];
-}
 
 const TABLE_HEADERS: { visible: TranslationKey; readable: TranslationKey }[] = [
   {
@@ -40,7 +35,6 @@ const COLUMN_GROUPS_END_INDEXES = [3];
 const COLUMN_GROUPS_START_INDEXES = COLUMN_GROUPS_END_INDEXES.map((i) => i + 1);
 
 export {
-  type PriceListTableData,
   TABLE_HEADERS,
   COLUMN_GROUPS_END_INDEXES,
   COLUMN_GROUPS_START_INDEXES,

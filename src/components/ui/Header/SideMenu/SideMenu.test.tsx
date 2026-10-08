@@ -38,12 +38,12 @@ vi.mock("./Navigation/Navigation", () => ({
   ),
 }));
 
-vi.mock("./ToggleThemeButton/ToggleThemeButton", () => ({
-  default: () => <div data-testid="toggle-theme-button" />,
+vi.mock("@/features/toggle-theme", () => ({
+  ToggleThemeButton: () => <div data-testid="toggle-theme-button" />,
 }));
 
-vi.mock("./ToggleLocaleButton/ToggleLocaleButton", () => ({
-  default: () => <div data-testid="toggle-locale-button" />,
+vi.mock("@/features/toggle-locale", () => ({
+  ToggleLocaleButton: () => <div data-testid="toggle-locale-button" />,
 }));
 
 const DESKTOP: MediaState = {

@@ -140,10 +140,12 @@
     "error": "Failed to load filter options"
   },
   "PriceListSection": {
-    "title": "Price list"
+    "title": "Price list",
+    "errors": {
+      "table": "Failed to load price list"
+    }
   },
   "PriceListTable": {
-    "error": "Failed to load price list",
     "headers": {
       "wood": {
         "visible": "Wood",

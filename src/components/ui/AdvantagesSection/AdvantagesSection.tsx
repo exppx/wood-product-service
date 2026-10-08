@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { QUESTIONS_FORM_ID } from "@/components/ui/QuestionsSection/QuestionsForm/QuestionsForm.config";
+import { QUESTIONS_FORM_ID } from "@/features/send-question";
 import { Container, LinkButton, Section } from "@/shared/ui";
 
 import advantagesImage from "@/shared/assets/images/advantages.webp";

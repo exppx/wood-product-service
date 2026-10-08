@@ -1,6 +1,12 @@
 import { useTranslation } from "react-i18next";
+import type { Locale } from "@/shared/types/locales";
+import { useSortParams } from "@/shared/lib/hooks";
 import { Container, Section } from "@/shared/ui";
-import PriceListFilters from "./PriceListFilters/PriceListFilters";
+import { useMaterialPriceList } from "@/entities/material";
+import {
+  PriceListFilters,
+  usePriceListFilters,
+} from "@/features/price-list-filters";
 import PriceListTable from "./PriceListTable/PriceListTable";
 
 import styles from "./PriceListSection.module.scss";
@@ -10,7 +16,15 @@ interface PriceListSectionProps {
 }
 
 function PriceListSection({ isMainSection }: PriceListSectionProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const { priceListFilters } = usePriceListFilters();
+  const { sortBy, sortDirection } = useSortParams();
+
+  const { data, isLoading, isError } = useMaterialPriceList(priceListFilters, {
+    sortBy,
+    sort: sortDirection,
+  });
 
   return (
     <Container width="xl">
@@ -20,7 +34,11 @@ function PriceListSection({ isMainSection }: PriceListSectionProps) {
       >
         <div className={styles["price-list-content"]}>
           <PriceListFilters />
-          <PriceListTable />
+          <PriceListTable
+            data={data[i18n.language as Locale]}
+            isLoading={isLoading}
+            error={isError ? t("PriceListSection.errors.table") : null}
+          />
         </div>
       </Section>
     </Container>

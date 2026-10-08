@@ -6,8 +6,8 @@ import { useMedia } from "@/shared/lib/hooks";
 import Navigation from "./Navigation/Navigation";
 import BurgerButton from "./BurgerButton/BurgerButton";
 import CloseSideMenuButton from "./CloseSideMenuButton/CloseSideMenuButton";
-import ToggleThemeButton from "./ToggleThemeButton/ToggleThemeButton";
-import ToggleLocaleButton from "./ToggleLocaleButton/ToggleLocaleButton";
+import { ToggleThemeButton } from "@/features/toggle-theme";
+import { ToggleLocaleButton } from "@/features/toggle-locale";
 
 import styles from "./SideMenu.module.scss";
 

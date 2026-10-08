@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
-import { QUESTIONS_FORM_ID } from "@/components/ui/QuestionsSection/QuestionsForm/QuestionsForm.config";
+import { QUESTIONS_FORM_ID } from "@/features/send-question";
 import {
   HERO_IMAGE_1_URL,
   HERO_IMAGE_2_URL,

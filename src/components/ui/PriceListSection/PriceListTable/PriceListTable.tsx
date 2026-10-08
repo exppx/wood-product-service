@@ -1,25 +1,22 @@
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
-import type { Locale } from "@/shared/types/locales";
-import type { Material } from "@/types/db";
+import { type PriceListTableData, type Material } from "@/entities/material";
 import {
   COLUMN_GROUPS_END_INDEXES,
   COLUMN_GROUPS_START_INDEXES,
   TABLE_HEADERS,
-  type PriceListTableData,
 } from "./PriceListTable.config";
-import usePriceListTableData from "@/hooks/usePriceListTableData/usePriceListTableData";
 
 import styles from "./PriceListTable.module.scss";
 
-function PriceListTable() {
-  const { t, i18n } = useTranslation();
+interface PriceListTableProps {
+  data: PriceListTableData;
+  isLoading: boolean;
+  error: string | null;
+}
 
-  const {
-    data: { [i18n.language as Locale]: data },
-    isLoading,
-    error,
-  } = usePriceListTableData();
+function PriceListTable({ data, isLoading, error }: PriceListTableProps) {
+  const { t } = useTranslation();
 
   if (error) {
     return (

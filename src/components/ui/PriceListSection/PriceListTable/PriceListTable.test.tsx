@@ -1,6 +1,5 @@
 import { render, screen, within } from "@/test-utils/test-utils";
-import type { Material } from "@/types/db";
-import usePriceListTableData from "@/hooks/usePriceListTableData/usePriceListTableData";
+import type { Material, PriceListTableData } from "@/entities/material";
 import {
   COLUMN_GROUPS_END_INDEXES,
   COLUMN_GROUPS_START_INDEXES,
@@ -8,13 +7,11 @@ import {
 } from "./PriceListTable.config";
 import PriceListTable from "./PriceListTable";
 
-vi.mock("@/hooks/usePriceListTableData/usePriceListTableData");
-
 vi.mock("./PriceListTable.module.scss", () => ({
   default: new Proxy({}, { get: (_target, key) => String(key) }),
 }));
 
-type HookResult = ReturnType<typeof usePriceListTableData>;
+type TableProps = React.ComponentProps<typeof PriceListTable>;
 
 function createMaterial(overrides: Partial<Material> = {}): Material {
   return {
@@ -55,16 +52,20 @@ const pine1 = createMaterial({
   priceM3: 2222,
 });
 
-function mockHook(overrides: Partial<HookResult> = {}) {
-  vi.mocked(usePriceListTableData).mockReturnValue({
-    data: {
-      en: { oak: [oak1, oak2], pine: [pine1] },
-      ru: { oak: [createMaterial({ wood: "Дуб" })] },
-    },
-    isLoading: false,
-    error: null,
-    ...overrides,
-  });
+const DEFAULT_DATA: PriceListTableData = {
+  oak: [oak1, oak2],
+  pine: [pine1],
+};
+
+function renderTable(props: Partial<TableProps> = {}) {
+  return render(
+    <PriceListTable
+      data={DEFAULT_DATA}
+      isLoading={false}
+      error={null}
+      {...props}
+    />,
+  );
 }
 
 function getTableCellWrapper(cell: HTMLElement) {
@@ -72,16 +73,9 @@ function getTableCellWrapper(cell: HTMLElement) {
 }
 
 describe("PriceListTable", () => {
-  beforeEach(() => {
-    vi.resetAllMocks();
-    mockHook();
-  });
-
   describe("error state", () => {
     it("renders error message with role=alert", () => {
-      mockHook({ error: "Something went wrong" });
-
-      render(<PriceListTable />);
+      renderTable({ error: "Something went wrong" });
 
       expect(screen.getByRole("alert")).toHaveTextContent(
         "Something went wrong",
@@ -89,15 +83,13 @@ describe("PriceListTable", () => {
     });
 
     it("does not render the table when there is an error", () => {
-      mockHook({ error: "Something went wrong" });
-
-      render(<PriceListTable />);
+      renderTable({ error: "Something went wrong" });
 
       expect(screen.queryByRole("table")).not.toBeInTheDocument();
     });
 
     it("does not render alert when there is no error", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       expect(screen.queryByRole("alert")).not.toBeInTheDocument();
     });
@@ -105,7 +97,7 @@ describe("PriceListTable", () => {
 
   describe("headers", () => {
     it("renders all column headers", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const [thead] = screen.getAllByRole("rowgroup");
       const headers = within(thead).getAllByRole("columnheader");
@@ -116,7 +108,7 @@ describe("PriceListTable", () => {
     it.each(TABLE_HEADERS.map((header) => [header]))(
       "renders visible text and aria-label for %o",
       (header) => {
-        render(<PriceListTable />);
+        renderTable();
 
         const th = screen.getByRole("columnheader", {
           name: new RegExp(header.readable.replace(/\./g, "\\.")),
@@ -127,7 +119,7 @@ describe("PriceListTable", () => {
     );
 
     it("renders headers inside thead", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const [thead] = screen.getAllByRole("rowgroup");
 
@@ -137,7 +129,7 @@ describe("PriceListTable", () => {
     });
 
     it("marks the last column of the group (height) with group class", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const [thead] = screen.getAllByRole("rowgroup");
       const headers = within(thead).getAllByRole("columnheader");
@@ -152,7 +144,7 @@ describe("PriceListTable", () => {
     });
 
     it("applies corner classes to the first header", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const [thead] = screen.getAllByRole("rowgroup");
       const headers = within(thead).getAllByRole("columnheader");
@@ -167,7 +159,7 @@ describe("PriceListTable", () => {
     });
 
     it("applies corner classes to the last header", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const [thead] = screen.getAllByRole("rowgroup");
       const headers = within(thead).getAllByRole("columnheader");
@@ -181,7 +173,7 @@ describe("PriceListTable", () => {
     });
 
     it("applies group-boundary classes to headers at group edges", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const headers = screen.getAllByRole("columnheader");
       const groupEnd = COLUMN_GROUPS_END_INDEXES[0];
@@ -198,7 +190,7 @@ describe("PriceListTable", () => {
     });
 
     it("does not apply boundary classes to middle headers", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const groupEnd = COLUMN_GROUPS_END_INDEXES[0];
       const wrapper = getTableCellWrapper(
@@ -216,21 +208,20 @@ describe("PriceListTable", () => {
 
   describe("body", () => {
     it("renders one row per material plus the header row", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       expect(screen.getAllByRole("row")).toHaveLength(4);
     });
 
-    it("renders only data for the current language", () => {
-      render(<PriceListTable />);
+    it("renders the data passed via props", () => {
+      renderTable();
 
-      expect(screen.getAllByText("Oak").length).toBeGreaterThan(0);
+      expect(screen.getByText("Oak")).toBeInTheDocument();
       expect(screen.getByText("Pine")).toBeInTheDocument();
-      expect(screen.queryByText("Дуб")).not.toBeInTheDocument();
     });
 
     it("renders group name only once per group with correct rowSpan", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const oakName = screen.getByText("Oak").closest("th");
       const pineName = screen.getByText("Pine").closest("th");
@@ -241,7 +232,7 @@ describe("PriceListTable", () => {
     });
 
     it("renders all property values of a material in the right order", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const row = screen.getByText("5001").closest("tr") as HTMLElement;
       const cells = within(row).getAllByRole("cell");
@@ -257,7 +248,7 @@ describe("PriceListTable", () => {
     });
 
     it("renders the group name cell only in the first row of a group", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const rows = screen.getAllByRole("row");
       const [, oakRow1, oakRow2, pineRow] = rows;
@@ -272,9 +263,7 @@ describe("PriceListTable", () => {
     });
 
     it("renders an empty tbody when there is no data", () => {
-      mockHook({ data: { en: {}, ru: {} } });
-
-      render(<PriceListTable />);
+      renderTable({ data: {} });
 
       expect(screen.getAllByRole("row")).toHaveLength(1);
     });
@@ -282,7 +271,7 @@ describe("PriceListTable", () => {
 
   describe("cell classes", () => {
     it("marks the last column in group (height) cells", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const row = screen.getByText("5001").closest("tr") as HTMLElement;
       const cells = within(row).getAllByRole("cell");
@@ -297,7 +286,7 @@ describe("PriceListTable", () => {
     });
 
     it("marks only the cells of the last row in group with last-row class", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const [, oakRow1, oakRow2] = screen.getAllByRole("row");
 
@@ -312,7 +301,7 @@ describe("PriceListTable", () => {
     });
 
     it("applies last-col and bottom-right classes to the last cell of the last row", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const [, , oakRow2] = screen.getAllByRole("row");
       const cells = within(oakRow2).getAllByRole("cell");
@@ -327,7 +316,7 @@ describe("PriceListTable", () => {
     });
 
     it("applies bottom-left class to the first cell of a column group in the last row", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const [, , oakRow2] = screen.getAllByRole("row");
       const cells = within(oakRow2).getAllByRole("cell");
@@ -340,7 +329,7 @@ describe("PriceListTable", () => {
     });
 
     it("does not apply top corner classes to cells of the first group", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const [, oakRow1] = screen.getAllByRole("row");
 
@@ -355,7 +344,7 @@ describe("PriceListTable", () => {
     });
 
     it("applies top corner classes to the first row of non-first groups", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const [, , , pineRow] = screen.getAllByRole("row");
       const cells = within(pineRow).getAllByRole("cell");
@@ -384,7 +373,7 @@ describe("PriceListTable", () => {
 
   describe("group name cell classes", () => {
     it("does not apply top-left classes to the first group name", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const th = screen.getByText("Oak").closest("th") as HTMLElement;
 
@@ -400,7 +389,7 @@ describe("PriceListTable", () => {
     });
 
     it("applies top-left classes to non-first group names", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const th = screen.getByText("Pine").closest("th") as HTMLElement;
 
@@ -415,9 +404,7 @@ describe("PriceListTable", () => {
 
   describe("loading state", () => {
     it("adds stale class to the table while loading", () => {
-      mockHook({ isLoading: true });
-
-      render(<PriceListTable />);
+      renderTable({ isLoading: true });
 
       expect(screen.getByRole("table")).toHaveClass(
         "price-table",
@@ -426,7 +413,7 @@ describe("PriceListTable", () => {
     });
 
     it("does not add stale class when loaded", () => {
-      render(<PriceListTable />);
+      renderTable();
 
       const table = screen.getByRole("table");
 
@@ -435,9 +422,7 @@ describe("PriceListTable", () => {
     });
 
     it("keeps rendering data while loading", () => {
-      mockHook({ isLoading: true });
-
-      render(<PriceListTable />);
+      renderTable({ isLoading: true });
 
       expect(screen.getByText("Pine")).toBeInTheDocument();
     });

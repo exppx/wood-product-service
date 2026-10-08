@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useMedia } from "@/shared/lib/hooks";
 import { Container, Section } from "@/shared/ui";
-import QuestionsForm from "./QuestionsForm/QuestionsForm";
+import { QuestionsForm } from "@/features/send-question";
 
 import logImage from "@/shared/assets/images/cut-log.webp";
 import styles from "./QuestionsSection.module.scss";

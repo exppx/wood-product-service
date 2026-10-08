@@ -6,8 +6,8 @@ vi.mock("@/shared/lib/hooks", () => ({
   useMedia: vi.fn(),
 }));
 
-vi.mock("./QuestionsForm/QuestionsForm", () => ({
-  default: () => (
+vi.mock("@/features/send-question", () => ({
+  QuestionsForm: () => (
     <form data-testid="form">
       <button>Submit</button>
     </form>

@@ -24,4 +24,6 @@ const NAVIGATION_LINKS = [
   },
 ] as const satisfies NavigationLinkData[];
 
-export { NAVIGATION_LINKS };
+const SIDE_MENU_ID = "side-menu";
+
+export { NAVIGATION_LINKS, SIDE_MENU_ID };

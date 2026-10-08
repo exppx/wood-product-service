@@ -3,7 +3,7 @@ import userEvent from "@testing-library/user-event";
 import type { ComponentProps } from "react";
 import type { MediaState } from "@/shared/types/media";
 import { useMedia } from "@/shared/lib/hooks";
-import { SIDE_MENU_ID } from "./SideMenu.config";
+import { SIDE_MENU_ID } from "../../model";
 import SideMenu from "./SideMenu";
 
 vi.mock("@/shared/lib/hooks", () => ({

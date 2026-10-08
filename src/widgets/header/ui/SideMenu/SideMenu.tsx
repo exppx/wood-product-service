@@ -7,7 +7,7 @@ import { ToggleLocaleButton } from "@/features/toggle-locale";
 import { Navigation } from "../Navigation";
 import { BurgerButton } from "../BurgerButton";
 import { CloseSideMenuButton } from "../CloseSideMenuButton";
-import { SIDE_MENU_ID } from "./SideMenu.config";
+import { SIDE_MENU_ID } from "../../model";
 
 import styles from "./SideMenu.module.scss";
 

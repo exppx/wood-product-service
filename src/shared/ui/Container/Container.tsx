@@ -1,6 +1,6 @@
 import type { ComponentProps, PropsWithChildren } from "react";
-import type { BreakPoint } from "@/shared/types/theme";
 import clsx from "clsx";
+import type { BreakPoint } from "@/shared/types/theme";
 
 import styles from "./Container.module.scss";
 

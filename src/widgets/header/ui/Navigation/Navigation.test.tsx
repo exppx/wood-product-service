@@ -1,5 +1,5 @@
 import { render, screen } from "@/test-utils/test-utils";
-import { NAVIGATION_LINKS } from "./Navigation.config";
+import { NAVIGATION_LINKS } from "../../model";
 import Navigation from "./Navigation";
 import userEvent from "@testing-library/user-event";
 import LocationDisplay from "@/test-utils/LocationDisplay";

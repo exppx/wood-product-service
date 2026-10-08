@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
-import { NAVIGATION_LINKS } from "./Navigation.config";
 import { useTranslation } from "react-i18next";
 import clsx from "clsx";
+import { NAVIGATION_LINKS } from "../../model";
 
 import styles from "./Navigation.module.scss";
 

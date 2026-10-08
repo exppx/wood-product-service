@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { BREAKPOINTS } from "./useMedia.config";
 import type { MediaState } from "@/shared/types/media";
+import { BREAKPOINTS } from "./useMedia.config";
 
 function getMediaState(): MediaState {
   return {

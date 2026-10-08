@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { useLocale } from "../../model";
 import { IconButton } from "@/shared/ui";
+import { useLocale } from "../../model";
 
 import styles from "./ToggleLocaleButton.module.scss";
 

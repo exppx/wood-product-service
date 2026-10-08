@@ -1,15 +1,22 @@
+import { lazy } from "react";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
-import AppLayout from "@/app/layouts/AppLayout/AppLayout";
-import FilledHeaderAppLayout from "@/app/layouts/FilledHeaderAppLayout/FilledHeaderAppLayout";
-import NoFooterLayout from "@/app/layouts/NoFooterLayout/NoFooterLayout";
-import HomePage from "@/pages/HomePage/HomePage";
-import GalleryPage from "@/pages/GalleryPage/GalleryPage";
-import PricesPage from "@/pages/PricesPage/PricesPage";
-import AboutPage from "@/pages/AboutPage/AboutPage";
-import ContactsPage from "@/pages/ContactsPage/ContactsPage";
-import NotFoundPage from "@/pages/NotFoundPage/NotFoundPage";
-import ScrollRestorationLayout from "@/app/layouts/ScrollRestorationLayout/ScrollRestorationLayout";
+
+const ScrollRestorationLayout = lazy(
+  () => import("../layouts/ScrollRestorationLayout"),
+);
+const AppLayout = lazy(() => import("../layouts/AppLayout"));
+const FilledHeaderAppLayout = lazy(
+  () => import("../layouts/FilledHeaderAppLayout"),
+);
+const NoFooterLayout = lazy(() => import("../layouts/NoFooterLayout"));
+
+const HomePage = lazy(() => import("@/pages/home"));
+const GalleryPage = lazy(() => import("@/pages/gallery"));
+const PricesPage = lazy(() => import("@/pages/prices"));
+const AboutPage = lazy(() => import("@/pages/about"));
+const ContactsPage = lazy(() => import("@/pages/contacts"));
+const NotFoundPage = lazy(() => import("@/pages/not-found"));
 
 const router = createBrowserRouter([
   {

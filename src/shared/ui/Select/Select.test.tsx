@@ -1,7 +1,8 @@
 import { render, screen } from "@/test-utils/test-utils";
 import userEvent from "@testing-library/user-event";
 import type { ChangeEvent } from "react";
-import Select, { type SelectOption } from "./Select";
+import type { SelectOption } from "@/shared/types/select";
+import Select from "./Select";
 
 describe("Select", () => {
   const TEST_OPTIONS: SelectOption<string | number>[] = [

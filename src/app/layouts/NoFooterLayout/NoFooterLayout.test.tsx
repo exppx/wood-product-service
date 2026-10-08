@@ -1,8 +1,8 @@
 import { render, screen } from "@/test-utils/test-utils";
 import NoFooterLayout from "./NoFooterLayout";
 
-vi.mock("@/components/ui/Header/Header", () => ({
-  default: () => <header>Header</header>,
+vi.mock("@/widgets/header", () => ({
+  Header: () => <header>Header</header>,
 }));
 
 describe("NoFooterLayout", () => {

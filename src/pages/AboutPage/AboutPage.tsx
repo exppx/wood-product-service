@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { usePageMetadata } from "@/shared/lib/hooks";
-import AboutSection from "@/components/ui/AboutSection/AboutSection";
-import OurWorksSection from "@/components/ui/OurWorksSection/OurWorksSection";
-import QuestionsSection from "@/components/ui/QuestionsSection/QuestionsSection";
+import { AboutSection } from "@/widgets/about-section";
+import { OurWorksSection } from "@/widgets/our-works-section";
+import { QuestionsSection } from "@/widgets/questions-section";
 
 import styles from "./AboutPage.module.scss";
 

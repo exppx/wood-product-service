@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { usePageMetadata } from "@/shared/lib/hooks";
-import PriceListSection from "@/components/ui/PriceListSection/PriceListSection";
-import QuestionsSection from "@/components/ui/QuestionsSection/QuestionsSection";
+import { PriceListSection } from "@/widgets/price-list-section";
+import { QuestionsSection } from "@/widgets/questions-section";
 
 import styles from "./PricesPage.module.scss";
 

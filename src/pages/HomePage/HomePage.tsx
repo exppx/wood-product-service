@@ -1,12 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { usePageMetadata } from "@/shared/lib/hooks";
-import Hero from "@/components/ui/Hero/Hero";
-import MaterialsSection from "@/components/ui/MaterialsSection/MaterialsSection";
-import OurWorksSection from "@/components/ui/OurWorksSection/OurWorksSection";
-import AdvantagesSection from "@/components/ui/AdvantagesSection/AdvantagesSection";
-import AboutSection from "@/components/ui/AboutSection/AboutSection";
-import QuestionsSection from "@/components/ui/QuestionsSection/QuestionsSection";
 import { Reveal } from "@/shared/ui";
+import { Hero } from "@/widgets/hero";
+import { MaterialsSection } from "@/widgets/materials-section";
+import { OurWorksSection } from "@/widgets/our-works-section";
+import { AdvantagesSection } from "@/widgets/advantages-section";
+import { AboutSection } from "@/widgets/about-section";
+import { QuestionsSection } from "@/widgets/questions-section";
 
 import styles from "./HomePage.module.scss";
 

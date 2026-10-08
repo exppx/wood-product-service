@@ -1,12 +1,12 @@
 import { render, screen } from "@/test-utils/test-utils";
 import AppLayout from "./AppLayout";
 
-vi.mock("@/components/ui/Header/Header", () => ({
-  default: () => <header>Header</header>,
+vi.mock("@/widgets/header", () => ({
+  Header: () => <header>Header</header>,
 }));
 
-vi.mock("@/components/ui/Footer/Footer", () => ({
-  default: () => <header>Footer</header>,
+vi.mock("@/widgets/footer", () => ({
+  Footer: () => <footer>Footer</footer>,
 }));
 
 describe("AppLayout", () => {

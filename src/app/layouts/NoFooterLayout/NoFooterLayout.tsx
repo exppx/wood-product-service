@@ -1,6 +1,7 @@
-import Header from "@/components/ui/Header/Header";
-import styles from "./NoFooterLayout.module.scss";
 import { Outlet } from "react-router";
+import { Header } from "@/widgets/header";
+
+import styles from "./NoFooterLayout.module.scss";
 
 function NoFooterLayout() {
   return (

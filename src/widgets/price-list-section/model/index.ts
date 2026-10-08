@@ -1,0 +1,5 @@
+export {
+  TABLE_HEADERS,
+  COLUMN_GROUPS_END_INDEXES,
+  COLUMN_GROUPS_START_INDEXES,
+} from "./config";

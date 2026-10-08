@@ -1,14 +1,14 @@
 import { render, screen } from "@/test-utils/test-utils";
 import FilledHeaderAppLayout from "./FilledHeaderAppLayout";
 
-vi.mock("@/components/ui/Header/Header", () => ({
-  default: ({ isFilled }: { isFilled: boolean }) => (
+vi.mock("@/widgets/header", () => ({
+  Header: ({ isFilled }: { isFilled: boolean }) => (
     <header data-isFilled={isFilled}>Header</header>
   ),
 }));
 
-vi.mock("@/components/ui/Footer/Footer", () => ({
-  default: () => <header>Footer</header>,
+vi.mock("@/widgets/footer", () => ({
+  Footer: () => <footer>Footer</footer>,
 }));
 
 describe("FilledHeaderAppLayout", () => {

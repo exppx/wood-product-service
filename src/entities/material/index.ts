@@ -7,3 +7,4 @@ export type {
   PriceListTableData,
 } from "./model/types";
 export { useMaterialPriceList } from "./model";
+export { MaterialCard } from "./ui";

@@ -33,7 +33,7 @@ function Header({ isFilled = false }: HeaderProps) {
     >
       <Container width="xl" className={s["header__container"]}>
         <div className={s["header__logo-container"]}>
-          <Logo color={isScrolled ? "adaptive" : "light"} />
+          <Logo color={isFilled || isScrolled ? "adaptive" : "light"} />
         </div>
         <SideMenu />
       </Container>

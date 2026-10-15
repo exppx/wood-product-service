@@ -1,0 +1,1 @@
+export { MATERIALS } from "./config";

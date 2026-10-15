@@ -1,0 +1,84 @@
+@use "@/app/styles/mixins.scss" as *;
+
+.not-found-container {
+  position: relative;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+.bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-height: 100%;
+  border-radius: 0 var(--border-radius-xl) var(--border-radius-xl) 0;
+  z-index: -100;
+}
+
+.not-found__heading {
+  @include visually-hidden;
+}
+
+.not-found__inner-container {
+  padding: calc(var(--header-height) + var(--padding-xxxl) * 1.5)
+    var(--padding-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xxxl);
+
+  @include media-desktop {
+    padding: 0 var(--padding-xl);
+    padding-top: calc(var(--header-height) + var(--padding-xxxl));
+    padding-bottom: var(--padding-xxxl);
+    gap: var(--gap-md);
+  }
+}
+
+.not-found__404-container {
+  fill: currentColor;
+  stroke: currentColor;
+  width: 100%;
+}
+
+.not-found__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-xl);
+}
+
+.not-found__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-md);
+  text-align: center;
+
+  @include media-desktop {
+    gap: 0;
+  }
+}
+
+.not-found__title {
+  font-size: var(--font-size-xxxl);
+
+  @include media-tablet {
+    font-size: calc(var(--font-size-xxxl) * 1.5);
+  }
+
+  @include media-desktop {
+    font-size: calc(var(--font-size-xxxl) * 1.5);
+  }
+}
+
+.not-found__message {
+  color: var(--color-secondary-3);
+}
+
+:root[data-theme="dark"] {
+  .not-found__message {
+    color: var(--color-secondary-8);
+  }
+}

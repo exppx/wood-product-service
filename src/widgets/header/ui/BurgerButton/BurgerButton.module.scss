@@ -1,0 +1,31 @@
+.burger-button {
+  width: var(--size-xl);
+  height: var(--size-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger-button__lines {
+  width: var(--size-lg);
+  height: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.burger-button__line {
+  background-color: var(--color-text);
+  height: 3px;
+  border-radius: var(--border-radius-rounded);
+
+  &:first-of-type {
+    width: 50%;
+    align-self: self-start;
+  }
+
+  &:last-of-type {
+    width: 50%;
+    align-self: self-end;
+  }
+}

@@ -1,0 +1,50 @@
+@use "@/app/styles/mixins.scss" as *;
+
+.input {
+  width: 100%;
+  padding: var(--form-control-padding);
+  background-color: var(--form-control-background-color);
+  border: var(--form-control-border);
+  border-radius: var(--form-control-border-radius);
+  transition: var(--transition-default);
+
+  &:focus-visible {
+    outline: none;
+    background-color: var(--form-control-focus-background-color);
+    box-shadow: var(--form-control-shadow);
+  }
+
+  &:disabled {
+    opacity: var(--form-control-disabled-opacity);
+  }
+
+  &::placeholder {
+    color: var(--form-control-placeholder-color);
+  }
+
+  @include hover {
+    &:hover:not(:disabled) {
+      background-color: var(--form-control-hover-background-color);
+    }
+  }
+}
+
+.input_invalid {
+  border-color: var(--form-control-error-border-color);
+  background-color: var(--form-control-error-background-color);
+
+  &:focus-visible {
+    box-shadow: var(--form-control-error-shadow);
+    background-color: var(--form-control-error-hover-background-color);
+  }
+
+  &::placeholder {
+    color: var(--form-control-error-placeholder-color);
+  }
+
+  @include hover {
+    &:hover:not(:disabled) {
+      background-color: var(--form-control-error-hover-background-color);
+    }
+  }
+}
